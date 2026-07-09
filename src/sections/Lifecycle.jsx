@@ -1,0 +1,427 @@
+'use client';
+
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { 
+  ClipboardList, 
+  UserPlus, 
+  Plane, 
+  Printer, 
+  BarChart3, 
+  Check, 
+  Sparkles, 
+  QrCode, 
+  DollarSign
+} from 'lucide-react';
+
+export default function Lifecycle() {
+  const containerRef = useRef(null);
+  const cardsRef = useRef([]);
+
+  const phases = [
+    {
+      number: '01',
+      phaseName: 'Phase 01 / Pre-Event',
+      title: 'Planning & Agenda Setup',
+      desc: 'Construct your event foundation with smart venue mappings, automated speaker portals, and AI-assisted track drafting.',
+      bullets: [
+        'AI-assisted track session drafting',
+        'Speaker collection and approval portals',
+        'Collaborative planning checklists'
+      ],
+      icon: ClipboardList,
+      gradient: 'from-blue-600/15 via-indigo-600/5 to-transparent',
+      borderColor: 'border-blue-500/30',
+      badgeBg: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
+      rightVisual: (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
+            <span className="text-xs font-bold text-slate-405 uppercase tracking-widest text-slate-400">AI Planner Core</span>
+            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20 shadow-sm shadow-accent-purple/5">Active Session</span>
+          </div>
+          <div className="space-y-3">
+            <div className="bg-[#0b102b]/80 p-4 rounded-2xl border border-slate-800/80 space-y-2">
+              <div className="flex justify-between items-center text-xs font-medium">
+                <span className="text-slate-300">Venue Map Setup</span>
+                <span className="text-[#a78bfa] font-mono font-bold">85% Complete</span>
+              </div>
+              <div className="w-full h-2 bg-slate-900 rounded-full overflow-hidden">
+                <div className="w-[85%] h-full bg-accent-purple rounded-full shadow-neon-purple/50" />
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3 text-xs">
+              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+                <span className="block text-[9px] text-slate-400 uppercase mb-1">Approved Tracks</span>
+                <span className="text-sm font-black font-mono text-white">12 Sessions</span>
+              </div>
+              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+                <span className="block text-[9px] text-slate-400 uppercase mb-1">Speaker Portal</span>
+                <span className="text-sm font-black font-mono text-white">14 Approved</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      number: '02',
+      phaseName: 'Phase 02 / Setup',
+      title: 'Registrations & Sales',
+      desc: 'Open ticket tiers and allocate sponsorship booths with automated multi-gateway payment pipelines and custom forms.',
+      bullets: [
+        'Logic-based ticketing forms',
+        'Interactive booth floor allocations',
+        'Automated VAT invoicing templates'
+      ],
+      icon: UserPlus,
+      gradient: 'from-accent-purple/15 via-[#050826]/5 to-transparent',
+      borderColor: 'border-accent-purple/30',
+      badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
+      rightVisual: (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
+            <span className="text-xs font-bold text-slate-405 uppercase tracking-widest text-slate-400">Registration Engine</span>
+            <span className="text-[10px] text-accent-purple font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20">3,420 Signed Up</span>
+          </div>
+          <div className="grid grid-cols-2 gap-3 text-xs">
+            <div className="bg-[#0b102b]/80 p-3.5 rounded-xl border border-slate-800/80">
+              <span className="block text-[9px] text-slate-400 mb-1">Ticket Revenue</span>
+              <span className="text-base font-black font-mono text-white flex items-center">
+                <DollarSign className="w-4 h-4 text-slate-450" />
+                <span>420,500.00</span>
+              </span>
+            </div>
+            <div className="bg-[#0b102b]/80 p-3.5 rounded-xl border border-slate-800/80">
+              <span className="block text-[9px] text-slate-400 mb-1">Booth Space</span>
+              <span className="text-base font-black font-mono text-white">Diamond: 5/5</span>
+            </div>
+          </div>
+          <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80 flex justify-between items-center text-xs">
+            <span className="text-slate-400">Coupon Code Usage</span>
+            <span className="font-bold text-[#a78bfa]">12% Redemptions</span>
+          </div>
+        </div>
+      )
+    },
+    {
+      number: '03',
+      phaseName: 'Phase 03 / Operations',
+      title: 'Logistics & Travel',
+      desc: 'Coordinate delegate accommodations, flight tracking approvals, and custom profile preferences in one unified portal.',
+      bullets: [
+        'Automated flight booking approvals',
+        'Hotel room block inventory trackers',
+        'Custom dietary profile parsing'
+      ],
+      icon: Plane,
+      gradient: 'from-accent-purple/15 via-[#050826]/5 to-transparent',
+      borderColor: 'border-accent-purple/30',
+      badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
+      rightVisual: (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
+            <span className="text-xs font-bold text-slate-405 uppercase tracking-widest text-slate-400">Logistics Console</span>
+            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20">Accommodation Map</span>
+          </div>
+          <div className="space-y-3">
+            <div className="bg-[#0b102b]/80 p-3.5 rounded-xl border border-slate-800/80 space-y-2">
+              <div className="flex justify-between items-center text-xs">
+                <span className="text-slate-300 font-semibold">Travel Clearances</span>
+                <span className="text-white font-bold">14 Flights Approved</span>
+              </div>
+              <div className="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden">
+                <div className="w-full h-full bg-accent-purple" />
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3 text-xs">
+              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+                <span className="block text-[9px] text-slate-400 uppercase mb-1">Hotel Allocated</span>
+                <span className="text-sm font-black font-mono text-white">412 Rooms</span>
+              </div>
+              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+                <span className="block text-[9px] text-slate-400 uppercase mb-1">Dietary Forms</span>
+                <span className="text-sm font-black font-mono text-white">100% Sorted</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      number: '04',
+      phaseName: 'Phase 04 / Live Event',
+      title: 'Onsite Ops & Badging',
+      desc: 'Deliver seamless check-in experiences with sub-2-second QR scan badging and live attendee engagement trackers.',
+      bullets: [
+        'Sub-2-second QR thermal badge printing',
+        'Self-service check-in kiosk tracking',
+        'Real-time session attendance mapping'
+      ],
+      icon: Printer,
+      gradient: 'from-accent-purple/15 via-[#050826]/5 to-transparent',
+      borderColor: 'border-accent-purple/30',
+      badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
+      rightVisual: (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
+            <span className="text-xs font-bold text-slate-405 uppercase tracking-widest text-slate-400">Onsite Kiosk Node</span>
+            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20">Online</span>
+          </div>
+          <div className="bg-[#0b102b]/80 p-4 rounded-2xl border border-slate-800/80 flex items-center justify-between">
+            <div className="space-y-1">
+              <span className="block text-[9px] text-slate-400">Badge Printed</span>
+              <span className="text-xs font-bold text-white block">Sarah Jenkins (VIP)</span>
+              <span className="text-[8px] text-slate-300 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">Check-in: 1.8s</span>
+            </div>
+            <QrCode className="w-12 h-12 text-white" />
+          </div>
+          <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80 flex justify-between items-center text-xs">
+            <span className="text-slate-400">Total checked-in delegates</span>
+            <span className="font-bold text-white">2,150 / 3,420</span>
+          </div>
+        </div>
+      )
+    },
+    {
+      number: '05',
+      phaseName: 'Phase 05 / Post-Event',
+      title: 'Reports & AI Insights',
+      desc: 'Compile comprehensive reports, trigger automated certification dispatches, and review feedback analytics.',
+      bullets: [
+        'Automated feedback survey loops',
+        'PDF certificate generation keys',
+        'Detailed sponsor ROI analytics report'
+      ],
+      icon: BarChart3,
+      gradient: 'from-accent-purple/15 via-[#050826]/5 to-transparent',
+      borderColor: 'border-accent-purple/30',
+      badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
+      rightVisual: (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
+            <span className="text-xs font-bold text-slate-450 uppercase tracking-widest text-slate-400">Intelligence Hub</span>
+            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20 font-semibold">Campaign Loop</span>
+          </div>
+          <div className="space-y-3">
+            <div className="bg-[#0b102b]/80 p-4 rounded-xl border border-slate-800/80 space-y-2">
+              <div className="flex justify-between items-center text-xs font-medium">
+                <span className="text-slate-300">Attendee Satisfaction</span>
+                <span className="text-[#a78bfa] font-bold font-mono">96.4%</span>
+              </div>
+              <div className="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden">
+                <div className="w-[96.4%] h-full bg-accent-purple rounded-full" />
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3 text-xs">
+              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+                <span className="block text-[9px] text-slate-400 uppercase mb-1">Certificates Sent</span>
+                <span className="text-sm font-black font-mono text-white">3,410 PDFs</span>
+              </div>
+              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+                <span className="block text-[9px] text-slate-400 uppercase mb-1">Average ROI</span>
+                <span className="text-sm font-black font-mono text-white">4.8x Return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+  ];
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const cards = cardsRef.current.filter(Boolean); // Filter out empty elements
+    if (!cards || cards.length === 0) return;
+
+    const ctx = gsap.context(() => {
+      // 1. Create a single master timeline tied to the pinned container scroll
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top top',
+          end: () => `+=${cards.length * 150}%`, // Increased scroll distance for smooth holds
+          pin: true,
+          pinSpacing: true,
+          scrub: 1, // Smooth scrolling transition response
+        }
+      });
+
+      // Set initial states for cards in GSAP to ensure correct starting points
+      cards.forEach((card, idx) => {
+        if (idx > 0) {
+          gsap.set(card, { y: '120%', opacity: 0, scale: 0.95 });
+        } else {
+          gsap.set(card, { y: 0, opacity: 1, scale: 1 });
+        }
+      });
+
+      const transitionDuration = 1;
+      const holdDuration = 1;
+
+      // 2. Add transition & hold steps sequentially
+      cards.forEach((card, idx) => {
+        if (idx === 0) {
+          // Pause/Hold on the first card at the start
+          tl.to({}, { duration: holdDuration });
+          return;
+        }
+
+        const prevCard = cards[idx - 1];
+        const startTime = tl.duration();
+
+        // Slide the previous card up and fade it out
+        tl.to(prevCard, {
+          y: '-120%',
+          opacity: 0,
+          scale: 0.9,
+          duration: transitionDuration,
+          ease: 'power2.inOut'
+        }, startTime);
+
+        // Slide the current card up and fade it in
+        tl.fromTo(card,
+          { 
+            y: '120%', 
+            opacity: 0,
+            scale: 0.95
+          },
+          { 
+            y: 0, 
+            opacity: 1,
+            scale: 1,
+            duration: transitionDuration,
+            ease: 'power2.out' 
+          },
+          startTime
+        );
+
+        // Pause/Hold on the current card
+        tl.to({}, { duration: holdDuration });
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section 
+      ref={containerRef}
+      id="solutions" 
+      className="relative min-h-screen overflow-hidden flex flex-col justify-center items-center bg-gradient-to-b from-[#020314] via-[#09062d] to-[#020314] transition-colors duration-300 w-full"
+    >
+      {/* Background ambient glowing gradient overlays */}
+      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-accent-purple/15 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent-blue/12 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-accent-cyan/8 rounded-full blur-[120px] pointer-events-none" />
+
+      {/* Subtle Animated Dotted grid Lines Floor */}
+      <div className="absolute bottom-0 left-0 right-0 h-[350px] overflow-hidden pointer-events-none z-0" style={{ perspective: '800px' }}>
+        <div 
+          className="absolute inset-0 w-full h-[500px]"
+          style={{
+            backgroundImage: 'linear-gradient(to right, rgba(132, 61, 245, 0.08) 2px, transparent 2px), linear-gradient(to bottom, rgba(132, 61, 245, 0.08) 2px, transparent 2px)',
+            backgroundSize: '50px 50px',
+            transform: 'rotateX(70deg) translateZ(0)',
+            transformOrigin: 'top center',
+            maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 90%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 90%)'
+          }}
+        />
+      </div>
+
+      {/* Title Header */}
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 text-center relative z-10 flex flex-col items-center">
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-accent-purple/40 bg-accent-purple/15 text-accent-lavender text-xs font-semibold mb-4 shadow-sm shadow-accent-purple/10">
+          <Sparkles className="w-3.5 h-3.5 text-accent-lavender animate-pulse" />
+          <span>Platform Roadmap</span>
+        </div>
+        <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+          One Platform for Every Stage of Your Event
+        </h2>
+        <p className="mt-3 text-sm sm:text-base text-slate-400 leading-relaxed font-light max-w-2xl">
+          Scroll down to see the event lifecycle stack seamlessly compile from pre-event setups to post-event automation.
+        </p>
+      </div>
+
+      {/* Pinned Card Stack viewport Wrapper */}
+      <div className="w-full max-w-5xl h-[620px] sm:h-[550px] relative px-4 sm:px-6 lg:px-8 mt-6 mb-16 overflow-visible flex items-center justify-center">
+        
+        {phases.map((phase, idx) => {
+          return (
+            <div
+              key={idx}
+              ref={(el) => (cardsRef.current[idx] = el)}
+              className="absolute inset-x-4 sm:inset-x-6 lg:inset-x-8 h-full bg-gradient-to-br from-[#0c0f2a]/90 to-[#030518]/98 rounded-[32px] p-6 sm:p-10 shadow-2xl backdrop-blur-md flex flex-col lg:flex-row items-center gap-8 overflow-hidden transition-all duration-300 shadow-neon-purple/5 group"
+              style={{ 
+                zIndex: 10 + idx,
+                transformOrigin: 'bottom center',
+                transform: idx > 0 ? 'translateY(120%)' : 'none', // GPU optimized initial off-screen offset
+                opacity: idx > 0 ? 0 : 1,
+              }}
+            >
+              {/* Premium 2px Gradient Border Overlay */}
+              <div 
+                className="absolute inset-0 rounded-[32px] p-[2px] bg-gradient-to-br from-accent-purple/85 via-accent-blue/70 to-accent-cyan/60 group-hover:from-accent-purple group-hover:via-accent-blue group-hover:to-accent-cyan transition-all duration-500 pointer-events-none z-20" 
+                style={{
+                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                  WebkitMaskComposite: 'xor',
+                  maskComposite: 'exclude'
+                }}
+              />
+
+              {/* Background gradient mask within the card */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${phase.gradient} opacity-35 pointer-events-none rounded-[32px]`} />
+
+              {/* Card Left: Content details */}
+              <div className="w-full lg:w-3/5 text-left relative z-10 space-y-4 sm:space-y-6">
+                
+                {/* Stage Indicator Badge */}
+                <div className="flex items-center space-x-3">
+                  <div className={`px-3 py-1 rounded-full border text-xs font-bold font-mono tracking-wider ${phase.badgeBg}`}>
+                    {phase.phaseName}
+                  </div>
+                  <div className="w-8 h-[1px] bg-slate-800" />
+                  <span className="font-mono text-sm font-extrabold text-slate-500">
+                    STAGE {phase.number}
+                  </span>
+                </div>
+
+                <h3 className="font-display font-extrabold text-2xl sm:text-4xl text-white tracking-tight leading-tight">
+                  {phase.title}
+                </h3>
+
+                <p className="text-sm sm:text-base text-slate-300 font-light leading-relaxed">
+                  {phase.desc}
+                </p>
+
+                {/* Bullet Points */}
+                <ul className="space-y-2.5 pt-2">
+                  {phase.bullets.map((bullet, bIdx) => (
+                    <li key={bIdx} className="flex items-start space-x-3 text-xs sm:text-sm text-slate-300">
+                      <div className="w-4 h-4 rounded-full bg-slate-800/85 text-slate-300 flex items-center justify-center flex-shrink-0 mt-0.5 border border-slate-700/60">
+                        <Check className="w-3 h-3" />
+                      </div>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+
+              </div>
+
+              {/* Card Right: Sleek Interactive Panel UI */}
+              <div className="w-full lg:w-2/5 relative z-10 h-max lg:h-full flex flex-col justify-center">
+                <div className={`p-5 rounded-2xl border ${phase.borderColor} bg-[#040717]/80 shadow-2xl shadow-black/40 backdrop-blur-md`}>
+                  {phase.rightVisual}
+                </div>
+              </div>
+
+            </div>
+          );
+        })}
+
+      </div>
+    </section>
+  );
+}
