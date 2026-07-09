@@ -95,7 +95,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
               href="/contact"
               className="relative group px-5 py-2.5 rounded-xl text-white font-semibold text-sm bg-accent-purple hover:bg-[#6c28e2] hover:scale-102 transition-all duration-300 flex items-center space-x-2"
             >
-              <span>Book a Demo</span>
+              <span>Get a Demo</span>
               <Sparkles className="w-4 h-4 text-white group-hover:animate-spin" />
             </Link>
           </div>
@@ -165,7 +165,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
                 onClick={() => setIsOpen(false)}
                 className="px-4 py-3 rounded-xl text-center text-white font-semibold text-base bg-accent-purple hover:bg-[#6c28e2] transition-all duration-300"
               >
-                Book a Demo
+                Get a Demo
               </Link>
             </div>
           </motion.div>
