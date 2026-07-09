@@ -45,7 +45,13 @@ export default function Header({ darkMode, toggleDarkMode }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-         
+          <Link href="/" className="flex items-center group">
+            <img 
+              src="https://congenie.com/assets/images/logo-next.png" 
+              alt="ConGenie Logo" 
+              className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
@@ -89,7 +95,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
               href="/contact"
               className="relative group px-5 py-2.5 rounded-xl text-white font-semibold text-sm bg-accent-purple hover:bg-[#6c28e2] hover:scale-102 transition-all duration-300 flex items-center space-x-2"
             >
-              <span>Get a Demo</span>
+              <span>Book a Demo</span>
               <Sparkles className="w-4 h-4 text-white group-hover:animate-spin" />
             </Link>
           </div>
@@ -159,7 +165,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
                 onClick={() => setIsOpen(false)}
                 className="px-4 py-3 rounded-xl text-center text-white font-semibold text-base bg-accent-purple hover:bg-[#6c28e2] transition-all duration-300"
               >
-                Get a Demo
+                Book a Demo
               </Link>
             </div>
           </motion.div>
