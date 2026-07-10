@@ -50,7 +50,7 @@ export default function Hero() {
         gsap.to(cursor, { 
           opacity: 0, 
           delay: 1.5, 
-          duration: 0.5, 
+          duration: 1.5, 
           onComplete: () => cursorTween.kill() 
         });
       }
@@ -123,7 +123,7 @@ export default function Hero() {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen pt-36 pb-32 overflow-hidden flex flex-col justify-center items-center bg-gradient-to-b from-[#060b24] via-[#091136] to-[#020412] w-full"
+      className="relative min-h-screen pt-36 pb-10 overflow-hidden flex flex-col justify-center items-center bg-gradient-to-b from-[#060b24] via-[#091136] to-[#020412] w-full"
     >
       {/* Cinematic Glow Blobs & Center Radial Lights */}
       <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-r from-accent-blue/12 to-accent-purple/12 rounded-full blur-[140px] pointer-events-none" />
@@ -151,7 +151,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.015)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 
       <motion.div 
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center flex flex-col items-center"
+        className="max-w-[1400px] mx-auto px-4 relative z-10 w-full text-center flex flex-col items-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -218,14 +218,14 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="px-8 py-4 rounded-2xl text-white font-bold text-base bg-gradient-to-r from-accent-purple to-accent-cyan hover:from-[#6c28e2] hover:to-[#00d0ff] hover:scale-102 transition-all duration-300 shadow-lg shadow-accent-purple/20 hover:shadow-neon-cyan/20 flex items-center space-x-2"
+            className="px-8 py-4 rounded-2xl text-white font-medium text-base bg-accent-purple hover:bg-[#6c28e2] hover:scale-102 transition-all duration-300 shadow-lg shadow-accent-purple/25 flex items-center space-x-2"
           >
             <span>Book a Free Demo</span>
             <ChevronRight className="w-5 h-5" />
           </a>
           <a
             href="#features"
-            className="px-8 py-4 rounded-2xl font-bold text-base text-white border border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:border-white/20"
+            className="px-8 py-4 rounded-2xl font-medium text-base text-white border border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:border-white/20"
           >
             Explore Features
           </a>

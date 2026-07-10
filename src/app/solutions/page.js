@@ -83,7 +83,7 @@ export default function SolutionsPage() {
       <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-accent-cyan/5 rounded-full blur-[150px] pointer-events-none" />
 
       {/* Hero Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-10 text-center">
+      <div className="max-w-[1400px] mx-auto px-4 py-16 sm:py-24 relative z-10 text-center">
         <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-accent-blue/35 bg-accent-blue/5 text-accent-blue text-xs font-semibold mb-6">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Tailored Event Solutions</span>
@@ -97,7 +97,7 @@ export default function SolutionsPage() {
       </div>
 
       {/* Grid of 9 Solutions */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 pb-32 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           {solutions.map((sol, idx) => {
             const Icon = sol.icon;

@@ -31,17 +31,17 @@ export default function Lifecycle() {
         'Collaborative planning checklists'
       ],
       icon: ClipboardList,
-      gradient: 'from-blue-600/15 via-indigo-600/5 to-transparent',
-      borderColor: 'border-blue-500/30',
-      badgeBg: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
+      gradient: 'from-[#7C3AED]/15 via-[#050826]/5 to-transparent',
+      borderColor: 'border-[#9333EA]/45',
+      badgeBg: 'bg-[#9333EA]/10 text-accent-lavender border-[#9333EA]/20',
       rightVisual: (
         <div className="space-y-4">
           <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
             <span className="text-xs font-bold text-slate-405 uppercase tracking-widest text-slate-400">AI Planner Core</span>
-            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20 shadow-sm shadow-accent-purple/5">Active Session</span>
+            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-[#9333EA]/10 border border-[#9333EA]/20 shadow-sm shadow-[#9333EA]/5">Active Session</span>
           </div>
           <div className="space-y-3">
-            <div className="bg-[#0b102b]/80 p-4 rounded-2xl border border-slate-800/80 space-y-2">
+            <div className="bg-[#14143A] p-4 rounded-2xl border border-[#9333EA]/45 space-y-2">
               <div className="flex justify-between items-center text-xs font-medium">
                 <span className="text-slate-300">Venue Map Setup</span>
                 <span className="text-[#a78bfa] font-mono font-bold">85% Complete</span>
@@ -51,11 +51,11 @@ export default function Lifecycle() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
                 <span className="block text-[9px] text-slate-400 uppercase mb-1">Approved Tracks</span>
                 <span className="text-sm font-black font-mono text-white">12 Sessions</span>
               </div>
-              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
                 <span className="block text-[9px] text-slate-400 uppercase mb-1">Speaker Portal</span>
                 <span className="text-sm font-black font-mono text-white">14 Approved</span>
               </div>
@@ -76,7 +76,7 @@ export default function Lifecycle() {
       ],
       icon: UserPlus,
       gradient: 'from-accent-purple/15 via-[#050826]/5 to-transparent',
-      borderColor: 'border-accent-purple/30',
+      borderColor: 'border-[#9333EA]/45',
       badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
       rightVisual: (
         <div className="space-y-4">
@@ -85,19 +85,19 @@ export default function Lifecycle() {
             <span className="text-[10px] text-accent-purple font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20">3,420 Signed Up</span>
           </div>
           <div className="grid grid-cols-2 gap-3 text-xs">
-            <div className="bg-[#0b102b]/80 p-3.5 rounded-xl border border-slate-800/80">
+            <div className="bg-[#14143A] p-3.5 rounded-xl border border-[#9333EA]/45">
               <span className="block text-[9px] text-slate-400 mb-1">Ticket Revenue</span>
               <span className="text-base font-black font-mono text-white flex items-center">
                 <DollarSign className="w-4 h-4 text-slate-450" />
                 <span>420,500.00</span>
               </span>
             </div>
-            <div className="bg-[#0b102b]/80 p-3.5 rounded-xl border border-slate-800/80">
+            <div className="bg-[#14143A] p-3.5 rounded-xl border border-[#9333EA]/45">
               <span className="block text-[9px] text-slate-400 mb-1">Booth Space</span>
               <span className="text-base font-black font-mono text-white">Diamond: 5/5</span>
             </div>
           </div>
-          <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80 flex justify-between items-center text-xs">
+          <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45 flex justify-between items-center text-xs">
             <span className="text-slate-400">Coupon Code Usage</span>
             <span className="font-bold text-[#a78bfa]">12% Redemptions</span>
           </div>
@@ -116,7 +116,7 @@ export default function Lifecycle() {
       ],
       icon: Plane,
       gradient: 'from-accent-purple/15 via-[#050826]/5 to-transparent',
-      borderColor: 'border-accent-purple/30',
+      borderColor: 'border-[#9333EA]/45',
       badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
       rightVisual: (
         <div className="space-y-4">
@@ -125,7 +125,7 @@ export default function Lifecycle() {
             <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20">Accommodation Map</span>
           </div>
           <div className="space-y-3">
-            <div className="bg-[#0b102b]/80 p-3.5 rounded-xl border border-slate-800/80 space-y-2">
+            <div className="bg-[#14143A] p-3.5 rounded-xl border border-[#9333EA]/45 space-y-2">
               <div className="flex justify-between items-center text-xs">
                 <span className="text-slate-300 font-semibold">Travel Clearances</span>
                 <span className="text-white font-bold">14 Flights Approved</span>
@@ -135,11 +135,11 @@ export default function Lifecycle() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
                 <span className="block text-[9px] text-slate-400 uppercase mb-1">Hotel Allocated</span>
                 <span className="text-sm font-black font-mono text-white">412 Rooms</span>
               </div>
-              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
                 <span className="block text-[9px] text-slate-400 uppercase mb-1">Dietary Forms</span>
                 <span className="text-sm font-black font-mono text-white">100% Sorted</span>
               </div>
@@ -160,7 +160,7 @@ export default function Lifecycle() {
       ],
       icon: Printer,
       gradient: 'from-accent-purple/15 via-[#050826]/5 to-transparent',
-      borderColor: 'border-accent-purple/30',
+      borderColor: 'border-[#9333EA]/45',
       badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
       rightVisual: (
         <div className="space-y-4">
@@ -168,7 +168,7 @@ export default function Lifecycle() {
             <span className="text-xs font-bold text-slate-405 uppercase tracking-widest text-slate-400">Onsite Kiosk Node</span>
             <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20">Online</span>
           </div>
-          <div className="bg-[#0b102b]/80 p-4 rounded-2xl border border-slate-800/80 flex items-center justify-between">
+          <div className="bg-[#14143A] p-4 rounded-2xl border border-[#9333EA]/45 flex items-center justify-between">
             <div className="space-y-1">
               <span className="block text-[9px] text-slate-400">Badge Printed</span>
               <span className="text-xs font-bold text-white block">Sarah Jenkins (VIP)</span>
@@ -176,7 +176,7 @@ export default function Lifecycle() {
             </div>
             <QrCode className="w-12 h-12 text-white" />
           </div>
-          <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80 flex justify-between items-center text-xs">
+          <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45 flex justify-between items-center text-xs">
             <span className="text-slate-400">Total checked-in delegates</span>
             <span className="font-bold text-white">2,150 / 3,420</span>
           </div>
@@ -195,16 +195,16 @@ export default function Lifecycle() {
       ],
       icon: BarChart3,
       gradient: 'from-accent-purple/15 via-[#050826]/5 to-transparent',
-      borderColor: 'border-accent-purple/30',
+      borderColor: 'border-[#9333EA]/45',
       badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
       rightVisual: (
         <div className="space-y-4">
           <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
             <span className="text-xs font-bold text-slate-450 uppercase tracking-widest text-slate-400">Intelligence Hub</span>
-            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20 font-semibold">Campaign Loop</span>
+            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20">Campaign Loop</span>
           </div>
           <div className="space-y-3">
-            <div className="bg-[#0b102b]/80 p-4 rounded-xl border border-slate-800/80 space-y-2">
+            <div className="bg-[#14143A] p-4 rounded-xl border border-[#9333EA]/45 space-y-2">
               <div className="flex justify-between items-center text-xs font-medium">
                 <span className="text-slate-300">Attendee Satisfaction</span>
                 <span className="text-[#a78bfa] font-bold font-mono">96.4%</span>
@@ -214,11 +214,11 @@ export default function Lifecycle() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
                 <span className="block text-[9px] text-slate-400 uppercase mb-1">Certificates Sent</span>
                 <span className="text-sm font-black font-mono text-white">3,410 PDFs</span>
               </div>
-              <div className="bg-[#0b102b]/80 p-3 rounded-xl border border-slate-800/80">
+              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
                 <span className="block text-[9px] text-slate-400 uppercase mb-1">Average ROI</span>
                 <span className="text-sm font-black font-mono text-white">4.8x Return</span>
               </div>
@@ -332,7 +332,7 @@ export default function Lifecycle() {
       </div>
 
       {/* Title Header */}
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 text-center relative z-10 flex flex-col items-center">
+      <div className="w-full max-w-[1400px] mx-auto px-4 pt-16 pb-8 text-center relative z-10 flex flex-col items-center">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-accent-purple/40 bg-accent-purple/15 text-accent-lavender text-xs font-semibold mb-4 shadow-sm shadow-accent-purple/10">
           <Sparkles className="w-3.5 h-3.5 text-accent-lavender animate-pulse" />
           <span>Platform Roadmap</span>
@@ -353,7 +353,7 @@ export default function Lifecycle() {
             <div
               key={idx}
               ref={(el) => (cardsRef.current[idx] = el)}
-              className="absolute inset-x-4 sm:inset-x-6 lg:inset-x-8 h-full bg-gradient-to-br from-[#0c0f2a]/90 to-[#030518]/98 rounded-[32px] p-6 sm:p-10 shadow-2xl backdrop-blur-md flex flex-col lg:flex-row items-center gap-8 overflow-hidden transition-all duration-300 shadow-neon-purple/5 group"
+              className="absolute inset-x-4 sm:inset-x-6 lg:inset-x-8 h-full bg-[#14143A] rounded-[32px] p-6 sm:p-10 shadow-2xl backdrop-blur-md flex flex-col lg:flex-row items-center gap-8 overflow-hidden transition-all duration-300 shadow-[#9333EA]/5 group"
               style={{ 
                 zIndex: 10 + idx,
                 transformOrigin: 'bottom center',
@@ -363,7 +363,7 @@ export default function Lifecycle() {
             >
               {/* Premium 2px Gradient Border Overlay */}
               <div 
-                className="absolute inset-0 rounded-[32px] p-[2px] bg-gradient-to-br from-accent-purple/85 via-accent-blue/70 to-accent-cyan/60 group-hover:from-accent-purple group-hover:via-accent-blue group-hover:to-accent-cyan transition-all duration-500 pointer-events-none z-20" 
+                className="absolute inset-0 rounded-[32px] p-[2px] bg-gradient-to-br from-[#7C3AED]/85 via-[#9333EA]/70 to-[#A855F7]/60 group-hover:from-[#7C3AED] group-hover:via-[#9333EA] group-hover:to-[#A855F7] transition-all duration-500 pointer-events-none z-20" 
                 style={{
                   WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                   WebkitMaskComposite: 'xor',
@@ -392,14 +392,14 @@ export default function Lifecycle() {
                   {phase.title}
                 </h3>
 
-                <p className="text-sm sm:text-base text-slate-300 font-light leading-relaxed">
+                <p className="text-slate-300 font-light leading-relaxed">
                   {phase.desc}
                 </p>
 
                 {/* Bullet Points */}
                 <ul className="space-y-2.5 pt-2">
                   {phase.bullets.map((bullet, bIdx) => (
-                    <li key={bIdx} className="flex items-start space-x-3 text-xs sm:text-sm text-slate-300">
+                    <li key={bIdx} className="flex items-start space-x-3 text-slate-300">
                       <div className="w-4 h-4 rounded-full bg-slate-800/85 text-slate-300 flex items-center justify-center flex-shrink-0 mt-0.5 border border-slate-700/60">
                         <Check className="w-3 h-3" />
                       </div>
@@ -412,7 +412,7 @@ export default function Lifecycle() {
 
               {/* Card Right: Sleek Interactive Panel UI */}
               <div className="w-full lg:w-2/5 relative z-10 h-max lg:h-full flex flex-col justify-center">
-                <div className={`p-5 rounded-2xl border ${phase.borderColor} bg-[#040717]/80 shadow-2xl shadow-black/40 backdrop-blur-md`}>
+                <div className={`p-5 rounded-2xl border ${phase.borderColor} bg-[#14143A] shadow-2xl shadow-[#9333EA]/5 backdrop-blur-md`}>
                   {phase.rightVisual}
                 </div>
               </div>

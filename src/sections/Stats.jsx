@@ -16,7 +16,7 @@ export default function Stats() {
 
   return (
     <section className="py-20 bg-white dark:bg-[#070b19] border-y border-slate-100 dark:border-slate-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4">
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
           {stats.map((stat, idx) => {
             const StatIcon = stat.icon;

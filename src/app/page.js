@@ -9,6 +9,8 @@ import DashboardPreview from '../sections/DashboardPreview';
 import Stats from '../sections/Stats';
 import Testimonials from '../sections/Testimonials';
 import FinalCTA from '../sections/FinalCTA';
+import AICapabilitiesCommandCenter from '../sections/AICapabilitiesCommandCenter';
+import UseCases from '../sections/UseCases';
 import { 
   Sparkles, ArrowRight, CheckCircle2, UserPlus, Calendar, 
   Ticket, Brain, ShieldCheck, BarChart3, Mail, Award, Bot, 
@@ -35,14 +37,7 @@ const aiHighlights = [
   { title: 'AI Recommendation Engine', desc: 'Tailors session and workshop suggests based on attendee interests.', icon: Sparkles }
 ];
 
-const keySolutions = [
-  { title: 'Conferences & Summits', desc: 'Multi-track academic agendas, speaker slide collectors, and live polling.', icon: Users },
-  { title: 'Exhibitions & Expos', desc: 'Exhibitor scanning portals, interactive floor layouts, and lead metrics.', icon: Building2 },
-  { title: 'Corporate Events & AGMs', desc: 'White-label registrations, secure document vaults, and Okta SSO syncs.', icon: Globe },
-  { title: 'Medical Congresses', desc: 'Abstract paper reviewers review gates, CME credit metrics, and certificates.', icon: Award },
-  { title: 'Trade Missions', desc: 'B2B matchmaking widgets, buyer matchmaking filters, and meeting logs.', icon: Globe },
-  { title: 'Government Summits', desc: 'Encrypted QR validation gates, VIP checkmarks, and offline DB support.', icon: ShieldCheck }
-];
+
 
 const whyChooseUs = [
   { title: 'Complete Lifecycle Coverage', desc: 'Bridges pre-event setup, ticket payments, onsite scanning, and post-event audits in one hub.', icon: Cpu },
@@ -68,9 +63,8 @@ export default function Home() {
         <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[130px] pointer-events-none" />
         
         {/* Dot pattern background overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:2rem_2rem] opacity-70 pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-4 relative z-10">
           
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
@@ -81,18 +75,9 @@ export default function Home() {
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-primary dark:text-white tracking-tight leading-tight">
               Pre-Event, Onsite, and Post-Event Under One Roof
             </h2>
-            <p className="mt-4 text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-slate-550 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
               ConGenie unifies disjointed systems into a single intelligent platform. Instead of copying spreadsheets between separate ticketing, speaker portals, and scanner apps, all modules run on a shared, real-time database.
             </p>
-            <div className="pt-2">
-              <Link
-                href="/about"
-                className="inline-flex items-center space-x-1.5 text-xs font-bold text-accent-purple dark:text-accent-cyan hover:underline group"
-              >
-                <span>Learn more about our approach</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
           </div>
 
           {/* Connected Row Containers */}
@@ -121,13 +106,13 @@ export default function Home() {
                     <h3 className="font-display font-extrabold text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Pre-Event Setup & Sales
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed">
+                    <p className="text-slate-550 dark:text-slate-400 font-light leading-relaxed">
                       Design speaker slide portals, open conditional forms, and collect ticket revenues via Stripe. Manage your agendas, databases, and promo codes from one admin dashboard.
                     </p>
                   </div>
 
                   {/* High-Fidelity Mockup simulation */}
-                  <div className="border border-slate-100 dark:border-slate-850 rounded-2xl bg-slate-50/50 dark:bg-slate-950/60 p-4 font-mono text-[10px] space-y-2.5 shadow-inner">
+                  <div className="border border-slate-100 dark:border-slate-850 rounded-2xl bg-white dark:bg-slate-950/60 p-4 font-mono text-[10px] space-y-2.5">
                     <div className="flex justify-between items-center text-slate-450 border-b border-slate-200/50 dark:border-slate-900 pb-1.5">
                       <span>SPEAKER PORTAL</span>
                       <span className="text-emerald-500 font-sans font-bold flex items-center gap-1">
@@ -149,26 +134,26 @@ export default function Home() {
               </div>
 
               {/* Stage 02: Onsite Ops */}
-              <div className="group relative rounded-3xl p-[1px] bg-gradient-to-br from-accent-blue to-accent-cyan shadow-lg shadow-accent-blue/5 transition-all duration-300">
+              <div className="group relative rounded-3xl p-[1px] bg-gradient-to-br from-accent-purple to-accent-blue shadow-lg shadow-accent-purple/5 transition-all duration-300">
                 <div className="h-full bg-white/90 dark:bg-[#070b20]/90 backdrop-blur-md rounded-[23px] p-6 sm:p-8 flex flex-col justify-between text-left space-y-6">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className="p-3 rounded-2xl bg-accent-blue/10 text-accent-blue border border-accent-blue/20">
+                      <div className="p-3 rounded-2xl bg-accent-purple/10 text-accent-purple border border-accent-purple/20">
                         <QrCode className="w-6 h-6" />
                       </div>
                       <span className="font-mono text-xs font-bold text-slate-400 dark:text-slate-500 tracking-wider">STAGE 02</span>
                     </div>
 
-                    <h3 className="font-display font-extrabold text-xl text-primary dark:text-white group-hover:text-accent-blue transition-colors">
+                    <h3 className="font-display font-extrabold text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Onsite Event Operations
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed">
+                    <p className="text-slate-550 dark:text-slate-400 font-light leading-relaxed">
                       Scan guest tickets using offline-capable check-in apps, trigger thermal badge printing, and monitor real-time attendance counts in the room portals.
                     </p>
                   </div>
 
                   {/* High-Fidelity Mockup simulation */}
-                  <div className="border border-slate-100 dark:border-slate-850 rounded-2xl bg-slate-50/50 dark:bg-slate-950/60 p-4 font-mono text-[10px] space-y-3 shadow-inner relative overflow-hidden">
+                  <div className="border border-slate-100 dark:border-slate-850 rounded-2xl bg-white dark:bg-slate-950/60 p-4 font-mono text-[10px] space-y-3 relative overflow-hidden">
                     <div className="flex justify-between items-center text-slate-450 border-b border-slate-200/50 dark:border-slate-900 pb-1.5">
                       <span>QR TICKET GATEWAY</span>
                       <span className="text-accent-blue font-sans font-bold">Scanning</span>
@@ -192,26 +177,26 @@ export default function Home() {
               </div>
 
               {/* Stage 03: Post-Event */}
-              <div className="group relative rounded-3xl p-[1px] bg-gradient-to-br from-accent-cyan to-accent-purple shadow-lg shadow-accent-cyan/5 transition-all duration-300">
+              <div className="group relative rounded-3xl p-[1px] bg-gradient-to-br from-accent-purple to-accent-blue shadow-lg shadow-accent-purple/5 transition-all duration-300">
                 <div className="h-full bg-white/90 dark:bg-[#070b20]/90 backdrop-blur-md rounded-[23px] p-6 sm:p-8 flex flex-col justify-between text-left space-y-6">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className="p-3 rounded-2xl bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20">
+                      <div className="p-3 rounded-2xl bg-accent-purple/10 text-accent-purple border border-accent-purple/20">
                         <BarChart3 className="w-6 h-6" />
                       </div>
                       <span className="font-mono text-xs font-bold text-slate-400 dark:text-slate-500 tracking-wider">STAGE 03</span>
                     </div>
 
-                    <h3 className="font-display font-extrabold text-xl text-primary dark:text-white group-hover:text-accent-cyan transition-colors">
+                    <h3 className="font-display font-extrabold text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Post-Event ROI Insights
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed">
+                    <p className="text-slate-550 dark:text-slate-400 font-light leading-relaxed">
                       Audit sponsor booth ROI, generate financial charts, and send CME completion certificates. Collect surveys and compile overall event performance summaries.
                     </p>
                   </div>
 
                   {/* High-Fidelity Mockup simulation */}
-                  <div className="border border-slate-100 dark:border-slate-850 rounded-2xl bg-slate-50/50 dark:bg-slate-950/60 p-4 font-mono text-[10px] space-y-2.5 shadow-inner">
+                  <div className="border border-slate-100 dark:border-slate-850 rounded-2xl bg-white dark:bg-slate-950/60 p-4 font-mono text-[10px] space-y-2.5">
                     <div className="flex justify-between items-center text-slate-450 border-b border-slate-200/50 dark:border-slate-900 pb-1.5">
                       <span>ROI ANALYTICS</span>
                       <span className="text-accent-purple font-sans font-bold">Generated</span>
@@ -237,9 +222,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 4. AI Capabilities Command Center Section */}
+      <AICapabilitiesCommandCenter />
+
       {/* 3. Core Modules Preview Section */}
       <section className="py-24 bg-slate-50 dark:bg-[#030712] transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white tracking-tight">
               Powerful Core Software Modules
@@ -274,57 +262,9 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/features"
-              className="inline-flex items-center space-x-2 bg-white dark:bg-slate-900 border border-slate-250 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold px-6 py-3 rounded-full hover:border-slate-350 dark:hover:border-slate-700 shadow-sm transition-all"
+              className="inline-flex items-center space-x-2 bg-white dark:bg-slate-900 border border-slate-250 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-base font-medium px-6 py-3 rounded-full hover:border-slate-350 dark:hover:border-slate-700 shadow-sm transition-all"
             >
-              <span>View All 12 Features</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. AI Capabilities Preview Section */}
-      <section className="py-24 bg-gradient-to-b from-[#0a0f24] to-[#040612] text-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[130px] pointer-events-none" />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-accent-cyan/30 bg-accent-cyan/5 text-accent-cyan text-[10px] font-semibold mb-4">
-              <Bot className="w-3.5 h-3.5" />
-              <span>Intelligent Automation</span>
-            </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white">
-              Built-In AI to Automate Event Operations
-            </h2>
-            <p className="mt-4 text-xs sm:text-sm text-slate-400 font-light">
-              Let algorithms run your B2B pairings, schedules conflicts checks, and support concierges.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            {aiHighlights.map((hl, idx) => {
-              const Icon = hl.icon;
-              return (
-                <div 
-                  key={idx} 
-                  className="bg-[#090b20]/60 border border-slate-850 p-5 rounded-2xl text-left hover:border-accent-cyan/35 transition-colors"
-                >
-                  <div className="p-2.5 rounded-xl bg-slate-950 text-accent-cyan w-max mb-4">
-                    <Icon className="w-4.5 h-4.5" />
-                  </div>
-                  <h4 className="font-bold text-xs sm:text-sm text-white mb-2">{hl.title}</h4>
-                  <p className="text-[11px] text-slate-400 font-light leading-relaxed">{hl.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/ai-capabilities"
-              className="inline-flex items-center space-x-2 bg-accent-purple hover:bg-[#6c28e2] text-white text-xs font-black px-6 py-3.5 rounded-xl shadow-lg shadow-accent-purple/20 transition-all"
-            >
-              <span>Explore AI Capabilities</span>
+              <span>View All Features</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -338,54 +278,11 @@ export default function Home() {
       <DashboardPreview />
 
       {/* 7. Solutions Preview Section */}
-      <section className="py-24 bg-white dark:bg-[#070b19] border-y border-slate-100 dark:border-slate-900 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white tracking-tight">
-              Engineered for Diverse Industry Use Cases
-            </h2>
-            <p className="mt-4 text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light">
-              Tailored templates preloaded for secure, high-capacity coordinates.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {keySolutions.map((sol, idx) => {
-              const Icon = sol.icon;
-              return (
-                <div 
-                  key={idx} 
-                  className="bg-slate-50 dark:bg-slate-900/40 border border-slate-205/60 dark:border-slate-805/60 p-5 rounded-2xl text-left hover:border-accent-purple/40 hover:shadow-md transition-all duration-300 group"
-                >
-                  <div className="p-2.5 rounded-xl bg-white dark:bg-slate-950 text-accent-purple w-max mb-4 shadow-sm border border-slate-150 dark:border-slate-850">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <h3 className="font-display font-bold text-sm sm:text-base text-primary dark:text-white mb-2">
-                    {sol.title}
-                  </h3>
-                  <p className="text-xs text-slate-550 dark:text-slate-400 font-light leading-relaxed">
-                    {sol.desc}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/solutions"
-              className="inline-flex items-center space-x-2 bg-white dark:bg-slate-900 border border-slate-250 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold px-6 py-3 rounded-full hover:border-slate-350 dark:hover:border-slate-700 shadow-sm transition-all"
-            >
-              <span>View Solutions</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <UseCases />
 
       {/* 8. Why Choose Us Section */}
       <section className="py-24 bg-slate-50 dark:bg-[#030712] transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[10px] font-bold text-accent-purple uppercase tracking-widest block mb-2">Why ConGenie</span>
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white tracking-tight">
@@ -402,7 +299,7 @@ export default function Home() {
                     <Icon className="w-5.5 h-5.5" />
                   </div>
                   <h4 className="font-display font-extrabold text-base sm:text-lg text-primary dark:text-white">{w.title}</h4>
-                  <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed">{w.desc}</p>
+                  <p className="text-slate-550 dark:text-slate-400 font-light leading-relaxed">{w.desc}</p>
                 </div>
               );
             })}

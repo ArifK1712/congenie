@@ -476,7 +476,7 @@ export default function Modules() {
       {/* Grid lines floor overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.035)_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">

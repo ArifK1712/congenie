@@ -42,7 +42,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
           : 'bg-white py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
@@ -54,14 +54,14 @@ export default function Header({ darkMode, toggleDarkMode }) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`font-medium text-sm transition-colors ${
+                  className={`font-normal text-md transition-colors ${
                     isActive 
                       ? 'text-accent-purple dark:text-accent-cyan font-bold' 
                       : 'text-slate-600 hover:text-accent-blue dark:text-slate-300 dark:hover:text-accent-cyan'
@@ -93,7 +93,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
             
             <Link
               href="/contact"
-              className="relative group px-5 py-2.5 rounded-xl text-white font-semibold text-sm bg-accent-purple hover:bg-[#6c28e2] hover:scale-102 transition-all duration-300 flex items-center space-x-2"
+              className="relative group px-5 py-2.5 rounded-xl text-white font-medium text-sm bg-accent-purple hover:bg-[#6c28e2] hover:scale-102 transition-all duration-300 flex items-center space-x-2"
             >
               <span>Book a Demo</span>
               <Sparkles className="w-4 h-4 text-white group-hover:animate-spin" />

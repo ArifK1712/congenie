@@ -8,7 +8,7 @@ import { Sparkles, ArrowRight } from 'lucide-react';
 export default function FinalCTA() {
   return (
     <section id="contact" className="py-24 bg-slate-50 dark:bg-[#030712] relative overflow-hidden transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 relative z-10">
         
         {/* Main Banner Card */}
         <div className="relative rounded-[32px] overflow-hidden bg-gradient-to-br from-[#0a0f24] via-[#0d1430] to-[#040612] border border-slate-800 text-white p-8 sm:p-12 lg:p-16 shadow-2xl text-center">

@@ -31,7 +31,7 @@ export default function Integrations() {
 
   return (
     <section className="py-20 bg-slate-50 dark:bg-[#030712] overflow-hidden transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-primary dark:text-white">
             Syncs Seamlessly with Your Tech Stack

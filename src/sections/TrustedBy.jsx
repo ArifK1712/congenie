@@ -50,7 +50,7 @@ export default function TrustedBy() {
 
   return (
     <section className="py-24 bg-white dark:bg-[#070b19] border-y border-slate-100 dark:border-slate-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -85,7 +85,7 @@ export default function TrustedBy() {
                 <h3 className="font-display font-bold text-base text-primary dark:text-white mb-2">
                   {event.title}
                 </h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-light">
+                <p className="text-slate-500 dark:text-slate-400 leading-relaxed font-light">
                   {event.description}
                 </p>
               </motion.div>

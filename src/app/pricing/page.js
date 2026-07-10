@@ -100,7 +100,7 @@ export default function PricingPage() {
       <div className="absolute bottom-1/3 left-1/4 w-[600px] h-[600px] bg-accent-purple/5 rounded-full blur-[150px] pointer-events-none" />
 
       {/* Hero section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-10 text-center">
+      <div className="max-w-[1400px] mx-auto px-4 py-16 sm:py-24 relative z-10 text-center">
         <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-accent-purple/35 bg-accent-purple/5 text-accent-purple text-xs font-semibold mb-6">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Flexible Licensing</span>
@@ -114,7 +114,7 @@ export default function PricingPage() {
       </div>
 
       {/* Pricing Cards Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 pb-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {plans.map((plan, idx) => (
             <motion.div

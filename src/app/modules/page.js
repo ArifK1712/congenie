@@ -15,7 +15,7 @@ export default function ModulesPage() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.025)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-purple/10 rounded-full blur-[150px] pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-4 relative z-10">
           <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-accent-purple/35 bg-accent-purple/5 text-accent-purple text-xs font-semibold mb-6">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Developer & Admin Suite</span>
@@ -37,7 +37,7 @@ export default function ModulesPage() {
 
       {/* Technical Workflow / Security section */}
       <section className="py-24 bg-slate-100/50 dark:bg-[#040612] border-t border-slate-200/50 dark:border-slate-900 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             

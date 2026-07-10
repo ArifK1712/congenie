@@ -109,7 +109,7 @@ export default function AICapabilitiesPage() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 
       {/* Hero section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 text-center">
+      <div className="max-w-[1400px] mx-auto px-4 py-20 relative z-10 text-center">
         <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-accent-cyan/35 bg-accent-cyan/5 text-accent-cyan text-xs font-semibold mb-6">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Intelligent Event Orchestration</span>
@@ -123,7 +123,7 @@ export default function AICapabilitiesPage() {
       </div>
 
       {/* Copilot Chat Sandbox Simulation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 pb-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center bg-[#070a1e]/40 border border-slate-800/80 rounded-[36px] p-8 sm:p-12 backdrop-blur-xl">
           
           {/* Left Column: AI Orb & Prompt selection */}
@@ -201,7 +201,7 @@ export default function AICapabilitiesPage() {
       </div>
 
       {/* Grid of 9 AI capabilities */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 pb-32 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-display font-extrabold text-3xl sm:text-4.5xl text-white tracking-tight">
             Complete Suite of Intelligent Capabilities

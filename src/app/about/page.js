@@ -14,7 +14,7 @@ export default function AboutPage() {
       <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-accent-purple/5 rounded-full blur-[150px] pointer-events-none" />
 
       {/* Hero section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-10 text-center">
+      <div className="max-w-[1400px] mx-auto px-4 py-16 sm:py-24 relative z-10 text-center">
         <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-accent-purple/35 bg-accent-purple/5 text-accent-purple text-xs font-semibold mb-6">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Product Mission</span>
@@ -28,7 +28,7 @@ export default function AboutPage() {
       </div>
 
       {/* Section 1: Target Audiences & Mission */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 pb-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <div className="space-y-6 text-left">
@@ -80,7 +80,7 @@ export default function AboutPage() {
 
       {/* Section 2: Tech Approach & Enterprise Readiness */}
       <div className="bg-white dark:bg-[#070b19] border-y border-slate-200/60 dark:border-slate-900 py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-[10px] font-bold text-accent-cyan uppercase tracking-widest block mb-2">Enterprise Ready</span>
@@ -127,7 +127,7 @@ export default function AboutPage() {
       </div>
 
       {/* Section 3: Onboarding & Implementation approach */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4  py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <div className="lg:col-span-6 text-left space-y-6">
