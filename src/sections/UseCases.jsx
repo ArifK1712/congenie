@@ -24,7 +24,7 @@ export default function UseCases() {
   return (
     <section 
       id="usecases"
-      className="py-28 bg-[#FFFFFF] transition-colors duration-300 relative overflow-hidden"
+      className="pb-28 bg-[#FFFFFF] transition-colors duration-300 relative overflow-hidden"
       style={{
         background: `
           radial-gradient(circle at 50% 45%, rgba(147, 51, 234, 0.1), transparent 40%),
