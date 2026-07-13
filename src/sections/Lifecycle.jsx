@@ -11,13 +11,16 @@ import {
   BarChart3, 
   Check, 
   Sparkles, 
-  QrCode, 
-  DollarSign
 } from 'lucide-react';
+import planningAgendaImage from '../assets/planning-agenda.webp';
+import registrationSalesImage from '../assets/registration-sales.webp';
+import logisticsTravelImage from '../assets/logistics-travel.webp';
+import onsiteBadgingImage from '../assets/onsite-badging.webp';
+import reportsInsightsImage from '../assets/reports-insights.webp';
 
 export default function Lifecycle() {
   const containerRef = useRef(null);
-  const cardsRef = useRef([]);
+  const cardsRef = useRef([]);  
 
   const phases = [
     {
@@ -35,33 +38,11 @@ export default function Lifecycle() {
       borderColor: 'border-[#9333EA]/45',
       badgeBg: 'bg-[#9333EA]/10 text-accent-lavender border-[#9333EA]/20',
       rightVisual: (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
-            <span className="text-xs font-bold text-slate-405 uppercase tracking-widest text-slate-400">AI Planner Core</span>
-            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-[#9333EA]/10 border border-[#9333EA]/20 shadow-sm shadow-[#9333EA]/5">Active Session</span>
-          </div>
-          <div className="space-y-3">
-            <div className="bg-[#14143A] p-4 rounded-2xl border border-[#9333EA]/45 space-y-2">
-              <div className="flex justify-between items-center text-xs font-medium">
-                <span className="text-slate-300">Venue Map Setup</span>
-                <span className="text-[#a78bfa] font-mono font-bold">85% Complete</span>
-              </div>
-              <div className="w-full h-2 bg-slate-900 rounded-full overflow-hidden">
-                <div className="w-[85%] h-full bg-accent-purple rounded-full shadow-neon-purple/50" />
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
-                <span className="block text-[9px] text-slate-400 uppercase mb-1">Approved Tracks</span>
-                <span className="text-sm font-black font-mono text-white">12 Sessions</span>
-              </div>
-              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
-                <span className="block text-[9px] text-slate-400 uppercase mb-1">Speaker Portal</span>
-                <span className="text-sm font-black font-mono text-white">14 Approved</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img
+          src={planningAgendaImage.src || planningAgendaImage}
+          alt="Planning and agenda stage visual"
+          className="h-full w-full object-contain"
+        />
       )
     },
     {
@@ -79,29 +60,11 @@ export default function Lifecycle() {
       borderColor: 'border-[#9333EA]/45',
       badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
       rightVisual: (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
-            <span className="text-xs font-bold text-slate-405 uppercase tracking-widest text-slate-400">Registration Engine</span>
-            <span className="text-[10px] text-accent-purple font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20">3,420 Signed Up</span>
-          </div>
-          <div className="grid grid-cols-2 gap-3 text-xs">
-            <div className="bg-[#14143A] p-3.5 rounded-xl border border-[#9333EA]/45">
-              <span className="block text-[9px] text-slate-400 mb-1">Ticket Revenue</span>
-              <span className="text-base font-black font-mono text-white flex items-center">
-                <DollarSign className="w-4 h-4 text-slate-450" />
-                <span>420,500.00</span>
-              </span>
-            </div>
-            <div className="bg-[#14143A] p-3.5 rounded-xl border border-[#9333EA]/45">
-              <span className="block text-[9px] text-slate-400 mb-1">Booth Space</span>
-              <span className="text-base font-black font-mono text-white">Diamond: 5/5</span>
-            </div>
-          </div>
-          <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45 flex justify-between items-center text-xs">
-            <span className="text-slate-400">Coupon Code Usage</span>
-            <span className="font-bold text-[#a78bfa]">12% Redemptions</span>
-          </div>
-        </div>
+        <img
+          src={registrationSalesImage.src || registrationSalesImage}
+          alt="Registration and sales stage visual"
+          className="h-full w-full object-contain"
+        />
       )
     },
     {
@@ -119,33 +82,11 @@ export default function Lifecycle() {
       borderColor: 'border-[#9333EA]/45',
       badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
       rightVisual: (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
-            <span className="text-xs font-bold text-slate-405 uppercase tracking-widest text-slate-400">Logistics Console</span>
-            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20">Accommodation Map</span>
-          </div>
-          <div className="space-y-3">
-            <div className="bg-[#14143A] p-3.5 rounded-xl border border-[#9333EA]/45 space-y-2">
-              <div className="flex justify-between items-center text-xs">
-                <span className="text-slate-300 font-semibold">Travel Clearances</span>
-                <span className="text-white font-bold">14 Flights Approved</span>
-              </div>
-              <div className="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden">
-                <div className="w-full h-full bg-accent-purple" />
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
-                <span className="block text-[9px] text-slate-400 uppercase mb-1">Hotel Allocated</span>
-                <span className="text-sm font-black font-mono text-white">412 Rooms</span>
-              </div>
-              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
-                <span className="block text-[9px] text-slate-400 uppercase mb-1">Dietary Forms</span>
-                <span className="text-sm font-black font-mono text-white">100% Sorted</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img
+          src={logisticsTravelImage.src || logisticsTravelImage}
+          alt="Logistics and travel stage visual"
+          className="h-full w-full object-contain"
+        />
       )
     },
     {
@@ -163,24 +104,11 @@ export default function Lifecycle() {
       borderColor: 'border-[#9333EA]/45',
       badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
       rightVisual: (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
-            <span className="text-xs font-bold text-slate-405 uppercase tracking-widest text-slate-400">Onsite Kiosk Node</span>
-            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20">Online</span>
-          </div>
-          <div className="bg-[#14143A] p-4 rounded-2xl border border-[#9333EA]/45 flex items-center justify-between">
-            <div className="space-y-1">
-              <span className="block text-[9px] text-slate-400">Badge Printed</span>
-              <span className="text-xs font-bold text-white block">Sarah Jenkins (VIP)</span>
-              <span className="text-[8px] text-slate-300 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">Check-in: 1.8s</span>
-            </div>
-            <QrCode className="w-12 h-12 text-white" />
-          </div>
-          <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45 flex justify-between items-center text-xs">
-            <span className="text-slate-400">Total checked-in delegates</span>
-            <span className="font-bold text-white">2,150 / 3,420</span>
-          </div>
-        </div>
+        <img
+          src={onsiteBadgingImage.src || onsiteBadgingImage}
+          alt="Onsite badging stage visual"
+          className="h-full w-full object-contain"
+        />
       )
     },
     {
@@ -198,33 +126,11 @@ export default function Lifecycle() {
       borderColor: 'border-[#9333EA]/45',
       badgeBg: 'bg-accent-purple/10 text-accent-lavender border-accent-purple/20',
       rightVisual: (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
-            <span className="text-xs font-bold text-slate-450 uppercase tracking-widest text-slate-400">Intelligence Hub</span>
-            <span className="text-[10px] text-accent-lavender font-semibold px-2 py-0.5 rounded bg-accent-purple/10 border border-accent-purple/20">Campaign Loop</span>
-          </div>
-          <div className="space-y-3">
-            <div className="bg-[#14143A] p-4 rounded-xl border border-[#9333EA]/45 space-y-2">
-              <div className="flex justify-between items-center text-xs font-medium">
-                <span className="text-slate-300">Attendee Satisfaction</span>
-                <span className="text-[#a78bfa] font-bold font-mono">96.4%</span>
-              </div>
-              <div className="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden">
-                <div className="w-[96.4%] h-full bg-accent-purple rounded-full" />
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
-                <span className="block text-[9px] text-slate-400 uppercase mb-1">Certificates Sent</span>
-                <span className="text-sm font-black font-mono text-white">3,410 PDFs</span>
-              </div>
-              <div className="bg-[#14143A] p-3 rounded-xl border border-[#9333EA]/45">
-                <span className="block text-[9px] text-slate-400 uppercase mb-1">Average ROI</span>
-                <span className="text-sm font-black font-mono text-white">4.8x Return</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img
+          src={reportsInsightsImage.src || reportsInsightsImage}
+          alt="Reports and insights stage visual"
+          className="h-full w-full object-contain"
+        />
       )
     }
   ];
@@ -346,7 +252,7 @@ export default function Lifecycle() {
       </div>
 
       {/* Pinned Card Stack viewport Wrapper */}
-      <div className="w-full max-w-5xl h-[620px] sm:h-[550px] relative px-4 sm:px-6 lg:px-8 mt-6 mb-16 overflow-visible flex items-center justify-center">
+      <div className="w-full max-w-6xl h-[620px] sm:h-[500px] relative px-4 sm:px-6 lg:px-8 mt-6 mb-16 overflow-visible flex items-center justify-center">
         
         {phases.map((phase, idx) => {
           return (
@@ -411,8 +317,8 @@ export default function Lifecycle() {
               </div>
 
               {/* Card Right: Sleek Interactive Panel UI */}
-              <div className="w-full lg:w-2/5 relative z-10 h-max lg:h-full flex flex-col justify-center">
-                <div className={`p-5 rounded-2xl border ${phase.borderColor} bg-[#14143A] shadow-2xl shadow-[#9333EA]/5 backdrop-blur-md`}>
+              <div className="w-full lg:w-2/3 relative z-10 h-max lg:h-full flex flex-col justify-center">
+                <div className={`rounded-4xl overflow-hidden ${phase.borderColor} bg-[#14143A] shadow-2xl shadow-[#9333EA]/5`}>
                   {phase.rightVisual}
                 </div>
               </div>

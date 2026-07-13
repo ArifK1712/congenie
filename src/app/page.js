@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Hero from '../sections/Hero';
 import TrustedBy from '../sections/TrustedBy';
+import WhyConGenie from '../sections/WhyConGenie';
 import Lifecycle from '../sections/Lifecycle';
 import DashboardPreview from '../sections/DashboardPreview';
 import Stats from '../sections/Stats';
@@ -14,7 +15,7 @@ import UseCases from '../sections/UseCases';
 import { 
   Sparkles, ArrowRight, CheckCircle2, UserPlus, Calendar, 
   Ticket, Brain, ShieldCheck, BarChart3, Mail, Award, Bot, 
-  Shield, Cpu, Users, Building2, Globe, HeartHandshake,
+  Users, Building2, Globe,
   QrCode, CalendarRange
 } from 'lucide-react';
 
@@ -39,14 +40,7 @@ const aiHighlights = [
 
 
 
-const whyChooseUs = [
-  { title: 'Complete Lifecycle Coverage', desc: 'Bridges pre-event setup, ticket payments, onsite scanning, and post-event audits in one hub.', icon: Cpu },
-  { title: 'AI-Powered Automation', desc: 'Let machine learning orchestrate your agenda scheduling, B2B matchmaking, and support.', icon: Brain },
-  { title: 'Enterprise-Ready Security', desc: 'SOC2 compliant database hosting options, SAML SSO logins, and full GDPR consent paths.', icon: Shield },
-  { title: 'Multi-Event Support', desc: 'Subscribe once and spin up unlimited separate event portals and calendars under one admin.', icon: Calendar },
-  { title: 'Secure & Scalable', desc: 'Offline-compatible databases and local printer servers keep lines moving under heavy traffic.', icon: ShieldCheck },
-  { title: 'Dedicated Onboarding', desc: 'Paired with onboarding managers who clean CSV directories, layout design styling, and support dry runs.', icon: HeartHandshake }
-];
+
 
 export default function Home() {
   return (
@@ -251,7 +245,7 @@ export default function Home() {
                   <h3 className="font-display font-bold text-sm sm:text-base text-primary dark:text-white mb-2">
                     {mod.title}
                   </h3>
-                  <p className="text-xs text-slate-550 dark:text-slate-400 font-light leading-relaxed">
+                  <p className="text-slate-550 dark:text-slate-400 font-light leading-relaxed">
                     {mod.desc}
                   </p>
                 </div>
@@ -280,32 +274,8 @@ export default function Home() {
       {/* 7. Solutions Preview Section */}
       <UseCases />
 
-      {/* 8. Why Choose Us Section */}
-      <section className="py-24 bg-slate-50 dark:bg-[#030712] transition-colors duration-300">
-        <div className="max-w-[1400px] mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[10px] font-bold text-accent-purple uppercase tracking-widest block mb-2">Why ConGenie</span>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white tracking-tight">
-              Enterprise Event Tech You Can Rely On
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {whyChooseUs.map((w, idx) => {
-              const Icon = w.icon;
-              return (
-                <div key={idx} className="text-left space-y-3">
-                  <div className="p-3 bg-accent-purple/10 text-accent-purple rounded-xl w-max">
-                    <Icon className="w-5.5 h-5.5" />
-                  </div>
-                  <h4 className="font-display font-extrabold text-base sm:text-lg text-primary dark:text-white">{w.title}</h4>
-                  <p className="text-slate-550 dark:text-slate-400 font-light leading-relaxed">{w.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* 8. Why ConGenie Section */}
+      <WhyConGenie />
 
       {/* 9. Stats Section */}
       <Stats />

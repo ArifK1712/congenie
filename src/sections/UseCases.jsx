@@ -24,7 +24,7 @@ export default function UseCases() {
   return (
     <section 
       id="usecases"
-      className="pb-28 bg-[#FFFFFF] transition-colors duration-300 relative overflow-hidden"
+      className="pb-20 bg-[#FFFFFF] transition-colors duration-300 relative overflow-hidden"
       style={{
         background: `
           radial-gradient(circle at 50% 45%, rgba(147, 51, 234, 0.1), transparent 40%),
@@ -79,7 +79,7 @@ export default function UseCases() {
         </div>
 
         {/* Asymmetric 12-Column Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch auto-rows-max">
+        <div className="grid grid-cols-12 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch auto-rows-max">
           
           {/* 1. Large Featured Card on the Left (Conferences & Summits) */}
           <motion.div
