@@ -50,7 +50,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-24 bg-slate-50 dark:bg-[#030712] border-t border-slate-100 dark:border-slate-900 transition-colors duration-300 relative overflow-hidden">
+    <section className="pt-24 bg-slate-50 dark:bg-[#030712] border-t border-slate-100 dark:border-slate-900 transition-colors duration-300 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center">
         
         {/* Quote Icon decorative */}

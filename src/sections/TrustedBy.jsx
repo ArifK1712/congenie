@@ -79,8 +79,8 @@ export default function TrustedBy() {
                 whileHover={{ y: -6, scale: 1.02 }}
                 className="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col items-center text-center transition-all duration-300 hover:shadow-xl group"
               >
-                <div className={`p-4 rounded-xl ${event.color} transition-all duration-300 group-hover:scale-110 mb-4`}>
-                  <IconComponent className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-full border flex items-center justify-center mb-4 text-accent-purple dark:text-purple-400 bg-purple-50 dark:bg-purple-950/20 border-purple-100/50 dark:border-purple-900/30 transition-transform duration-300 group-hover:-translate-y-0.5">
+                  <IconComponent className="w-6 h-6 stroke-[1.5]" />
                 </div>
                 <h3 className="font-display font-bold text-base text-primary dark:text-white mb-2">
                   {event.title}
