@@ -3,61 +3,99 @@
 import React from 'react';
 import Link from 'next/link';
 import Hero from '../sections/Hero';
-import TrustedBy from '../sections/TrustedBy';
-import WhyConGenie from '../sections/WhyConGenie';
-import Lifecycle from '../sections/Lifecycle';
-import DashboardPreview from '../sections/DashboardPreview';
 import Stats from '../sections/Stats';
-import Testimonials from '../sections/Testimonials';
-import FinalCTA from '../sections/FinalCTA';
+import TrustedBy from '../sections/TrustedBy';
+import Lifecycle from '../sections/Lifecycle';
 import AICapabilitiesCommandCenter from '../sections/AICapabilitiesCommandCenter';
+import DashboardPreview from '../sections/DashboardPreview';
 import UseCases from '../sections/UseCases';
-import { 
-  Sparkles, ArrowRight, CheckCircle2, UserPlus, Calendar, 
-  Ticket, Brain, ShieldCheck, BarChart3, Mail, Award, Bot, 
-  Users, Building2, Globe,
-  QrCode, CalendarRange
+import WhyConGenie from '../sections/WhyConGenie';
+import Testimonials from '../sections/Testimonials';
+import FAQSection from '../sections/FAQSection';
+import FinalCTA from '../sections/FinalCTA';
+import {
+  Sparkles,
+  ArrowRight,
+  UserPlus,
+  Calendar,
+  Ticket,
+  ShieldCheck,
+  BarChart3,
+  Mail,
+  Award,
+  Users,
+  QrCode,
+  Smartphone,
+  CalendarRange,
 } from 'lucide-react';
 
+// ─── Core Modules data — edit here to update the modules preview section ─────
 const coreModules = [
-  { title: 'Registration', desc: 'Custom logic forms, ticket tier rules, and attendee onboarding databases.', icon: UserPlus },
-  { title: 'Agenda Management', desc: 'Dynamic multi-track schedulers, drag-and-drop conflicts alerts, and streams.', icon: Calendar },
-  { title: 'Ticketing & Payments', desc: 'Secure Stripe processing, multi-currency invoices, and group promos.', icon: Ticket },
-  { title: 'AI Matchmaking', desc: 'Intelligent buyer-seller matchmaking matrixes and meeting table assignments.', icon: Brain },
-  { title: 'Onsite Check-in', desc: 'Fast QR scanners, thermal printing kiosks, and local database overrides.', icon: ShieldCheck },
-  { title: 'Reports & Analytics', desc: 'Real-time financial audits, NPS sentiment logs, and sponsor exposure sheets.', icon: BarChart3 },
-  { title: 'Sponsor & Exhibitor', desc: 'Exhibitor scanning apps, interactive venue layouts, and branding banner zones.', icon: Award },
-  { title: 'Email Communication', desc: 'Drip marketing tools, personalized VIP invitations, and SMS session alerts.', icon: Mail }
+  {
+    title: 'Registration',
+    desc: 'Custom form logic, conditional fields, ticket tier rules, and attendee onboarding workflows.',
+    icon: UserPlus,
+  },
+  {
+    title: 'Agenda Management',
+    desc: 'Dynamic multi-track schedulers, drag-and-drop conflict alerts, and session streams.',
+    icon: Calendar,
+  },
+  {
+    title: 'Ticketing & Payments',
+    desc: 'Secure payment processing, multi-currency invoices, promo codes, and group bookings.',
+    icon: Ticket,
+  },
+  {
+    title: 'Attendee Management',
+    desc: 'Centralised attendee database with approval workflows, categories, and communication tools.',
+    icon: Users,
+  },
+  {
+    title: 'Email Communication',
+    desc: 'Drip marketing tools, personalised VIP invitations, automated confirmations, and SMS alerts.',
+    icon: Mail,
+  },
+  {
+    title: 'Onsite Check-in',
+    desc: 'Sub-2-second QR scanning, thermal printing kiosks, and real-time attendance tracking.',
+    icon: ShieldCheck,
+  },
+  {
+    title: 'Badge Printing',
+    desc: 'Custom badge design, bulk thermal printing, and self-service kiosk support.',
+    icon: QrCode,
+  },
+  {
+    title: 'Sponsor & Exhibitor',
+    desc: 'Exhibitor scanning apps, interactive floor plans, lead collection, and branding zones.',
+    icon: Award,
+  },
+  {
+    title: 'Reports & Analytics',
+    desc: 'Real-time financial dashboards, NPS logs, sponsor ROI reports, and post-event summaries.',
+    icon: BarChart3,
+  },
+  {
+    title: 'Mobile App',
+    desc: 'Attendee-facing app with personal schedule, matchmaking, session alerts, and digital badge.',
+    icon: Smartphone,
+  },
 ];
-
-const aiHighlights = [
-  { title: 'AI Assistant Chatbot', desc: '24/7 attendee concierge resolving registration and session questions.', icon: Bot },
-  { title: 'AI Agenda Planner', desc: 'Automates scheduling conflicts and suggested room tracks.', icon: Calendar },
-  { title: 'AI Matchmaking', desc: 'Suggests high-value pairings and schedules B2B meetings.', icon: Brain },
-  { title: 'AI Reporting & Insights', desc: 'Pulls sentiment logs, NPS graphs, and revenue predictions.', icon: BarChart3 },
-  { title: 'AI Recommendation Engine', desc: 'Tailors session and workshop suggests based on attendee interests.', icon: Sparkles }
-];
-
-
-
-
 
 export default function Home() {
   return (
     <div className="w-full relative">
-      
-      {/* 1. Hero & TrustedBy Sections */}
-      <Hero />
-      <TrustedBy />
 
-      {/* 2. Platform Overview Section - Redesigned Connected Lifecycle Journey */}
-      <section className="py-28 bg-white dark:bg-[#030712] transition-colors duration-300 w-full overflow-hidden relative">
+      {/* 1. Hero Section */}
+      <Hero />
+
+      {/* 1b. Unified Event Lifecycle Overview Stack */}
+      <section className="py-20 bg-white dark:bg-[#030712] transition-colors duration-300 w-full overflow-hidden relative dark:border-slate-900">
         {/* Background glowing effects */}
         <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-accent-purple/5 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[130px] pointer-events-none" />
         
-        {/* Dot pattern background overlay */}
-
         <div className="max-w-[1400px] mx-auto px-4 relative z-10">
           
           {/* Section Header */}
@@ -69,7 +107,7 @@ export default function Home() {
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-primary dark:text-white tracking-tight leading-tight">
               Pre-Event, Onsite, and Post-Event Under One Roof
             </h2>
-            <p className="mt-4 text-slate-550 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-slate-555 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
               ConGenie unifies disjointed systems into a single intelligent platform. Instead of copying spreadsheets between separate ticketing, speaker portals, and scanner apps, all modules run on a shared, real-time database.
             </p>
           </div>
@@ -100,7 +138,7 @@ export default function Home() {
                     <h3 className="font-display font-extrabold text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Pre-Event Setup & Sales
                     </h3>
-                    <p className="text-slate-550 dark:text-slate-400 font-light leading-relaxed">
+                    <p className="text-slate-555 dark:text-slate-400 font-light leading-relaxed">
                       Design speaker slide portals, open conditional forms, and collect ticket revenues via Stripe. Manage your agendas, databases, and promo codes from one admin dashboard.
                     </p>
                   </div>
@@ -113,7 +151,7 @@ export default function Home() {
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" /> Live
                       </span>
                     </div>
-                    <div className="space-y-2 text-slate-700 dark:text-slate-300">
+                    <div className="space-y-2 text-slate-705 dark:text-slate-300">
                       <div className="flex justify-between items-center bg-white dark:bg-slate-900/60 p-2 rounded border border-slate-200/40 dark:border-slate-855">
                         <span>Abstract File: Sarah_bio.pdf</span>
                         <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500 text-[8px] font-bold">Approved</span>
@@ -141,7 +179,7 @@ export default function Home() {
                     <h3 className="font-display font-extrabold text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Onsite Event Operations
                     </h3>
-                    <p className="text-slate-550 dark:text-slate-400 font-light leading-relaxed">
+                    <p className="text-slate-555 dark:text-slate-400 font-light leading-relaxed">
                       Scan guest tickets using offline-capable check-in apps, trigger thermal badge printing, and monitor real-time attendance counts in the room portals.
                     </p>
                   </div>
@@ -156,8 +194,8 @@ export default function Home() {
                       {/* Scanning laser line overlay */}
                       <div className="absolute top-0 left-0 right-0 h-[2px] bg-accent-blue shadow-neon-blue animate-[scan-y_2s_ease-in-out_infinite]" />
                       <div className="flex items-center space-x-3 w-full">
-                        <div className="w-7 h-7 bg-slate-100 dark:bg-slate-950 rounded border border-slate-200 dark:border-slate-800 flex items-center justify-center">
-                          <QrCode className="w-5 h-5 text-slate-550 dark:text-slate-350" />
+                        <div className="w-7 h-7 bg-slate-100 dark:bg-slate-955 rounded border border-slate-200 dark:border-slate-800 flex items-center justify-center">
+                          <QrCode className="w-5 h-5 text-slate-555 dark:text-slate-350" />
                         </div>
                         <div className="text-left font-sans">
                           <div className="font-bold text-[9px] text-slate-800 dark:text-slate-205">Elena Rostova</div>
@@ -184,7 +222,7 @@ export default function Home() {
                     <h3 className="font-display font-extrabold text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Post-Event ROI Insights
                     </h3>
-                    <p className="text-slate-550 dark:text-slate-400 font-light leading-relaxed">
+                    <p className="text-slate-555 dark:text-slate-400 font-light leading-relaxed">
                       Audit sponsor booth ROI, generate financial charts, and send CME completion certificates. Collect surveys and compile overall event performance summaries.
                     </p>
                   </div>
@@ -216,18 +254,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. AI Capabilities Command Center Section */}
-      <AICapabilitiesCommandCenter />
+      {/* 2. Trust Statistics */}
+      <Stats />
 
-      {/* 3. Core Modules Preview Section */}
-      <section className="py-24 bg-slate-50 dark:bg-[#030712] transition-colors duration-300">
+      {/* 3. Event Types */}
+      <TrustedBy />
+
+      {/* 4. Complete Event Lifecycle — 5-step roadmap */}
+      <Lifecycle />
+
+      {/* 5. Core Software Modules */}
+      <section id="features" className="py-24 bg-slate-50 dark:bg-[#030712] transition-colors duration-300">
         <div className="max-w-[1400px] mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-accent-purple/35 bg-accent-purple/5 text-accent-purple text-xs font-semibold mb-4">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Platform Modules</span>
+            </div>
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white tracking-tight">
               Powerful Core Software Modules
             </h2>
-            <p className="mt-4 text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light">
-              Hover or click on features to explore our technical library.
+            <p className="mt-4 text-sm sm:text-base text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+              Everything your team needs to plan, execute, and measure a successful event — in one connected platform.
             </p>
           </div>
 
@@ -235,8 +283,8 @@ export default function Home() {
             {coreModules.map((mod, idx) => {
               const Icon = mod.icon;
               return (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="bg-white dark:bg-slate-900/30 border border-slate-200/80 dark:border-slate-800/80 p-5 rounded-2xl text-left hover:border-accent-purple/40 hover:shadow-lg transition-all duration-300 group"
                 >
                   <div className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 w-max text-accent-purple group-hover:bg-accent-purple/10 transition-colors duration-300 mb-4">
@@ -245,7 +293,7 @@ export default function Home() {
                   <h3 className="font-display font-bold text-sm sm:text-base text-primary dark:text-white mb-2">
                     {mod.title}
                   </h3>
-                  <p className="text-slate-550 dark:text-slate-400 font-light leading-relaxed">
+                  <p className="text-slate-500 dark:text-slate-400 font-light leading-relaxed text-sm">
                     {mod.desc}
                   </p>
                 </div>
@@ -256,34 +304,34 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/features"
-              className="inline-flex items-center space-x-2 bg-white dark:bg-slate-900 border border-slate-250 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-base font-medium px-6 py-3 rounded-full hover:border-slate-350 dark:hover:border-slate-700 shadow-sm transition-all"
+              className="inline-flex items-center space-x-2 bg-white dark:bg-slate-900 border border-slate-250 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-base font-medium px-6 py-3 rounded-full hover:border-accent-purple/40 hover:text-accent-purple dark:hover:border-slate-700 shadow-sm transition-all"
             >
-              <span>View All Features</span>
+              <span>View All Modules</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 5. Event Lifecycle Section */}
-      <Lifecycle />
+      {/* 6. AI-Powered Features */}
+      <AICapabilitiesCommandCenter />
 
-      {/* 6. Dashboard Preview Section */}
+      {/* 7. Platform Explorer / Role-Based Dashboard */}
       <DashboardPreview />
 
-      {/* 7. Solutions Preview Section */}
+      {/* 8. Industry Solutions */}
       <UseCases />
 
-      {/* 8. Why ConGenie Section */}
+      {/* 9. Why ConGenie */}
       <WhyConGenie />
 
-      {/* 9. Stats Section */}
-      <Stats />
-
-      {/* 10. Testimonials Section */}
+      {/* 10. Customer Success / Testimonials */}
       <Testimonials />
 
-      {/* 11. Final CTA Section */}
+      {/* 11. Frequently Asked Questions */}
+      <FAQSection />
+
+      {/* 12. Final Call to Action */}
       <FinalCTA />
 
     </div>

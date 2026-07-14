@@ -4,40 +4,40 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
-export default function Testimonials() {
-  const reviews = [
-    {
-      name: 'Sarah Jenkins',
-      role: 'Executive Director',
-      event: 'Global Health Congress 2026',
-      rating: 5,
-      text: 'EVNT.AI completely revolutionized how we run our annual congress. Abstract submissions, reviewer assignments, and attendee badge printing worked flawlessly. Our onsite check-in queues went down to zero.',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120&h=120'
-    },
-    {
-      name: 'Marcus Sterling',
-      role: 'Head of B2B summits',
-      event: 'Apex FinTech Forum',
-      rating: 5,
-      text: 'The AI matchmaking module was a massive success. Delegates scheduled over 2,400 buyer-seller meetings in three days. We received outstanding feedback from our sponsors on lead collection ROI.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=120&h=120'
-    },
-    {
-      name: 'Amelia Chen',
-      role: 'Government Events Manager',
-      event: 'National Trade Delegation Summit',
-      rating: 5,
-      text: 'Our summit required strict security protocols and complex airport pickups tracking. The custom modules in EVNT.AI accommodated every VIP requirement. The automated badge verification system is top tier.',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=120&h=120'
-    }
-  ];
+const reviews = [
+  {
+    name: 'Sarah Jenkins',
+    role: 'Executive Director',
+    event: 'Global Health Congress 2026',
+    rating: 5,
+    text: 'ConGenie completely revolutionized how we run our annual congress. Abstract submissions, reviewer assignments, and attendee badge printing worked flawlessly. Our onsite check-in queues went down to zero.',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120&h=120'
+  },
+  {
+    name: 'Marcus Sterling',
+    role: 'Head of B2B Summits',
+    event: 'Apex FinTech Forum',
+    rating: 5,
+    text: 'The AI matchmaking module was a massive success. Delegates scheduled over 2,400 buyer-seller meetings in three days. We received outstanding feedback from our sponsors on lead collection ROI.',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=120&h=120'
+  },
+  {
+    name: 'Amelia Chen',
+    role: 'Government Events Manager',
+    event: 'National Trade Delegation Summit',
+    rating: 5,
+    text: 'Our summit required strict security protocols and complex airport pickup tracking. The custom modules in ConGenie accommodated every VIP requirement. The automated badge verification system is top tier.',
+    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=120&h=120'
+  }
+];
 
+export default function Testimonials() {
   const [currentIdx, setCurrentIdx] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       handleNext();
-    }, 8000); // auto-rotate review
+    }, 8000);
     return () => clearInterval(timer);
   }, [currentIdx]);
 
@@ -50,9 +50,19 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="pt-24 bg-slate-50 dark:bg-[#030712] border-t border-slate-100 dark:border-slate-900 transition-colors duration-300 relative overflow-hidden">
+    <section id="testimonials" className="py-15 bg-slate-50 dark:bg-[#030712] border-t border-slate-100 dark:border-slate-900 transition-colors duration-300 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center">
         
+        {/* Section Heading */}
+        <div className="mb-8">
+          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white tracking-tight">
+            What Our Clients Say
+          </h2>
+          <p className="mt-3 text-slate-500 dark:text-slate-400 font-light">
+            Trusted by event professionals across industries worldwide.
+          </p>
+        </div>
+
         {/* Quote Icon decorative */}
         <div className="flex justify-center mb-8 text-accent-blue/20 dark:text-accent-cyan/15">
           <Quote className="w-16 h-16 transform rotate-180" />
@@ -78,7 +88,7 @@ export default function Testimonials() {
 
               {/* Review Text */}
               <p className="text-lg sm:text-xl text-slate-700 dark:text-slate-200 font-light italic leading-relaxed">
-                "{reviews[currentIdx].text}"
+                &quot;{reviews[currentIdx].text}&quot;
               </p>
 
               {/* Client Info */}
@@ -106,7 +116,7 @@ export default function Testimonials() {
           <button
             onClick={handlePrev}
             className="p-2.5 rounded-full border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-900 transition-colors"
-            aria-label="Previous review"
+            aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
@@ -117,10 +127,10 @@ export default function Testimonials() {
               <button
                 key={idx}
                 onClick={() => setCurrentIdx(idx)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                  currentIdx === idx ? 'w-6 bg-accent-blue dark:bg-accent-cyan' : 'bg-slate-300 dark:bg-slate-800'
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  currentIdx === idx ? 'w-6 bg-accent-blue dark:bg-accent-cyan' : 'w-2.5 bg-slate-300 dark:bg-slate-800'
                 }`}
-                aria-label={`Go to slide ${idx + 1}`}
+                aria-label={`Go to testimonial ${idx + 1}`}
               />
             ))}
           </div>
@@ -128,7 +138,7 @@ export default function Testimonials() {
           <button
             onClick={handleNext}
             className="p-2.5 rounded-full border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-900 transition-colors"
-            aria-label="Next review"
+            aria-label="Next testimonial"
           >
             <ChevronRight className="w-5 h-5" />
           </button>

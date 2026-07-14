@@ -361,15 +361,8 @@ export default function WhyConGenie() {
       <section
         ref={stickyRef}
         className="relative hidden lg:block"
-        style={{ minHeight: '220vh', background: '#F7F8FC' }}
+        style={{ minHeight: '220vh' }}
       >
-        {/* Ambient glows */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-[15%] left-[18%] w-[500px] h-[500px] rounded-full"
-            style={{ background: 'radial-gradient(circle, rgba(132,61,245,0.055) 0%, transparent 70%)', filter: 'blur(80px)' }} />
-          <div className="absolute bottom-[15%] right-[20%] w-[400px] h-[400px] rounded-full"
-            style={{ background: 'radial-gradient(circle, rgba(158,112,255,0.04) 0%, transparent 70%)', filter: 'blur(70px)' }} />
-        </div>
 
         {/* ── Sticky container — ALWAYS VISIBLE, no opacity tricks ── */}
         <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -453,8 +446,7 @@ export default function WhyConGenie() {
           MOBILE / TABLET — vertical timeline
           ════════════════════════════════════════ */}
       <section
-        className="relative block lg:hidden py-20 overflow-hidden"
-        style={{ background: '#F7F8FC' }}
+        className="relative block lg:hidden py-20 overflow-hidden"        
       >
         <div className="absolute top-[10%] right-0 w-[240px] h-[240px] rounded-full pointer-events-none"
           style={{ background: 'radial-gradient(circle, rgba(132,61,245,0.045) 0%, transparent 70%)', filter: 'blur(50px)' }} />

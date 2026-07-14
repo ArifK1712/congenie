@@ -217,17 +217,17 @@ export default function Hero() {
           className="mt-10 flex flex-wrap justify-center gap-4"
         >
           <a
-            href="#contact"
+            href="/contact"
             className="px-8 py-4 rounded-2xl text-white font-medium text-base bg-accent-purple hover:bg-[#6c28e2] hover:scale-102 transition-all duration-300 shadow-lg shadow-accent-purple/25 flex items-center space-x-2"
           >
-            <span>Book a Free Demo</span>
+            <span>Book a Demo</span>
             <ChevronRight className="w-5 h-5" />
           </a>
           <a
-            href="#features"
+            href="#platform-explorer"
             className="px-8 py-4 rounded-2xl font-medium text-base text-white border border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:border-white/20"
           >
-            Explore Features
+            Explore ConGenie
           </a>
         </motion.div>
       </motion.div>

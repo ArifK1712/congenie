@@ -11,17 +11,21 @@ export default function Header({ darkMode, toggleDarkMode }) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 40);
+  };
+
+  handleScroll();
+
+  window.addEventListener('scroll', handleScroll, {
+    passive: true,
+  });
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -36,12 +40,38 @@ export default function Header({ darkMode, toggleDarkMode }) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white dark:bg-[#020314] border-b border-slate-200/50 dark:border-slate-800/50 py-2 shadow-md'
-          : 'bg-white py-5'
-      }`}
-    >
+  className={`fixed left-0 right-0 z-50 mx-auto origin-top transform-gpu transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+    scrolled
+      ? `
+        top-0
+        max-w-full
+        rounded-none
+        border-b border-slate-200/50
+        bg-white/95
+        py-2
+        shadow-[0_10px_30px_rgba(15,23,42,0.08)]
+        backdrop-blur-xl
+        dark:border-slate-800/50
+        dark:bg-[#020314]/90
+        translate-y-0
+        scale-100
+      `
+      : `
+        top-4
+        max-w-[1400px]
+        rounded-full
+        border border-slate-200/60
+        bg-white/90
+        py-2
+        shadow-sm
+        backdrop-blur-xl
+        dark:border-slate-800/60
+        dark:bg-[#020314]/90
+        translate-y-0
+        scale-[0.985]
+      `
+  }`}
+>
       <div className="max-w-[1400px] mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}

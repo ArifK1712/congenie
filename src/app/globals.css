@@ -15,7 +15,6 @@
 
 @layer base {
   body {
-    background-color: #fcfbfe; /* very light lavender tint based on #ebe7fb */
     color: #040742; /* Brand deep navy text */
     transition-property: color, background-color;
     transition-duration: 300ms;

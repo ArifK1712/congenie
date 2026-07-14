@@ -2,7 +2,35 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Sparkles, Mail, Send } from 'lucide-react';
+import { Sparkles, Send } from 'lucide-react';
+
+// ─── Footer configuration — update these values when verified details are available ───
+const footerConfig = {
+  companyName: 'ConGenie Technology Inc',
+  // address: '', // Add verified address here when available
+  email: 'solutions@congenie.com',
+  // phone: '',   // Add verified phone number here when available
+  description: 'The complete enterprise-grade event technology platform. Manage tickets, custom badge designs, B2B matchmaking schedulers, onsite check-in, and feedback analysis in one dashboard.',
+  solutions: [
+    { label: 'Medical Congresses', href: '/solutions' },
+    { label: 'Trade Missions', href: '/solutions' },
+    { label: 'Exhibitions & Shows', href: '/solutions' },
+    { label: 'Corporate AGMs', href: '/solutions' },
+    { label: 'Summit Conferences', href: '/solutions' },
+  ],
+  modules: [
+    { label: 'Smart Matchmaking', href: '/modules' },
+    { label: 'Badge & QR Designer', href: '/modules' },
+    { label: 'Onsite Check-in App', href: '/modules' },
+    { label: 'Invoice Gateways', href: '/modules' },
+    { label: 'Travel & Hotel Block', href: '/modules' },
+  ],
+  legal: [
+    { label: 'Privacy Policy', href: '#' },
+    { label: 'Terms of Service', href: '#' },
+    { label: 'Compliance SLAs', href: '#' },
+  ],
+};
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -27,21 +55,13 @@ export default function Footer() {
           
           {/* Logo & Description Column */}
           <div className="lg:col-span-4 space-y-6 text-left">
-            <Link href="/" className="flex items-center">
-              <img 
-                src="https://congenie.com/assets/images/logo-next.png" 
-                alt="ConGenie Logo" 
-                className="h-8 w-auto object-contain"
-              />
-            </Link>
-            
             <p className="text-xs text-slate-400 leading-relaxed font-light max-w-sm">
-              The complete enterprise-grade event technology platform. Manage tickets, custom badge designs, B2B matchmaking schedulers, onsite check-in, and feedback analysis in one dashboard.
+              {footerConfig.description}
             </p>
 
             {/* Social Icons */}
             <div className="flex space-x-4">
-              <a href="#" className="p-2.5 rounded-lg border border-slate-900 bg-[#0d1430]/40 text-slate-455 hover:text-white hover:border-slate-800 transition-all duration-300" aria-label="Twitter">
+              <a href="#" className="p-2.5 rounded-lg border border-slate-900 bg-[#0d1430]/40 text-slate-455 hover:text-white hover:border-slate-800 transition-all duration-300" aria-label="Twitter / X">
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
@@ -59,43 +79,40 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Sitemaps */}
           {/* Solutions Column */}
           <div className="lg:col-span-2 text-left space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Solutions</h4>
             <ul className="space-y-2.5 text-xs">
-              {['Medical Congresses', 'Trade Missions', 'Exhibitions & Shows', 'Corporate AGMs', 'Summit Conferences'].map((link) => (
-                <li key={link}>
-                  <Link href="/solutions" className="hover:text-accent-cyan transition-colors font-light">{link}</Link>
+              {footerConfig.solutions.map((item) => (
+                <li key={item.label}>
+                  <Link href={item.href} className="hover:text-accent-cyan transition-colors font-light">{item.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Feature Modules Column */}
+          {/* Modules Column */}
           <div className="lg:col-span-2 text-left space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Modules</h4>
             <ul className="space-y-2.5 text-xs">
-              {['Smart Matchmaking', 'Badge & QR Designer', 'Onsite Check-in App', 'Invoice Gateways', 'Travel & Hotel Block'].map((link) => (
-                <li key={link}>
-                  <Link href="/modules" className="hover:text-accent-cyan transition-colors font-light">{link}</Link>
+              {footerConfig.modules.map((item) => (
+                <li key={item.label}>
+                  <Link href={item.href} className="hover:text-accent-cyan transition-colors font-light">{item.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Details Column */}
+          {/* Contact Column */}
           <div className="lg:col-span-2 text-left space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Contact</h4>
             <ul className="space-y-2.5 text-xs font-light">
-              <li className="text-slate-400">ConGenie Technology Inc</li>
-              <li className="text-slate-450">75 Wall Street, New York</li>
-              <li className="hover:text-white transition-colors">
-                <a href="mailto:solutions@congenie.com">solutions@congenie.com</a>
-              </li>
-              <li className="hover:text-white transition-colors">
-                <a href="tel:+15550291911">+1 (555) 029-1911</a>
-              </li>
+              <li className="text-slate-400">{footerConfig.companyName}</li>
+              {footerConfig.email && (
+                <li className="hover:text-white transition-colors">
+                  <a href={`mailto:${footerConfig.email}`}>{footerConfig.email}</a>
+                </li>
+              )}
             </ul>
           </div>
 
@@ -118,6 +135,7 @@ export default function Footer() {
               <button
                 type="submit"
                 className="absolute right-1 p-2 rounded-lg bg-accent-blue hover:bg-accent-purple text-white transition-colors"
+                aria-label="Subscribe to newsletter"
               >
                 <Send className="w-3.5 h-3.5" />
               </button>
@@ -134,11 +152,11 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] text-slate-500 space-y-4 sm:space-y-0">
-          <p>© {new Date().getFullYear()} ConGenie Technology Inc. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {footerConfig.companyName}. All rights reserved.</p>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-slate-350 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-slate-350 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-slate-350 transition-colors">Compliance SLAs</a>
+            {footerConfig.legal.map((item) => (
+              <a key={item.label} href={item.href} className="hover:text-slate-350 transition-colors">{item.label}</a>
+            ))}
           </div>
         </div>
 

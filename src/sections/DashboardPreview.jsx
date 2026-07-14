@@ -18,9 +18,6 @@ import {
   CheckCircle2, 
   AlertCircle, 
   Clock, 
-  Check, 
-  Terminal,
-  Cpu,
   ChevronRight,
   MapPin,
   QrCode
@@ -32,25 +29,25 @@ const rolesData = [
     label: 'Admin Dashboard',
     sublabel: 'Platform Control',
     icon: Shield,
-    accent: '#7C3AED', // Electric Blue
+    accent: '#7C3AED',
     url: 'console://congenie.com/workspace/admin',
     colorClass: 'text-violet-500 border-violet-500/20 bg-violet-500/5 hover:border-violet-500/30',
     activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 dark:text-violet-400 shadow-violet-500/10',
     kpis: [
-      { label: 'Global Platform Uptime', value: '99.99%', change: 'Optimal SLA', icon: Activity },
-      { label: 'Active Tenant Orgs', value: '124', change: '+12% MoM', icon: Users },
-      { label: 'API Requests (24h)', value: '1.8M', change: 'Avg 42ms lat', icon: Cpu },
-      { label: 'Active Event Instances', value: '450', change: 'Live running', icon: Terminal }
+      { label: 'Total Registrations', value: '12,450', change: '94% of target', icon: Users },
+      { label: 'Checked-in Attendees', value: '9,820', change: 'Live synced', icon: Activity },
+      { label: 'Ticket Revenue', value: '$284,000', change: '+18% vs last event', icon: TrendingUp },
+      { label: 'Upcoming Sessions', value: '48', change: 'Starting today', icon: Calendar }
     ],
-    chartTitle: 'System Performance & API Latency (ms)',
-    chartType: 'lines',
-    chartData: [45, 38, 55, 42, 60, 48, 42, 35, 38],
+    chartTitle: 'Registration Trends (Daily Signups)',
+    chartType: 'bars',
+    chartData: [80, 120, 160, 210, 190, 250, 290, 340, 380],
     activities: [
-      { text: "SaaS tenant 'SummitCorp' provisioned successfully", time: '2m ago', status: 'success' },
-      { text: "Automatic database replication sync complete", time: '12m ago', status: 'success' },
-      { text: "System patch v4.8 deployed to us-east clusters", time: '45m ago', status: 'info' }
+      { text: "New registration: Dr. Fatima Al-Rashid (VIP Delegate)", time: '1m ago', status: 'success' },
+      { text: "Accommodation booking confirmed — 42 rooms, Hilton Block", time: '15m ago', status: 'success' },
+      { text: "Pending approval: 8 group registrations from TechCorp", time: '40m ago', status: 'warning' }
     ],
-    aiInsight: "Platform resources auto-scaled successfully. Auto-provisioned node cluster-4 to balance concurrent registrations."
+    aiInsight: "Registration pace is 18% above target. AI predicts full capacity by Day 2 morning — consider opening a waitlist."
   },
   {
     id: 'organizer',
@@ -209,7 +206,7 @@ export default function DashboardPreview() {
   const activeRole = rolesData.find(r => r.id === activeTab) || rolesData[0];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#F7F9FD] via-[#F2F5FB] to-white dark:from-[#020314] dark:via-[#0c1228]/20 dark:to-[#020314] transition-colors duration-300 relative overflow-hidden">
+    <section id="platform-explorer" className="py-24 bg-gradient-to-b from-[#F7F9FD] via-[#F2F5FB] to-white dark:from-[#020314] dark:via-[#0c1228]/20 dark:to-[#020314] transition-colors duration-300 relative overflow-hidden">
       
       {/* Background Decorative Glow Elements */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -220,18 +217,35 @@ export default function DashboardPreview() {
 
       <div className="max-w-[1400px] mx-auto px-4 relative z-10">
         
-        {/* Compact Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-accent-blue/30 bg-accent-blue/5 text-accent-blue dark:text-accent-cyan text-xs font-semibold mb-4 backdrop-blur-sm">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Role-Based Experience</span>
           </div>
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-primary dark:text-white tracking-tight leading-tight">
-            One Platform. A <span className="bg-gradient-to-r from-accent-blue to-accent-purple bg-clip-text text-transparent">Tailored Workspace</span> for Every User.
+            Explore ConGenie Through Every{' '}
+            <span className="bg-gradient-to-r from-accent-blue to-accent-purple bg-clip-text text-transparent">User&apos;s Workspace</span>
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-500 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
-            Explore how administrators, organizers, finance teams, speakers, sponsors, and attendees experience ConGenie through purpose-built dashboards, intelligent workflows, and role-specific insights.
+            Each role receives a tailored workspace based on their responsibilities — from registration management to financial reporting, agenda planning, and attendee engagement.
           </p>
+
+          {/* CTA Buttons */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#platform-explorer"
+              className="px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 text-sm font-medium hover:border-accent-purple/40 hover:text-accent-purple transition-all duration-300 shadow-sm"
+            >
+              Explore Live Demo
+            </a>
+            <a
+              href="/contact"
+              className="px-6 py-3 rounded-xl bg-accent-purple text-white text-sm font-medium hover:bg-[#6c28e2] transition-all duration-300 shadow-lg shadow-accent-purple/25"
+            >
+              Book a Guided Demo
+            </a>
+          </div>
         </div>
 
         {/* Studio Workspace container */}
@@ -447,11 +461,14 @@ export default function DashboardPreview() {
                               </linearGradient>
                             </defs>
                             
+                            {/* Baseline — rendered first so bars always paint on top */}
+                            <line x1="0" y1="107" x2="400" y2="107" stroke="currentColor" className="text-slate-200 dark:text-slate-800" strokeWidth="1" />
+
                             {activeRole.chartType === 'lines' ? (() => {
                               const maxVal = Math.max(...activeRole.chartData, 1);
                               const points = activeRole.chartData.map((val, idx) => {
                                 const x = (idx / (activeRole.chartData.length - 1)) * 400;
-                                const y = 110 - (val / maxVal) * 92; // Max height capped to ~77% of SVG height
+                                const y = 107 - (val / maxVal) * 88;
                                 return { x, y };
                               });
                               const pathD = points.map((p, idx) => (idx === 0 ? `M ${p.x} ${p.y}` : `L ${p.x} ${p.y}`)).join(' ');
@@ -477,31 +494,31 @@ export default function DashboardPreview() {
                                 </>
                               );
                             })() : (() => {
+                              const CHART_BOTTOM = 105; // bars sit above the baseline with a clear gap
+                              const MAX_BAR_H  = 88;    // maximum usable height within viewBox
+                              const MIN_BAR_H  = 4;     // smallest bar stays visible
                               const maxVal = Math.max(...activeRole.chartData, 1);
                               return activeRole.chartData.map((val, idx) => {
                                 const barWidth = 24;
                                 const spacing = 16;
                                 const xPos = idx * (barWidth + spacing) + 20;
-                                const barHeight = (val / maxVal) * 92; // Max height capped to ~77% of SVG height
+                                const barHeight = Math.max(MIN_BAR_H, (val / maxVal) * MAX_BAR_H);
                                 return (
                                   <motion.rect
                                     key={idx}
                                     x={xPos}
-                                    y={110 - barHeight}
+                                    y={CHART_BOTTOM - barHeight}
                                     width={barWidth}
                                     height={barHeight}
                                     rx="5"
                                     fill={`url(#chart-grad-${activeRole.id})`}
-                                    initial={{ height: 0, y: 110 }}
-                                    animate={{ height: barHeight, y: 110 - barHeight }}
+                                    initial={{ height: 0, y: CHART_BOTTOM }}
+                                    animate={{ height: barHeight, y: CHART_BOTTOM - barHeight }}
                                     transition={{ duration: 0.8, delay: idx * 0.05, ease: 'easeOut' }}
                                   />
                                 );
                               });
                             })()}
-                            
-                            {/* Baseline grid */}
-                            <line x1="0" y1="110" x2="400" y2="110" stroke="currentColor" className="text-slate-200 dark:text-slate-800" strokeWidth="1" />
                           </svg>
                           
                           {/* Grid value guides */}
