@@ -206,7 +206,7 @@ export default function DashboardPreview() {
   const activeRole = rolesData.find(r => r.id === activeTab) || rolesData[0];
 
   return (
-    <section id="platform-explorer" className="py-24 bg-gradient-to-b from-[#F7F9FD] via-[#F2F5FB] to-white dark:from-[#020314] dark:via-[#0c1228]/20 dark:to-[#020314] transition-colors duration-300 relative overflow-hidden">
+    <section id="platform-explorer" className="py-20 lg:py-24 bg-gradient-to-b from-[#F7F9FD] via-[#F2F5FB] to-white dark:from-[#020314] dark:via-[#0c1228]/20 dark:to-[#020314] transition-colors duration-300 relative overflow-hidden">
       
       {/* Background Decorative Glow Elements */}
       <div className="absolute inset-0 pointer-events-none z-0">

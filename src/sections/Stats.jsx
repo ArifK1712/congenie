@@ -36,7 +36,7 @@ export default function Stats() {
   return (
     <section 
       id="stats" 
-      className="py-16 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.16),transparent_55%),linear-gradient(135deg,#07091f_0%,#0b0d2b_50%,#08091d_100%)] border-y border-white/5 transition-colors duration-300 relative overflow-hidden max-w-[1400px] mx-auto rounded-4xl"
+      className="py-16 mb-16 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.16),transparent_55%),linear-gradient(135deg,#07091f_0%,#0b0d2b_50%,#08091d_100%)] border-y border-white/5 transition-colors duration-300 relative overflow-hidden max-w-[1400px] mx-auto rounded-4xl"
     >
       {/* Subtle background overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(rgba(148,163,184,0.015)_1px,transparent_1px)] [background-size:2rem_2rem] pointer-events-none" />
@@ -71,13 +71,13 @@ export default function Stats() {
                   className={`flex flex-col items-center text-center px-4 group cursor-default ${borderClasses}`}
                 >
                   {/* Translucent Dark Glass Icon Container */}
-                  <div className="w-15 h-15 rounded-xl border flex items-center justify-center mb-4 transition-all duration-300 group-hover:-translate-y-0.5 bg-white/[0.05] border-purple-400/20 shadow-[0_0_30px_rgba(124,58,237,0.12)] backdrop-blur-sm group-hover:border-purple-400/40 group-hover:bg-purple-500/10 group-hover:shadow-[0_0_35px_rgba(139,92,246,0.22)] text-purple-400">
+                  <div className="w-15 h-15 rounded-xl border flex items-center justify-center mb-4 transition-all duration-300 group-hover:-translate-y-0.5 bg-white/[0.05] border-purple-400/20 shadow-[0_0_30px_rgba(124,58,237,0.12)] backdrop-blur-sm group-hover:border-purple-400/40 group-hover:bg-purple-500/10 group-hover:shadow-[0_0_35px_rgba(139,92,246,0.22)] text-accent-purple">
                     <StatIcon className="w-8 h-8 stroke-[1.5]" />
                   </div>
 
                   {/* Value + Suffix */}
                   <h3 className="flex items-baseline">
-                    <span className="font-display font-black text-4xl sm:text-5xl text-white transition-colors duration-300 group-hover:text-purple-300">
+                    <span className="font-display font-black text-4xl sm:text-5xl text-white transition-colors duration-300 group-hover:text-accent-purple">
                       <Counter value={stat.value} duration={1.8} />
                       {stat.suffix && (
                         <span className="text-slate-400 font-sans font-medium text-2xl sm:text-3xl ml-0.5">

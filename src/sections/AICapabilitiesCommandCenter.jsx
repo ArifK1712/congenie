@@ -296,10 +296,8 @@ export default function AICapabilitiesCommandCenter() {
 
       {/* ── Ambient glows ── */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-purple-600/5 blur-[160px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-cyan-500/5 blur-[150px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] rounded-full bg-blue-600/5 blur-[120px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(rgba(148,163,184,0.025)_1px,transparent_1px)] [background-size:2rem_2rem]" />
+        <div className="absolute bottom-0 w-180 h-180 bg-accent-purple opacity-40 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-150 h-120 bg-accent-purple opacity-40 rounded-full blur-[100px] pointer-events-none" />
       </div>
 
       {/* ── Content wrapper ── */}

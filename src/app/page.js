@@ -1,87 +1,21 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import Hero from '../sections/Hero';
 import Stats from '../sections/Stats';
-import TrustedBy from '../sections/TrustedBy';
 import Lifecycle from '../sections/Lifecycle';
 import AICapabilitiesCommandCenter from '../sections/AICapabilitiesCommandCenter';
 import DashboardPreview from '../sections/DashboardPreview';
-import UseCases from '../sections/UseCases';
-import WhyConGenie from '../sections/WhyConGenie';
+import MergedSolutions from '../sections/MergedSolutions';
 import Testimonials from '../sections/Testimonials';
 import FAQSection from '../sections/FAQSection';
 import FinalCTA from '../sections/FinalCTA';
 import {
   Sparkles,
-  ArrowRight,
-  UserPlus,
-  Calendar,
-  Ticket,
-  ShieldCheck,
   BarChart3,
-  Mail,
-  Award,
-  Users,
   QrCode,
-  Smartphone,
   CalendarRange,
 } from 'lucide-react';
-
-// ─── Core Modules data — edit here to update the modules preview section ─────
-const coreModules = [
-  {
-    title: 'Registration',
-    desc: 'Custom form logic, conditional fields, ticket tier rules, and attendee onboarding workflows.',
-    icon: UserPlus,
-  },
-  {
-    title: 'Agenda Management',
-    desc: 'Dynamic multi-track schedulers, drag-and-drop conflict alerts, and session streams.',
-    icon: Calendar,
-  },
-  {
-    title: 'Ticketing & Payments',
-    desc: 'Secure payment processing, multi-currency invoices, promo codes, and group bookings.',
-    icon: Ticket,
-  },
-  {
-    title: 'Attendee Management',
-    desc: 'Centralised attendee database with approval workflows, categories, and communication tools.',
-    icon: Users,
-  },
-  {
-    title: 'Email Communication',
-    desc: 'Drip marketing tools, personalised VIP invitations, automated confirmations, and SMS alerts.',
-    icon: Mail,
-  },
-  {
-    title: 'Onsite Check-in',
-    desc: 'Sub-2-second QR scanning, thermal printing kiosks, and real-time attendance tracking.',
-    icon: ShieldCheck,
-  },
-  {
-    title: 'Badge Printing',
-    desc: 'Custom badge design, bulk thermal printing, and self-service kiosk support.',
-    icon: QrCode,
-  },
-  {
-    title: 'Sponsor & Exhibitor',
-    desc: 'Exhibitor scanning apps, interactive floor plans, lead collection, and branding zones.',
-    icon: Award,
-  },
-  {
-    title: 'Reports & Analytics',
-    desc: 'Real-time financial dashboards, NPS logs, sponsor ROI reports, and post-event summaries.',
-    icon: BarChart3,
-  },
-  {
-    title: 'Mobile App',
-    desc: 'Attendee-facing app with personal schedule, matchmaking, session alerts, and digital badge.',
-    icon: Smartphone,
-  },
-];
 
 export default function Home() {
   return (
@@ -90,8 +24,8 @@ export default function Home() {
       {/* 1. Hero Section */}
       <Hero />
 
-      {/* 1b. Unified Event Lifecycle Overview Stack */}
-      <section className="py-20 bg-white dark:bg-[#030712] transition-colors duration-300 w-full overflow-hidden relative dark:border-slate-900">
+      {/* 2. Pre-Event, During-Event & Post-Event Overview Stack */}
+      <section className="py-16 lg:py-20 bg-white dark:bg-[#030712] transition-colors duration-300 w-full overflow-hidden relative dark:border-slate-900">
         {/* Background glowing effects */}
         <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-accent-purple/5 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[130px] pointer-events-none" />
@@ -99,7 +33,7 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-4 relative z-10">
           
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-accent-purple/35 bg-accent-purple/5 text-accent-purple text-xs font-semibold shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-accent-purple" />
               <span>Unified Event Lifecycle Stack</span>
@@ -113,7 +47,7 @@ export default function Home() {
           </div>
 
           {/* Connected Row Containers */}
-          <div className="relative mt-16">
+          <div className="relative mt-12">
             
             {/* Connected Horizontal Flow Line (Desktop) */}
             <div className="absolute top-[138px] left-[15%] right-[15%] h-[2px] bg-gradient-to-r from-accent-purple via-accent-blue to-accent-cyan opacity-40 hidden lg:block overflow-visible pointer-events-none">
@@ -254,84 +188,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Trust Statistics */}
+      {/* 3. Statistics */}
       <Stats />
 
-      {/* 3. Event Types */}
-      <TrustedBy />
-
-      {/* 4. Complete Event Lifecycle — 5-step roadmap */}
-      <Lifecycle />
-
-      {/* 5. Core Software Modules */}
-      <section id="features" className="py-24 bg-slate-50 dark:bg-[#030712] transition-colors duration-300">
-        <div className="max-w-[1400px] mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-accent-purple/35 bg-accent-purple/5 text-accent-purple text-xs font-semibold mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Platform Modules</span>
-            </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white tracking-tight">
-              Powerful Core Software Modules
-            </h2>
-            <p className="mt-4 text-sm sm:text-base text-slate-500 dark:text-slate-400 font-light leading-relaxed">
-              Everything your team needs to plan, execute, and measure a successful event — in one connected platform.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {coreModules.map((mod, idx) => {
-              const Icon = mod.icon;
-              return (
-                <div
-                  key={idx}
-                  className="bg-white dark:bg-slate-900/30 border border-slate-200/80 dark:border-slate-800/80 p-5 rounded-2xl text-left hover:border-accent-purple/40 hover:shadow-lg transition-all duration-300 group"
-                >
-                  <div className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 w-max text-accent-purple group-hover:bg-accent-purple/10 transition-colors duration-300 mb-4">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <h3 className="font-display font-bold text-sm sm:text-base text-primary dark:text-white mb-2">
-                    {mod.title}
-                  </h3>
-                  <p className="text-slate-500 dark:text-slate-400 font-light leading-relaxed text-sm">
-                    {mod.desc}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/features"
-              className="inline-flex items-center space-x-2 bg-white dark:bg-slate-900 border border-slate-250 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-base font-medium px-6 py-3 rounded-full hover:border-accent-purple/40 hover:text-accent-purple dark:hover:border-slate-700 shadow-sm transition-all"
-            >
-              <span>View All Modules</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. AI-Powered Features */}
+      {/* 5. Intelligent Event Operations (AI) */}
       <AICapabilitiesCommandCenter />
 
-      {/* 7. Platform Explorer / Role-Based Dashboard */}
+      {/* 6. Dashboard / Product Walkthrough */}
       <DashboardPreview />
 
-      {/* 8. Industry Solutions */}
-      <UseCases />
+      {/* 4. One Platform for Every Stage of Your Event — 5-step roadmap */}
+      <Lifecycle />
 
-      {/* 9. Why ConGenie */}
-      <WhyConGenie />
+      {/* 7. Everything You Need to Run Any Event (Merged Section) */}
+      <MergedSolutions />
 
-      {/* 10. Customer Success / Testimonials */}
+      {/* 8. Testimonials */}
       <Testimonials />
 
-      {/* 11. Frequently Asked Questions */}
+      {/* 9. FAQ */}
       <FAQSection />
 
-      {/* 12. Final Call to Action */}
+      {/* 10. Final Call to Action */}
       <FinalCTA />
 
     </div>

@@ -56,11 +56,11 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-white dark:bg-[#030712] transition-colors duration-300">
+    <section id="faq" className="pt-16 bg-white dark:bg-[#030712] transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-accent-purple/35 bg-accent-purple/5 text-accent-purple text-xs font-semibold mb-4">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>FAQs</span>
@@ -68,7 +68,7 @@ export default function FAQSection() {
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+          <p className="mt-2 text-slate-500 dark:text-slate-400 font-light leading-relaxed">
             Everything you need to know about the ConGenie platform.
           </p>
         </div>

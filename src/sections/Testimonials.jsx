@@ -50,7 +50,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-15 bg-slate-50 dark:bg-[#030712] border-t border-slate-100 dark:border-slate-900 transition-colors duration-300 relative overflow-hidden">
+    <section id="testimonials" className="py-16 lg:py-20 bg-slate-50 dark:bg-[#030712] border-t border-slate-100 dark:border-slate-900 transition-colors duration-300 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center">
         
         {/* Section Heading */}
@@ -64,12 +64,12 @@ export default function Testimonials() {
         </div>
 
         {/* Quote Icon decorative */}
-        <div className="flex justify-center mb-8 text-accent-blue/20 dark:text-accent-cyan/15">
+        <div className="flex justify-center mb-4 text-accent-blue/20 dark:text-accent-cyan/15">
           <Quote className="w-16 h-16 transform rotate-180" />
         </div>
 
         {/* Carousel Container */}
-        <div className="relative min-h-[250px] flex items-center justify-center">
+        <div className="relative min-h-[200px] flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIdx}
