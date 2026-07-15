@@ -56,10 +56,10 @@ export default function ContactPage() {
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Book a Demo Session</span>
               </div>
-              <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-primary dark:text-white tracking-tight leading-tight">
+              <h1 className="font-display text-primary dark:text-white">
                 Let’s Discuss Your Upcoming Event Tech Needs
               </h1>
-              <p className="mt-4 text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed">
+              <p className="mt-4 text-xs sm:text-sm text-slate-550 dark:text-slate-400 leading-relaxed">
                 Connect with our systems architects. Fill out your target parameters and we will schedule a live sandbox walkthrough custom-made for your workflow.
               </p>
             </div>
@@ -102,7 +102,7 @@ export default function ContactPage() {
 
             <div className="p-5 rounded-2xl bg-[#070a1e]/40 border border-slate-200/50 dark:border-slate-800/40 text-left">
               <span className="text-[9px] font-bold text-accent-cyan uppercase tracking-widest block mb-1">Standard SLAs</span>
-              <p className="text-xs text-slate-550 dark:text-slate-400 font-light leading-relaxed">
+              <p className="text-xs text-slate-550 dark:text-slate-400 leading-relaxed">
                 Response timeline: Under 4 business hours for enterprise queries. Platform deployment timelines average 2-4 weeks from setup parameters verification.
               </p>
             </div>
@@ -247,10 +247,10 @@ export default function ContactPage() {
                     <CheckCircle className="w-16 h-16 text-green-500 mx-auto animate-pulse" />
                     
                     <div className="space-y-2">
-                      <h3 className="font-display font-extrabold text-2xl text-primary dark:text-white">
+                      <h3 className="font-display text-primary dark:text-white">
                         Demo Request Registered!
                       </h3>
-                      <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light max-w-md mx-auto leading-relaxed">
+                      <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 max-w-md mx-auto leading-relaxed">
                         Thank you, <strong className="text-primary dark:text-white">{formData.name}</strong>. We have scheduled an invitation request for <strong className="text-primary dark:text-white">{formData.demoDate} at {formData.demoTime}</strong>. A systems engineer will send a confirmation calendar invite to <strong className="text-primary dark:text-white">{formData.email}</strong> under 4 business hours.
                       </p>
                     </div>

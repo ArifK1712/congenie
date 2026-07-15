@@ -304,10 +304,10 @@ export default function FeaturesPage() {
           <Sparkles className="w-3.5 h-3.5" />
           <span>Detailed Capabilities</span>
         </div>
-        <h1 className="font-display font-extrabold text-4xl sm:text-6xl text-primary dark:text-white tracking-tight max-w-4xl mx-auto">
+        <h1 className="font-display text-primary dark:text-white max-w-4xl mx-auto">
           A Complete Event Technology Stack Designed for Enterprise Scale
         </h1>
-        <p className="mt-6 text-sm sm:text-base text-slate-550 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+        <p className="mt-6 text-sm sm:text-base text-slate-550 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
           From advanced registration flows to onsite check-in kiosks and post-event analytics. Explore the capabilities built to automate every stage of your event lifecycle.
         </p>
       </div>
@@ -343,11 +343,11 @@ export default function FeaturesPage() {
                   
                   {/* Tag & Title */}
                   <span className="text-[10px] font-bold text-slate-450 dark:text-slate-500 uppercase tracking-widest">{feat.tagline}</span>
-                  <h3 className="font-display font-extrabold text-xl text-primary dark:text-white mt-1 mb-3">
+                  <h3 className="font-display text-xl text-primary dark:text-white mt-1 mb-3">
                     {feat.title}
                   </h3>
                   
-                  <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 leading-relaxed mb-6">
                     {feat.desc}
                   </p>
 
@@ -365,7 +365,7 @@ export default function FeaturesPage() {
                   {/* Use Case Box */}
                   <div className="bg-slate-50/60 dark:bg-slate-900/60 rounded-xl p-3.5 border border-slate-150 dark:border-slate-800/50 mb-6">
                     <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Common Use Case</span>
-                    <p className="text-xs text-slate-600 dark:text-slate-400 font-light">
+                    <p className="text-xs text-slate-600 dark:text-slate-400">
                       {feat.useCase}
                     </p>
                   </div>

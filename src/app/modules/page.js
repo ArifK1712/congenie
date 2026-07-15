@@ -20,10 +20,10 @@ export default function ModulesPage() {
             <Sparkles className="w-3.5 h-3.5" />
             <span>Developer & Admin Suite</span>
           </div>
-          <h1 className="font-display font-extrabold text-4xl sm:text-6xl tracking-tight max-w-4xl mx-auto">
+          <h1 className="font-display max-w-4xl mx-auto">
             Interactive Platform Modules Library
           </h1>
-          <p className="mt-6 text-sm sm:text-base text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-6 text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl mx-auto">
             Dive deep into the functional modules that compose the ConGenie event tech stack. Explore interactive simulated dashboard consoles below.
           </p>
         </div>
@@ -44,10 +44,10 @@ export default function ModulesPage() {
             {/* Left Column: Tech overview */}
             <div className="lg:col-span-6 space-y-6 text-left">
               <span className="text-[10px] font-bold text-accent-purple uppercase tracking-widest block">System Security & Operations</span>
-              <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white leading-tight">
+              <h2 className="font-display text-primary dark:text-white">
                 Enterprise Infrastructure You Can Rely On
               </h2>
-              <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 leading-relaxed">
                 ConGenie is built for zero-downtime operations. Whether running offline barcode scans or processing Stripe transactions, our systems guarantee data consistency and secure protocols.
               </p>
 

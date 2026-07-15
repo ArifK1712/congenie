@@ -310,15 +310,12 @@ export default function AICapabilitiesCommandCenter() {
         </div>
 
         {/* Heading */}
-        <h2 className="aicmd-header font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight max-w-4xl">
-          Built-In AI to{' '}
-          <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-            Automate Event Operations
-          </span>
+        <h2 className="aicmd-header font-display text-white max-w-4xl">
+          Built-In AI to Automate Event Operations
         </h2>
 
         {/* Sub-copy */}
-        <p className="aicmd-header mt-4 text-sm sm:text-base text-slate-400 font-light max-w-2xl leading-relaxed">
+        <p className="aicmd-header mt-4 text-slate-400 max-w-2xl leading-relaxed">
           From attendee support and agenda planning to matchmaking, reporting, and personalised
           recommendations — ConGenie brings every intelligent workflow into one connected AI ecosystem.
         </p>
@@ -534,7 +531,7 @@ export default function AICapabilitiesCommandCenter() {
                       <h3 className="font-semibold text-xl text-white leading-snug">
                         {m.title}
                       </h3>
-                      <p className="text-slate-400 leading-tight font-light">
+                      <p className="text-slate-400 leading-tight">
                         {m.desc}
                       </p>
                     </div>
@@ -615,8 +612,8 @@ export default function AICapabilitiesCommandCenter() {
                         {m.status}
                       </span>
                     </div>
-                    <h3 className="font-extrabold text-sm text-white">{m.title}</h3>
-                    <p className="text-[11px] text-slate-400 font-light leading-relaxed">{m.desc}</p>
+                    <h3 className="text-sm text-white">{m.title}</h3>
+                    <p className="text-[11px] text-slate-400 leading-relaxed">{m.desc}</p>
                   </div>
                 </div>
               );
@@ -672,8 +669,8 @@ export default function AICapabilitiesCommandCenter() {
                         <span className="text-[8px] font-mono font-bold uppercase" style={{ color: m.badgeColor }}>{m.status}</span>
                         <Icon className="w-4 h-4" style={{ color: m.accentA }} />
                       </div>
-                      <h4 className="font-extrabold text-xs text-white">{m.title}</h4>
-                      <p className="text-[10px] text-slate-400 font-light leading-relaxed">{m.desc}</p>
+                      <h4 className="text-xs text-white">{m.title}</h4>
+                      <p className="text-[10px] text-slate-400 leading-relaxed">{m.desc}</p>
                     </div>
                   </div>
                 </div>

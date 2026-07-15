@@ -43,7 +43,8 @@ export default function Lifecycle() {
           alt="Planning and agenda stage visual"
           className="h-full w-full object-contain"
         />
-      )
+      ),
+      imgSrc: planningAgendaImage,
     },
     {
       number: '02',
@@ -65,7 +66,8 @@ export default function Lifecycle() {
           alt="Registration and sales stage visual"
           className="h-full w-full object-contain"
         />
-      )
+      ),
+      imgSrc: registrationSalesImage,
     },
     {
       number: '03',
@@ -87,7 +89,8 @@ export default function Lifecycle() {
           alt="Logistics and travel stage visual"
           className="h-full w-full object-contain"
         />
-      )
+      ),
+      imgSrc: logisticsTravelImage,
     },
     {
       number: '04',
@@ -109,7 +112,8 @@ export default function Lifecycle() {
           alt="Onsite badging stage visual"
           className="h-full w-full object-contain"
         />
-      )
+      ),
+      imgSrc: onsiteBadgingImage,
     },
     {
       number: '05',
@@ -131,7 +135,8 @@ export default function Lifecycle() {
           alt="Reports and insights stage visual"
           className="h-full w-full object-contain"
         />
-      )
+      ),
+      imgSrc: reportsInsightsImage,
     }
   ];
 
@@ -141,81 +146,88 @@ export default function Lifecycle() {
     const cards = cardsRef.current.filter(Boolean); // Filter out empty elements
     if (!cards || cards.length === 0) return;
 
-    const ctx = gsap.context(() => {
-      // 1. Create a single master timeline tied to the pinned container scroll
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top top',
-          end: () => `+=${cards.length * 150}%`, // Increased scroll distance for smooth holds
-          pin: true,
-          pinSpacing: true,
-          scrub: 1, // Smooth scrolling transition response
-        }
-      });
+    const mm = gsap.matchMedia();
 
-      // Set initial states for cards in GSAP to ensure correct starting points
-      cards.forEach((card, idx) => {
-        if (idx > 0) {
-          gsap.set(card, { y: '120%', opacity: 0, scale: 0.95 });
-        } else {
-          gsap.set(card, { y: 0, opacity: 1, scale: 1 });
-        }
-      });
+    // Limit scroll-trigger layout transitions strictly to screens above 1023px
+    mm.add("(min-width: 1024px) and (prefers-reduced-motion: no-preference)", () => {
+      const ctx = gsap.context(() => {
+        // 1. Create a single master timeline tied to the pinned container scroll
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top top',
+            end: () => `+=${cards.length * 150}%`, // Increased scroll distance for smooth holds
+            pin: true,
+            pinSpacing: true,
+            scrub: 1, // Smooth scrolling transition response
+          }
+        });
 
-      const transitionDuration = 1;
-      const holdDuration = 1;
+        // Set initial states for cards in GSAP to ensure correct starting points
+        cards.forEach((card, idx) => {
+          if (idx > 0) {
+            gsap.set(card, { y: '120%', opacity: 0, scale: 0.95 });
+          } else {
+            gsap.set(card, { y: 0, opacity: 1, scale: 1 });
+          }
+        });
 
-      // 2. Add transition & hold steps sequentially
-      cards.forEach((card, idx) => {
-        if (idx === 0) {
-          // Pause/Hold on the first card at the start
-          tl.to({}, { duration: holdDuration });
-          return;
-        }
+        const transitionDuration = 1;
+        const holdDuration = 1;
 
-        const prevCard = cards[idx - 1];
-        const startTime = tl.duration();
+        // 2. Add transition & hold steps sequentially
+        cards.forEach((card, idx) => {
+          if (idx === 0) {
+            // Pause/Hold on the first card at the start
+            tl.to({}, { duration: holdDuration });
+            return;
+          }
 
-        // Slide the previous card up and fade it out
-        tl.to(prevCard, {
-          y: '-120%',
-          opacity: 0,
-          scale: 0.9,
-          duration: transitionDuration,
-          ease: 'power2.inOut'
-        }, startTime);
+          const prevCard = cards[idx - 1];
+          const startTime = tl.duration();
 
-        // Slide the current card up and fade it in
-        tl.fromTo(card,
-          { 
-            y: '120%', 
+          // Slide the previous card up and fade it out
+          tl.to(prevCard, {
+            y: '-120%',
             opacity: 0,
-            scale: 0.95
-          },
-          { 
-            y: 0, 
-            opacity: 1,
-            scale: 1,
+            scale: 0.9,
             duration: transitionDuration,
-            ease: 'power2.out' 
-          },
-          startTime
-        );
+            ease: 'power2.inOut'
+          }, startTime);
 
-        // Pause/Hold on the current card
-        tl.to({}, { duration: holdDuration });
-      });
-    }, containerRef);
+          // Slide the current card up and fade it in
+          tl.fromTo(card,
+            { 
+              y: '120%', 
+              opacity: 0,
+              scale: 0.95
+            },
+            { 
+              y: 0, 
+              opacity: 1,
+              scale: 1,
+              duration: transitionDuration,
+              ease: 'power2.out' 
+            },
+            startTime
+          );
 
-    return () => ctx.revert();
+          // Pause/Hold on the current card
+          tl.to({}, { duration: holdDuration });
+        });
+      }, containerRef);
+
+      return () => ctx.revert();
+    });
+
+    return () => mm.revert();
   }, []);
 
   return (
     <section 
       ref={containerRef}
       id="solutions" 
-      className="relative min-h-screen overflow-hidden flex flex-col justify-center items-center bg-gradient-to-b from-[#020314] via-[#09062d] to-[#020314] transition-colors duration-300 w-full"
+      className="relative w-full bg-gradient-to-b from-[#020314] via-[#09062d] to-[#020314] transition-colors duration-300 overflow-hidden lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:items-center"
     >
       {/* Background ambient glowing gradient overlays */}
       <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-accent-purple/15 rounded-full blur-[150px] pointer-events-none" />
@@ -238,7 +250,7 @@ export default function Lifecycle() {
       </div>
 
       {/* Title Header */}
-      <div className="w-full max-w-[1400px] mx-auto px-4 pt-16 pb-8 text-center relative z-10 flex flex-col items-center">
+      <div className="w-full max-w-[1400px] mx-auto px-4 pt-12 pb-4 lg:pt-16 lg:pb-8 text-center relative z-10 flex flex-col items-center">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-accent-purple/40 bg-accent-purple/15 text-accent-lavender text-xs font-semibold mb-4 shadow-sm shadow-accent-purple/10">
           <Sparkles className="w-3.5 h-3.5 text-accent-lavender animate-pulse" />
           <span>Platform Roadmap</span>
@@ -246,14 +258,13 @@ export default function Lifecycle() {
         <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
           One Platform for Every Stage of Your Event
         </h2>
-        <p className="mt-3 text-sm sm:text-base text-slate-400 leading-relaxed font-light max-w-2xl">
+        <p className="mt-3 text-slate-400 leading-relaxed font-light max-w-2xl">
           Scroll down to see the event lifecycle stack seamlessly compile from pre-event setups to post-event automation.
         </p>
       </div>
 
-      {/* Pinned Card Stack viewport Wrapper */}
-      <div className="w-full max-w-6xl h-[620px] sm:h-[500px] relative px-4 sm:px-6 lg:px-8 mt-6 mb-16 overflow-visible flex items-center justify-center">
-        
+      {/* DESKTOP LAYOUT (>= 1024px) */}
+      <div className="hidden lg:flex w-full max-w-6xl h-[620px] sm:h-[500px] relative px-4 sm:px-6 lg:px-8 mt-6 mb-16 overflow-visible items-center justify-center">
         {phases.map((phase, idx) => {
           return (
             <div
@@ -326,7 +337,79 @@ export default function Lifecycle() {
             </div>
           );
         })}
+      </div>
 
+      {/* MOBILE / TABLET LAYOUT (< 1024px) */}
+      <div className="flex lg:hidden flex-col gap-6 w-full max-w-5xl mx-auto px-4 sm:px-6 mt-2 mb-12">
+        {phases.map((phase, idx) => {
+          return (
+            <div
+              key={idx}
+              className="relative w-full bg-[#14143A] rounded-[32px] p-6 sm:p-10 shadow-2xl flex flex-col gap-6 overflow-hidden border border-[#7C3AED]/40"
+            >
+              {/* Premium 2px Gradient Border Overlay */}
+              <div 
+                className="absolute inset-0 rounded-[32px] p-[2px] bg-gradient-to-br from-[#7C3AED]/85 via-[#9333EA]/70 to-[#A855F7]/60 pointer-events-none z-20" 
+                style={{
+                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                  WebkitMaskComposite: 'xor',
+                  maskComposite: 'exclude'
+                }}
+              />
+
+              {/* Background gradient mask within the card */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${phase.gradient} opacity-35 pointer-events-none rounded-[32px]`} />
+
+              {/* Card Details */}
+              <div className="w-full text-left relative z-10 space-y-4">
+                
+                {/* Stage Indicator Badge & Label */}
+                <div className="flex items-center space-x-3">
+                  <div className={`px-3 py-1 rounded-full border text-xs font-bold font-mono tracking-wider ${phase.badgeBg}`}>
+                    {phase.phaseName}
+                  </div>
+                  <div className="w-8 h-[1px] bg-slate-800" />
+                  <span className="font-mono text-sm font-extrabold text-slate-500">
+                    STAGE {phase.number}
+                  </span>
+                </div>
+
+                <h3 className="font-display font-extrabold text-2xl sm:text-4xl text-white tracking-tight leading-tight">
+                  {phase.title}
+                </h3>
+
+                <p className="text-slate-300 font-light leading-relaxed">
+                  {phase.desc}
+                </p>
+
+                {/* Bullet Points */}
+                <ul className="space-y-2.5 pt-2">
+                  {phase.bullets.map((bullet, bIdx) => (
+                    <li key={bIdx} className="flex items-start space-x-3 text-slate-300">
+                      <div className="w-4 h-4 rounded-full bg-slate-800/85 text-slate-300 flex items-center justify-center flex-shrink-0 mt-0.5 border border-slate-700/60">
+                        <Check className="w-3 h-3" />
+                      </div>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+
+              </div>
+
+              {/* Card Image (Placed below the text) */}
+              <div className="w-full relative z-10">
+                <div className={`rounded-2xl overflow-hidden ${phase.borderColor} bg-[#14143A] shadow-2xl shadow-[#9333EA]/5`}>
+                  <img
+                    src={phase.imgSrc.src || phase.imgSrc}
+                    alt={`${phase.title} visual`}
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              </div>
+
+            </div>
+          );
+        })}
       </div>
     </section>
   );

@@ -174,11 +174,11 @@ export default function MergedSolutions() {
             <span>Platform Solutions</span>
           </div>
 
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-primary dark:text-white tracking-tight leading-tight">
+          <h2 className="font-display text-primary dark:text-white">
             Everything You Need to Run Any Event
           </h2>
 
-          <p className="mt-4 text-sm sm:text-base text-slate-500 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
             From conferences and exhibitions to medical congresses, trade missions, and corporate events, ConGenie delivers purpose-built modules customized for your event environment.
           </p>
         </div>
@@ -221,10 +221,10 @@ export default function MergedSolutions() {
             <div className="lg:col-span-5 flex flex-col justify-between p-8 rounded-3xl border border-slate-200/50 dark:border-slate-800/50 bg-white dark:bg-slate-950/40">
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-primary dark:text-white tracking-tight leading-tight">
+                  <h3 className="font-display text-primary dark:text-white">
                     {activeSolution.title}
                   </h3>
-                  <p className="mt-3 text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+                  <p className="mt-3 text-slate-500 dark:text-slate-400 leading-relaxed">
                     {activeSolution.longDescription}
                   </p>
                 </div>
@@ -236,7 +236,7 @@ export default function MergedSolutions() {
                       <div className="w-5 h-5 rounded-full bg-accent-purple/10 flex items-center justify-center flex-shrink-0">
                         <Check className="w-3.5 h-3.5 text-accent-purple" />
                       </div>
-                      <span className="text-sm font-light">{bullet}</span>
+                      <span className="font-light">{bullet}</span>
                     </div>
                   ))}
                 </div>
@@ -245,8 +245,8 @@ export default function MergedSolutions() {
               {/* Bottom Insight Card */}
               <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-900">
                 <div className="bg-accent-purple/5 border border-accent-purple/10 p-4 rounded-2xl">
-                  <span className="block font-mono text-xs font-bold uppercase text-accent-purple tracking-wider mb-1">Platform Insight</span>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 font-light">{activeSolution.insight}</p>
+                  <span className="block font-mono font-bold uppercase text-accent-purple tracking-wider mb-1">Platform Insight</span>
+                  <p className=" text-slate-600 dark:text-slate-400 font-light">{activeSolution.insight}</p>
                 </div>
               </div>
             </div>
@@ -254,10 +254,10 @@ export default function MergedSolutions() {
             {/* Right Column: Dynamic Relevant Modules Grid */}
             <div className="lg:col-span-7 flex flex-col justify-center">
               <div className="text-left mb-6">
-                <span className="text-xs font-mono font-bold text-accent-purple uppercase tracking-wider block mb-1">
+                <span className="font-mono font-bold text-accent-purple uppercase tracking-wider block mb-1">
                   RELEVANT MODULES
                 </span>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
+                <p className="text-slate-500 dark:text-slate-400">
                   These core modules support the specific needs of {activeSolution.title}.
                 </p>
               </div>
@@ -274,10 +274,10 @@ export default function MergedSolutions() {
                       <div className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 w-max text-accent-purple group-hover:bg-accent-purple/10 transition-colors duration-300 mb-4">
                         <ModuleIcon className="w-5 h-5" />
                       </div>
-                      <h4 className="font-display font-bold text-sm sm:text-base text-primary dark:text-white mb-2">
+                      <h4 className="font-display text-sm sm:text-base text-primary dark:text-white mb-2">
                         {moduleName}
                       </h4>
-                      <p className="text-slate-500 dark:text-slate-400 font-light leading-relaxed text-sm">
+                      <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
                         {moduleDesc}
                       </p>
                     </div>
@@ -289,7 +289,7 @@ export default function MergedSolutions() {
               <div className="text-right mt-6">
                 <a
                   href="/features"
-                  className="inline-flex items-center space-x-1 text-xs font-semibold text-accent-purple hover:text-[#6c28e2] transition-colors"
+                  className="inline-flex items-center space-x-1 font-semibold text-accent-purple hover:text-[#6c28e2] transition-colors"
                 >
                   <span>View All Modules</span>
                   <ArrowRight className="w-3.5 h-3.5" />

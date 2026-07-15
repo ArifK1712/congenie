@@ -65,10 +65,10 @@ export default function FAQSection() {
             <HelpCircle className="w-3.5 h-3.5" />
             <span>FAQs</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white tracking-tight">
+          <h2 className="font-display text-primary dark:text-white">
             Frequently Asked Questions
           </h2>
-          <p className="mt-2 text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+          <p className="mt-2 text-slate-500 dark:text-slate-400 leading-relaxed">
             Everything you need to know about the ConGenie platform.
           </p>
         </div>
@@ -124,7 +124,7 @@ export default function FAQSection() {
                       transition={{ duration: 0.25, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <p className="px-6 pb-5 text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-light">
+                      <p className="px-6 pb-5 text-slate-600 dark:text-slate-400">
                         {faq.answer}
                       </p>
                     </motion.dd>

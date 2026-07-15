@@ -54,7 +54,7 @@ export default function TrustedBy() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white">
+          <h2 className="font-display text-primary dark:text-white">
             Built for Large-Scale, Complex Events
           </h2>
           <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">

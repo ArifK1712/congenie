@@ -55,10 +55,10 @@ export default function Testimonials() {
         
         {/* Section Heading */}
         <div className="mb-8">
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white tracking-tight">
+          <h2 className="font-display text-primary dark:text-white">
             What Our Clients Say
           </h2>
-          <p className="mt-3 text-slate-500 dark:text-slate-400 font-light">
+          <p className="mt-3 text-slate-500 dark:text-slate-400">
             Trusted by event professionals across industries worldwide.
           </p>
         </div>
@@ -99,10 +99,10 @@ export default function Testimonials() {
                   className="w-12 h-12 rounded-full object-cover border-2 border-accent-blue/30 shadow-md"
                 />
                 <div className="text-left">
-                  <h4 className="text-sm font-bold text-slate-850 dark:text-slate-100">
+                  <h4 className="text-sm text-slate-850 dark:text-slate-100">
                     {reviews[currentIdx].name}
                   </h4>
-                  <p className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-light">
+                  <p className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">
                     {reviews[currentIdx].role} • {reviews[currentIdx].event}
                   </p>
                 </div>

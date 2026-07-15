@@ -269,7 +269,7 @@ function SideFeature({ feature, isOn, onHover, onLeave }) {
     >
       {/* Title — always at full opacity */}
       <h4
-        className="font-display font-extrabold text-[15px] xl:text-lg leading-snug mb-1.5"
+        className="font-display text-[15px] xl:text-lg leading-snug mb-1.5"
         style={{
           color: isOn ? '#843df5' : 'rgba(5,8,59,0.10)',
           transition: 'color 0.6s ease',
@@ -319,7 +319,7 @@ function MobileItem({ feature, index, reduced }) {
           style={{ height: 'calc(100% - 8px)', background: 'linear-gradient(180deg, rgba(132,61,245,0.22), transparent)' }} />
       )}
 
-      <h4 className="font-display font-extrabold text-base mb-1" style={{ color: '#05083B' }}>
+      <h4 className="font-display text-base mb-1" style={{ color: '#05083B' }}>
         {feature.title}
       </h4>
       <p className="text-sm font-light leading-relaxed" style={{ color: '#5E6175' }}>
@@ -376,7 +376,7 @@ export default function WhyConGenie() {
               <span className="w-8 h-px" style={{ background: 'linear-gradient(270deg, transparent, rgba(132,61,245,0.5))' }} />
             </div>
 
-            <h2 className="font-display font-extrabold text-3xl xl:text-[2.6rem] tracking-tight leading-tight max-w-[850px] mx-auto"
+            <h2 className="font-display max-w-[850px] mx-auto"
               style={{ color: '#05083B' }}>
               Enterprise Event Tech You Can Rely On
             </h2>
@@ -455,7 +455,7 @@ export default function WhyConGenie() {
           <div className="text-center mb-14">
             <span className="text-[10px] font-bold uppercase tracking-[0.3em] block mb-3"
               style={{ color: 'rgb(132,61,245)' }}>Why ConGenie</span>
-            <h2 className="font-display font-extrabold text-2xl sm:text-3xl tracking-tight leading-tight"
+            <h2 className="font-display"
               style={{ color: '#05083B' }}>
               Enterprise Event Tech You Can Rely On
             </h2>

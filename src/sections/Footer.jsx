@@ -48,14 +48,14 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#0a0f24] text-slate-400 border-t border-slate-900 pt-16 pb-12 transition-colors duration-300">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto">
         
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-slate-900">
           
           {/* Logo & Description Column */}
           <div className="lg:col-span-4 space-y-6 text-left">
-            <p className="text-xs text-slate-400 leading-relaxed font-light max-w-sm">
+            <p className="text-slate-400 leading-relaxed max-w-sm">
               {footerConfig.description}
             </p>
 
@@ -80,24 +80,24 @@ export default function Footer() {
           </div>
 
           {/* Solutions Column */}
-          <div className="lg:col-span-2 text-left space-y-4">
+          <div className="lg:col-span-3 text-left space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Solutions</h4>
-            <ul className="space-y-2.5 text-xs">
+            <ul className="space-y-2.5">
               {footerConfig.solutions.map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="hover:text-accent-cyan transition-colors font-light">{item.label}</Link>
+                  <Link href={item.href} className="hover:text-accent-purple transition-colors font-light">{item.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Modules Column */}
-          <div className="lg:col-span-2 text-left space-y-4">
+          <div className="lg:col-span-3 text-left space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Modules</h4>
-            <ul className="space-y-2.5 text-xs">
+            <ul className="space-y-2.5">
               {footerConfig.modules.map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="hover:text-accent-cyan transition-colors font-light">{item.label}</Link>
+                  <Link href={item.href} className="hover:text-accent-purple transition-colors font-light">{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -106,7 +106,7 @@ export default function Footer() {
           {/* Contact Column */}
           <div className="lg:col-span-2 text-left space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Contact</h4>
-            <ul className="space-y-2.5 text-xs font-light">
+            <ul className="space-y-2.5 font-light">
               <li className="text-slate-400">{footerConfig.companyName}</li>
               {footerConfig.email && (
                 <li className="hover:text-white transition-colors">
@@ -116,42 +116,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter Column */}
-          <div className="lg:col-span-2 text-left space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Newsletter</h4>
-            <p className="text-[10px] text-slate-450 leading-relaxed font-light">
-              Get bi-weekly enterprise updates on B2B matchmaking strategies and check-in hardware.
-            </p>
-
-            <form onSubmit={handleSubscribe} className="relative flex items-center">
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-[#0d132d] border border-slate-900 rounded-xl py-3 pl-3 pr-10 text-[10px] text-white placeholder-slate-550 focus:outline-none focus:border-slate-800 transition-colors"
-                placeholder="Email address"
-              />
-              <button
-                type="submit"
-                className="absolute right-1 p-2 rounded-lg bg-accent-blue hover:bg-accent-purple text-white transition-colors"
-                aria-label="Subscribe to newsletter"
-              >
-                <Send className="w-3.5 h-3.5" />
-              </button>
-            </form>
-            
-            {subscribed && (
-              <p className="text-[9px] text-green-500 font-semibold animate-pulse">
-                Successfully subscribed!
-              </p>
-            )}
-          </div>
-
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] text-slate-500 space-y-4 sm:space-y-0">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-slate-500 space-y-4 sm:space-y-0">
           <p>© {new Date().getFullYear()} {footerConfig.companyName}. All rights reserved.</p>
           <div className="flex space-x-6">
             {footerConfig.legal.map((item) => (

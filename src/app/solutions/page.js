@@ -88,10 +88,10 @@ export default function SolutionsPage() {
           <Sparkles className="w-3.5 h-3.5" />
           <span>Tailored Event Solutions</span>
         </div>
-        <h1 className="font-display font-extrabold text-4xl sm:text-6.5xl text-primary dark:text-white tracking-tight leading-tight max-w-4xl mx-auto">
+        <h1 className="font-display text-primary dark:text-white max-w-4xl mx-auto">
           Built for the Unique Complexities of Your Industry
         </h1>
-        <p className="mt-6 text-sm sm:text-base text-slate-550 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+        <p className="mt-6 text-sm sm:text-base text-slate-550 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
           Every event format demands its own custom workflows. ConGenie adapts to your security regulations, networking requirements, and attendee numbers out of the box.
         </p>
       </div>
@@ -116,11 +116,11 @@ export default function SolutionsPage() {
                   </div>
                   
                   <span className="text-[10px] font-bold text-accent-cyan uppercase tracking-wider block">{sol.tagline}</span>
-                  <h3 className="font-display font-extrabold text-xl text-primary dark:text-white mt-1.5 mb-3 group-hover:text-accent-purple dark:group-hover:text-accent-cyan transition-colors">
+                  <h3 className="font-display text-xl text-primary dark:text-white mt-1.5 mb-3 group-hover:text-accent-purple dark:group-hover:text-accent-cyan transition-colors">
                     {sol.title}
                   </h3>
                   
-                  <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 leading-relaxed mb-6">
                     {sol.desc}
                   </p>
 
@@ -151,10 +151,10 @@ export default function SolutionsPage() {
 
         {/* Bottom Contact Panel */}
         <div className="mt-20 border border-slate-200/80 dark:border-slate-850 bg-white dark:bg-[#070a1e]/40 rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto shadow-xl">
-          <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-primary dark:text-white mb-3">
+          <h3 className="font-display text-2xl sm:text-3xl text-primary dark:text-white mb-3">
             Running a unique event configuration?
           </h3>
-          <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light max-w-lg mx-auto mb-8">
+          <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 max-w-lg mx-auto mb-8">
             Tell us about your expected attendee count, ticketing tiers, and API database systems. We will build a customized integration demo for your organization.
           </p>
           <Link

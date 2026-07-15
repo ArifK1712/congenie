@@ -38,10 +38,10 @@ export default function Home() {
               <Sparkles className="w-3.5 h-3.5 text-accent-purple" />
               <span>Unified Event Lifecycle Stack</span>
             </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-primary dark:text-white tracking-tight leading-tight">
+            <h2 className="font-display text-primary dark:text-white">
               Pre-Event, Onsite, and Post-Event Under One Roof
             </h2>
-            <p className="mt-4 text-slate-555 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-slate-555 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
               ConGenie unifies disjointed systems into a single intelligent platform. Instead of copying spreadsheets between separate ticketing, speaker portals, and scanner apps, all modules run on a shared, real-time database.
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function Home() {
                       <span className="font-mono text-xs font-bold text-slate-400 dark:text-slate-500 tracking-wider">STAGE 01</span>
                     </div>
 
-                    <h3 className="font-display font-extrabold text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
+                    <h3 className="font-display text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Pre-Event Setup & Sales
                     </h3>
                     <p className="text-slate-555 dark:text-slate-400 font-light leading-relaxed">
@@ -110,10 +110,10 @@ export default function Home() {
                       <span className="font-mono text-xs font-bold text-slate-400 dark:text-slate-500 tracking-wider">STAGE 02</span>
                     </div>
 
-                    <h3 className="font-display font-extrabold text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
+                    <h3 className="font-display text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Onsite Event Operations
                     </h3>
-                    <p className="text-slate-555 dark:text-slate-400 font-light leading-relaxed">
+                    <p className="text-slate-555 dark:text-slate-400 leading-relaxed">
                       Scan guest tickets using offline-capable check-in apps, trigger thermal badge printing, and monitor real-time attendance counts in the room portals.
                     </p>
                   </div>
@@ -153,10 +153,10 @@ export default function Home() {
                       <span className="font-mono text-xs font-bold text-slate-400 dark:text-slate-500 tracking-wider">STAGE 03</span>
                     </div>
 
-                    <h3 className="font-display font-extrabold text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
+                    <h3 className="font-display text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Post-Event ROI Insights
                     </h3>
-                    <p className="text-slate-555 dark:text-slate-400 font-light leading-relaxed">
+                    <p className="text-slate-555 dark:text-slate-400 leading-relaxed">
                       Audit sponsor booth ROI, generate financial charts, and send CME completion certificates. Collect surveys and compile overall event performance summaries.
                     </p>
                   </div>

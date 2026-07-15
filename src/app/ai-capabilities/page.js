@@ -114,10 +114,10 @@ export default function AICapabilitiesPage() {
           <Sparkles className="w-3.5 h-3.5" />
           <span>Intelligent Event Orchestration</span>
         </div>
-        <h1 className="font-display font-extrabold text-4xl sm:text-6.5xl text-white tracking-tight leading-tight max-w-4xl mx-auto">
+        <h1 className="font-display text-white max-w-4xl mx-auto">
           Futuristic Event Tech Powered by Machine Learning
         </h1>
-        <p className="mt-6 text-sm sm:text-base text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+        <p className="mt-6 text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl mx-auto">
           Let AI handle your complex agenda planning, guest matchmaking, automated sponsor reporting, and 24/7 support ticketing. Focus on strategy, not manual work.
         </p>
       </div>
@@ -137,7 +137,7 @@ export default function AICapabilitiesPage() {
               />
             </div>
             
-            <h3 className="font-display font-extrabold text-2xl text-white mb-3 flex items-center space-x-2">
+            <h3 className="font-display text-2xl text-white mb-3 flex items-center space-x-2">
               <Brain className="w-6 h-6 text-accent-cyan" />
               <span>Ask the ConGenie Copilot</span>
             </h3>
@@ -203,10 +203,10 @@ export default function AICapabilitiesPage() {
       {/* Grid of 9 AI capabilities */}
       <div className="max-w-[1400px] mx-auto px-4 pb-32 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="font-display font-extrabold text-3xl sm:text-4.5xl text-white tracking-tight">
+          <h2 className="font-display text-white">
             Complete Suite of Intelligent Capabilities
           </h2>
-          <p className="mt-4 text-xs sm:text-sm text-slate-400 font-light">
+          <p className="mt-4 text-xs sm:text-sm text-slate-400">
             An ecosystem of models designed specifically for security, attendee engagement, and corporate coordination.
           </p>
         </div>
@@ -228,11 +228,11 @@ export default function AICapabilitiesPage() {
                     <Icon className="w-5 h-5" />
                   </div>
                   
-                  <h3 className="font-display font-extrabold text-lg text-white mb-3">
+                  <h3 className="font-display text-lg text-white mb-3">
                     {ai.title}
                   </h3>
                   
-                  <p className="text-xs sm:text-sm text-slate-400 font-light leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6">
                     {ai.desc}
                   </p>
                 </div>
@@ -249,10 +249,10 @@ export default function AICapabilitiesPage() {
 
         {/* Bottom CTA Card */}
         <div className="mt-20 border border-accent-purple/30 bg-gradient-to-r from-accent-purple/10 to-accent-blue/10 rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto backdrop-blur-md">
-          <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-white mb-4">
+          <h3 className="font-display text-2xl sm:text-3xl text-white mb-4">
             Want to see how it works in real-time?
           </h3>
-          <p className="text-xs sm:text-sm text-slate-400 font-light max-w-lg mx-auto mb-8">
+          <p className="text-xs sm:text-sm text-slate-400 max-w-lg mx-auto mb-8">
             Schedule a session with our event architecture experts. We will build a sandbox template tailored specifically to your upcoming event parameters.
           </p>
           <Link

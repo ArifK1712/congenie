@@ -53,7 +53,7 @@ export default function RoleBasedAccess() {
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-accent-purple/30 bg-accent-purple/5 text-accent-purple text-xs font-semibold mb-4">
             <span>Granular Permissions</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white">
+          <h2 className="font-display text-primary dark:text-white">
             Role-Based Access for Safe Collaboration
           </h2>
           <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">

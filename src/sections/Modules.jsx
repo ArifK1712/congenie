@@ -484,10 +484,10 @@ export default function Modules() {
             <Sparkles className="w-3.5 h-3.5 text-accent-purple" />
             <span>Platform Modules</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-primary dark:text-white tracking-tight leading-tight">
+          <h2 className="font-display text-primary dark:text-white">
             Feature-Rich Modules for Seamless Coordination
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-slate-550 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-sm sm:text-base text-slate-550 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
             A complete event technology stack under one roof. Hover or click a module to activate its live simulated dashboard preview in the central Command Center.
           </p>
         </div>

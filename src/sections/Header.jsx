@@ -91,10 +91,10 @@ useEffect(() => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`font-normal text-md transition-colors ${
+                  className={`transition-colors ${
                     isActive 
-                      ? 'text-accent-purple dark:text-accent-cyan font-bold' 
-                      : 'text-slate-600 hover:text-accent-blue dark:text-slate-300 dark:hover:text-accent-cyan'
+                      ? 'text-accent-purple dark:text-accent-purple font-medium' 
+                      : 'text-slate-600 hover:text-accent-purple dark:text-slate-300 dark:hover:text-accent-purple'
                   }`}
                 >
                   {link.name}

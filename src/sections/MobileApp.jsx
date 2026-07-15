@@ -49,10 +49,10 @@ export default function MobileApp() {
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-accent-cyan/30 bg-accent-cyan/5 text-accent-cyan text-xs font-semibold mb-4">
               <span>Attendee Experience</span>
             </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white mb-6">
+            <h2 className="font-display text-primary dark:text-white mb-6">
               Empower Attendees with a Sleek Native App Experience
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed font-light">
+            <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
               Make B2B networking, navigation, schedules, and surveys accessible in one place. White-label app options available for enterprise customers.
             </p>
 

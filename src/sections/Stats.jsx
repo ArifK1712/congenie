@@ -76,7 +76,7 @@ export default function Stats() {
                   </div>
 
                   {/* Value + Suffix */}
-                  <h3 className="flex items-baseline">
+                  <div className="flex items-baseline">
                     <span className="font-display font-black text-4xl sm:text-5xl text-white transition-colors duration-300 group-hover:text-accent-purple">
                       <Counter value={stat.value} duration={1.8} />
                       {stat.suffix && (
@@ -85,10 +85,10 @@ export default function Stats() {
                         </span>
                       )}
                     </span>
-                  </h3>
+                  </div>
 
                   {/* Label */}
-                  <p className="mt-2 text-sm text-slate-400 font-light tracking-wide">
+                  <p className="mt-2 text-slate-400 tracking-wide">
                     {stat.label}
                   </p>
                 </motion.div>

@@ -4,12 +4,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ChevronRight } from 'lucide-react';
 import gsap from 'gsap';
-import dashboardMockup from '../assets/dashboard_mockup.jpg';
-import aiOrb from '../assets/ai_orb.jpg';
-import mobileAppScreen from '../assets/mobile_app_screen.jpg';
-import heroCardAttendee from '../assets/hero_card_attendee.jpg';
-import lightDashboardMockup from '../assets/light_dashboard_mockup.jpg';
-import onsiteKioskMockup from '../assets/onsite_kiosk_mockup.jpg';
+import dashboardMockup from '../assets/dashboard-mockup.webp';
+import aiOrb from '../assets/badge-module.webp';
+import mobileAppScreen from '../assets/app-attendee.webp';
+import heroCardAttendee from '../assets/support.webp';
+import attendeePortrait from '../assets/ai-congenie.webp';
+import lightDashboardMockup from '../assets/light-dashboard.webp';
+import onsiteKioskMockup from '../assets/event-app.webp';
 
 export default function Hero() {
   const [isMounted, setIsMounted] = useState(false);
@@ -85,15 +86,15 @@ export default function Hero() {
     { 
       src: aiOrb, 
       alt: 'AI Orb Tech', 
-      className: 'w-[50px] sm:w-[9vw] aspect-[3/4] translate-y-10 z-10 opacity-70 border border-white/5 bg-slate-950/40 p-1 sm:p-2 backdrop-blur-md rounded-2xl flex-shrink-0 shadow-lg shadow-black/30'
+      className: 'w-[50px] sm:w-[9vw] aspect-[3/4] translate-y-10 z-10 border border-white/5 bg-slate-950/40 p-1 sm:p-2 backdrop-blur-md rounded-2xl flex-shrink-0 shadow-lg shadow-black/30'
     },
     { 
       src: mobileAppScreen, 
       alt: 'Attendee App Layout', 
-      className: 'w-[60px] sm:w-[11vw] aspect-[3/4] translate-y-5 z-20 opacity-85 border border-white/8 bg-slate-950/45 p-1 sm:p-2 backdrop-blur-md rounded-2xl flex-shrink-0 shadow-xl shadow-black/40'
+      className: 'w-[60px] sm:w-[11vw] aspect-[3/4] translate-y-5 z-20 border border-white/8 bg-slate-950/45 p-1 sm:p-2 backdrop-blur-md rounded-2xl flex-shrink-0 shadow-xl shadow-black/40'
     },
     { 
-      src: heroCardAttendee, 
+      src: attendeePortrait, 
       alt: 'Event Attendee Portrait', 
       className: 'w-[75px] sm:w-[13vw] aspect-[3/4] translate-y-1 z-30 border border-white/10 bg-slate-950/50 p-1 sm:p-2 backdrop-blur-md rounded-2xl flex-shrink-0 shadow-2xl shadow-black/50'
     },
@@ -111,12 +112,12 @@ export default function Hero() {
     { 
       src: onsiteKioskMockup, 
       alt: 'Attendee Ticket QR', 
-      className: 'w-[60px] sm:w-[11vw] aspect-[3/4] translate-y-5 z-20 opacity-85 border border-white/8 bg-slate-950/45 p-1 sm:p-2 backdrop-blur-md rounded-2xl flex-shrink-0 shadow-xl shadow-black/40'
+      className: 'w-[60px] sm:w-[11vw] aspect-[3/4] translate-y-5 z-20 border border-white/8 bg-slate-950/45 p-1 sm:p-2 backdrop-blur-md rounded-2xl flex-shrink-0 shadow-xl shadow-black/40'
     },
     { 
       src: heroCardAttendee, 
       alt: 'Event Attendee Portrait Copy', 
-      className: 'w-[50px] sm:w-[9vw] aspect-[3/4] translate-y-10 z-10 opacity-70 border border-white/5 bg-slate-950/40 p-1 sm:p-2 backdrop-blur-md rounded-2xl flex-shrink-0 shadow-lg shadow-black/30'
+      className: 'w-[50px] sm:w-[9vw] aspect-[3/4] translate-y-10 z-10 border border-white/5 bg-slate-950/40 p-1 sm:p-2 backdrop-blur-md rounded-2xl flex-shrink-0 shadow-lg shadow-black/30'
     },
   ];
 
@@ -169,15 +170,11 @@ export default function Hero() {
         <motion.h1 
           ref={headingRef}
           variants={itemVariants}
-          className="font-display font-extrabold text-4xl sm:text-5xl lg:text-7xl tracking-tight leading-[1.05] text-white max-w-5xl"
+          className="font-display text-white max-w-5xl"
         >
           {!isMounted ? (
             <>
-              Manage Your Entire Event Lifecycle with{' '}
-              <span className="bg-gradient-to-r from-accent-purple via-accent-blue to-accent-cyan bg-clip-text text-transparent">
-                One Intelligent
-              </span>{' '}
-              Platform
+              Manage Your Entire Event Lifecycle with One Intelligent Platform              
             </>
           ) : (
             <>
@@ -186,7 +183,7 @@ export default function Hero() {
                   {char}
                 </span>
               ))}
-              <span className="bg-gradient-to-r from-accent-purple via-accent-blue to-accent-cyan bg-clip-text text-transparent">
+              <span>
                 {"One Intelligent".split("").map((char, index) => (
                   <span key={`t2-${index}`} className="hero-char" style={{ display: 'none', opacity: 0 }}>
                     {char}
@@ -206,7 +203,7 @@ export default function Hero() {
         {/* Subheading */}
         <motion.p 
           variants={itemVariants}
-          className="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed font-light max-w-3xl"
+          className="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl"
         >
           From registration and agenda planning to onsite check-in, matchmaking, payments, accommodation, analytics, and post-event reporting — our AI-powered event software helps organizers deliver smarter, faster, and more engaging events.
         </motion.p>

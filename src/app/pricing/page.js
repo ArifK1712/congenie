@@ -105,10 +105,10 @@ export default function PricingPage() {
           <Sparkles className="w-3.5 h-3.5" />
           <span>Flexible Licensing</span>
         </div>
-        <h1 className="font-display font-extrabold text-4xl sm:text-6.5xl text-primary dark:text-white tracking-tight leading-tight max-w-4xl mx-auto">
+        <h1 className="font-display text-primary dark:text-white max-w-4xl mx-auto">
           Scale-Ready Licensing Built for Every Event Format
         </h1>
-        <p className="mt-6 text-sm sm:text-base text-slate-550 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+        <p className="mt-6 text-sm sm:text-base text-slate-550 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
           We operate on a flat licensing model based on your event scale and required modules. No hidden transaction commission surcharges. Select a plan below to request pricing or book a live demo.
         </p>
       </div>
@@ -138,10 +138,10 @@ export default function PricingPage() {
                 )}
 
                 <div>
-                  <h3 className="font-display font-extrabold text-xl text-primary dark:text-white mb-2">
+                  <h3 className="font-display text-xl text-primary dark:text-white mb-2">
                     {plan.name}
                   </h3>
-                  <p className="text-xs text-slate-550 dark:text-slate-400 min-h-[50px] leading-relaxed font-light mb-6">
+                  <p className="text-xs text-slate-550 dark:text-slate-400 min-h-[50px] leading-relaxed mb-6">
                     {plan.desc}
                   </p>
                   
@@ -181,7 +181,7 @@ export default function PricingPage() {
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Licensing FAQ</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl text-primary dark:text-white">
+          <h2 className="font-display text-primary dark:text-white">
             Frequently Asked Pricing Questions
           </h2>
         </div>
@@ -210,7 +210,7 @@ export default function PricingPage() {
                       exit={{ height: 0 }}
                       className="overflow-hidden"
                     >
-                      <p className="px-6 pb-6 text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed border-t border-slate-100 dark:border-slate-800/60 pt-4">
+                      <p className="px-6 pb-6 text-xs sm:text-sm text-slate-550 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/60 pt-4">
                         {faq.a}
                       </p>
                     </motion.div>

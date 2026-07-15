@@ -50,7 +50,7 @@ export default function AICapabilities() {
             <Bot className="w-4 h-4 text-accent-cyan" />
             <span>Intelligent Automation Engine</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white">
+          <h2 className="font-display text-white">
             Built with AI to Make Event Management Smarter
           </h2>
           <p className="mt-4 text-lg text-slate-400">
@@ -72,7 +72,7 @@ export default function AICapabilities() {
               />
             </div>
             
-            <h3 className="font-display font-bold text-xl text-white mb-4 flex items-center space-x-2">
+            <h3 className="text-xl font-display text-white mb-4 flex items-center space-x-2">
               <Brain className="w-5 h-5 text-accent-cyan" />
               <span>Ask the ConGenie Copilot</span>
             </h3>

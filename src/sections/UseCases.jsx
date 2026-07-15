@@ -50,14 +50,14 @@ export default function UseCases() {
             <span>Industry Solutions</span>
           </div>
 
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#0A1744] tracking-tight leading-tight">
+          <h2 className="font-display text-[#0A1744]">
             Built for Every{' '}
             <span className="bg-gradient-to-r from-[#6B21A8] via-[#9333EA] to-[#C084FC] bg-clip-text text-transparent">
               Event Environment
             </span>
           </h2>
 
-          <p className="mt-4 text-slate-500 font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-slate-500 leading-relaxed max-w-2xl mx-auto">
             From global conferences and exhibitions to medical congresses, trade missions, and government summits, ConGenie delivers purpose-built workflows for every event format.
           </p>
 
@@ -136,7 +136,7 @@ export default function UseCases() {
                 </div>
 
                 <div className="space-y-3">
-                  <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-[#0A1744] tracking-tight leading-tight">
+                  <h3 className="font-display text-[#0A1744]">
                     Conferences & Summits
                   </h3>
                   <p className="text-slate-500 font-light leading-relaxed">
@@ -211,7 +211,7 @@ export default function UseCases() {
                   </div>
                   <span className="text-xs font-semibold tracking-wider text-[#9333EA] bg-[#9333EA]/6 px-2 py-0.5 rounded">EXPO</span>
                 </div>
-                <h4 className="font-display font-extrabold text-lg text-[#0A1744] tracking-tight">Exhibitions & Expos</h4>
+                <h4 className="font-display text-lg text-[#0A1744]">Exhibitions & Expos</h4>
                 <p className=" text-slate-500 font-light leading-relaxed line-clamp-2">
                   Manage exhibitors, floor plans, lead capture, booth activity, and visitor engagement from one connected platform.
                 </p>
@@ -263,7 +263,7 @@ export default function UseCases() {
                   </div>
                   <span className="text-xs font-semibold tracking-wider text-[#9333EA] bg-[#9333EA]/6 px-2 py-0.5 rounded">CORPORATE</span>
                 </div>
-                <h4 className="font-display font-extrabold text-lg text-[#0A1744] tracking-tight">Corporate Events & AGMs</h4>
+                <h4 className="font-display text-lg text-[#0A1744]">Corporate Events & AGMs</h4>
                 <p className="text-slate-500 font-light leading-relaxed line-clamp-2">
                   Deliver secure, branded corporate events with registration, document access, voting, and SSO support.
                 </p>
@@ -315,7 +315,7 @@ export default function UseCases() {
                   </div>
                   <span className="text-xs font-semibold tracking-wider text-[#9333EA] bg-[#9333EA]/6 px-2 py-0.5 rounded">MEDICAL</span>
                 </div>
-                <h4 className="font-display font-extrabold text-lg text-[#0A1744] tracking-tight">Medical Congresses</h4>
+                <h4 className="font-display text-lg text-[#0A1744]">Medical Congresses</h4>
                 <p className=" text-slate-500 font-light leading-relaxed line-clamp-2">
                   Support abstracts, CME credits, scientific committees, certificates, and faculty workflows for medical events.
                 </p>
@@ -367,7 +367,7 @@ export default function UseCases() {
                   </div>
                   <span className="text-xs font-semibold tracking-wider text-[#9333EA] bg-[#9333EA]/6 px-2 py-0.5 rounded">B2B</span>
                 </div>
-                <h4 className="font-display font-extrabold text-lg text-[#0A1744] tracking-tight">Trade Missions</h4>
+                <h4 className="font-display text-lg text-[#0A1744]">Trade Missions</h4>
                 <p className=" text-slate-500 font-light leading-relaxed line-clamp-2">
                   Coordinate buyers, sellers, delegations, matchmaking, meeting schedules, and business outcomes.
                 </p>
@@ -422,7 +422,7 @@ export default function UseCases() {
                     </div>
                     <span className="text-xs font-semibold tracking-wider text-[#9333EA] bg-[#9333EA]/6 px-2 py-0.5 rounded uppercase">GOVERNMENT</span>
                   </div>
-                  <h4 className="font-display font-extrabold text-lg sm:text-xl text-[#0A1744] tracking-tight">Government Summits</h4>
+                  <h4 className="font-display text-lg sm:text-xl text-[#0A1744]">Government Summits</h4>
                   <p className="text-slate-500 font-light leading-relaxed">
                     Enable secure check-in, VIP protocols, encrypted credentials, delegate management, and offline validation.
                   </p>

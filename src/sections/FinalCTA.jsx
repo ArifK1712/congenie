@@ -36,11 +36,11 @@ export default function FinalCTA() {
               <span>Get Started Today</span>
             </div>
             
-            <h2 className="font-display font-extrabold text-3xl sm:text-5xl tracking-tight leading-tight text-white max-w-3xl">
+            <h2 className="font-display text-white max-w-3xl">
               Ready to Run Smarter Events?
             </h2>
             
-            <p className="text-sm sm:text-base text-slate-400 font-light leading-relaxed max-w-xl">
+            <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-xl">
               Explore the platform yourself or speak with our team about your next event.
             </p>
 

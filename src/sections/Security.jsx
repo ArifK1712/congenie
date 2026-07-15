@@ -35,8 +35,8 @@ export default function Security() {
             <ShieldCheck className="w-4 h-4" />
             <span>High Security Standards</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white">
-            Enterprise-Grade Security & Global Scalability
+          <h2 className="font-display text-primary dark:text-white">
+            Enterprise-Grade Security &amp; Global Scalability
           </h2>
           <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
             Trusted by governments and international congresses. We guarantee data privacy, compliance, and flawless platform reliability.

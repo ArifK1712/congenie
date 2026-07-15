@@ -67,7 +67,7 @@ export default function Pricing() {
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-accent-blue/30 bg-accent-blue/5 text-accent-blue text-xs font-semibold mb-4">
             <span>Enterprise Tiers</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-primary dark:text-white">
+          <h2 className="font-display text-primary dark:text-white">
             Flexible Licensing Tiers for Every Scale
           </h2>
           <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
@@ -99,10 +99,10 @@ export default function Pricing() {
                 )}
 
                 <div>
-                  <h3 className="font-display font-black text-xl text-primary dark:text-white mb-2">
+                  <h3 className="font-display text-xl text-primary dark:text-white mb-2">
                     {plan.name}
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 min-h-[50px] leading-relaxed font-light mb-6">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 min-h-[50px] leading-relaxed mb-6">
                     {plan.desc}
                   </p>
                   

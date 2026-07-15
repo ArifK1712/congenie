@@ -223,11 +223,10 @@ export default function DashboardPreview() {
             <Sparkles className="w-3.5 h-3.5" />
             <span>Role-Based Experience</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-primary dark:text-white tracking-tight leading-tight">
-            Explore ConGenie Through Every{' '}
-            <span className="bg-gradient-to-r from-accent-blue to-accent-purple bg-clip-text text-transparent">User&apos;s Workspace</span>
+          <h2 className="font-display text-primary dark:text-white">
+            Explore ConGenie Through Every User's Workspace
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-slate-500 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
             Each role receives a tailored workspace based on their responsibilities — from registration management to financial reporting, agenda planning, and attendee engagement.
           </p>
 
@@ -295,10 +294,10 @@ export default function DashboardPreview() {
 
                   {/* Text Content */}
                   <div className="flex-1 min-w-[120px]">
-                    <h4 className="font-display font-extrabold text-sm text-slate-800 dark:text-white leading-tight">
+                    <h6 className="font-display text-slate-800 dark:text-white">
                       {role.label}
-                    </h4>
-                    <p className="text-[10px] text-slate-400 dark:text-slate-450 font-light mt-0.5 uppercase tracking-wider">
+                    </h6>
+                    <p className="text-xs text-slate-400 dark:text-slate-450 mt-0.5 uppercase tracking-wider">
                       {role.sublabel}
                     </p>
                   </div>
@@ -361,7 +360,7 @@ export default function DashboardPreview() {
                           className="bg-slate-100/60 dark:bg-[#0e1634]/55 border border-slate-200/40 dark:border-slate-800/40 p-4 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300"
                         >
                           <div className="flex justify-between items-start">
-                            <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium leading-tight">
+                            <span className="text-xs text-slate-500 dark:text-slate-400 leading-tight">
                               {kpi.label}
                             </span>
                             <div 
@@ -393,7 +392,7 @@ export default function DashboardPreview() {
                     {/* Main Chart Visualization */}
                     <div className="md:col-span-8 bg-slate-100/40 dark:bg-[#0b1028]/40 p-5 rounded-2xl border border-slate-200/40 dark:border-slate-800/40 flex flex-col justify-between min-h-[320px]">
                       <div className="flex justify-between items-center mb-3">
-                        <h4 className="text-xs sm:text-sm font-bold text-slate-800 dark:text-white">
+                        <h4 className="text-xs sm:text-sm text-slate-800 dark:text-white">
                           {activeRole.chartTitle}
                         </h4>
                         <span 
@@ -589,10 +588,10 @@ export default function DashboardPreview() {
                         <Sparkles className="w-4 h-4" style={{ color: activeRole.accent }} />
                       </div>
                       <div>
-                        <span className="text-[9px] font-mono font-bold tracking-widest uppercase block" style={{ color: activeRole.accent }}>
+                        <span className="font-mono font-bold tracking-widest uppercase block" style={{ color: activeRole.accent }}>
                           CONGENIE ENGINE • AUTOMATION METRICS
                         </span>
-                        <p className="text-xs text-slate-650 dark:text-slate-350 font-light mt-0.5 leading-snug">
+                        <p className="text-sm text-slate-650 dark:text-slate-350 font-light mt-0.5 leading-snug">
                           {activeRole.aiInsight}
                         </p>
                       </div>

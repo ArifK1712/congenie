@@ -19,10 +19,10 @@ export default function AboutPage() {
           <Sparkles className="w-3.5 h-3.5" />
           <span>Product Mission</span>
         </div>
-        <h1 className="font-display font-extrabold text-4xl sm:text-6.5xl text-primary dark:text-white tracking-tight leading-tight max-w-4xl mx-auto">
+        <h1 className="font-display text-primary dark:text-white max-w-4xl mx-auto">
           Simplifying the Event Lifecycle Through Intelligent Tech
         </h1>
-        <p className="mt-6 text-sm sm:text-base text-slate-550 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+        <p className="mt-6 text-sm sm:text-base text-slate-550 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
           ConGenie was created to unite disjointed event tools—such as ticketing databases, abstract reviewer grids, check-in kiosks, and B2B scheduling widgets—into a single, high-fidelity command dashboard.
         </p>
       </div>
@@ -33,10 +33,10 @@ export default function AboutPage() {
           
           <div className="space-y-6 text-left">
             <span className="text-[10px] font-bold text-accent-purple uppercase tracking-widest block">Core Positioning</span>
-            <h2 className="font-display font-extrabold text-3xl text-primary dark:text-white">
+            <h2 className="font-display text-primary dark:text-white">
               Who is ConGenie Built For?
             </h2>
-            <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 leading-relaxed font-light">
+            <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 leading-relaxed">
               We design software for organizers managing high-complexity operations, commercial B2B matchmaking, and high-security parameters. Our platform empowers:
             </p>
             
@@ -66,8 +66,8 @@ export default function AboutPage() {
             <div className="absolute top-[-2rem] right-[-2rem] w-32 h-32 bg-accent-purple/10 rounded-full blur-2xl" />
             
             <Target className="w-8 h-8 text-accent-purple mb-6" />
-            <h3 className="font-display font-extrabold text-xl text-primary dark:text-white mb-3">Why We Created ConGenie</h3>
-            <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed mb-4">
+            <h3 className="font-display text-xl text-primary dark:text-white mb-3">Why We Created ConGenie</h3>
+            <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 leading-relaxed mb-4">
               After coordinating events for years, we noticed coordinators were constantly copying registrant spreadsheets between separate ticketing systems, abstract review grids, check-in apps, and matchmaking widgets.
             </p>
             <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 font-light leading-relaxed">
@@ -84,7 +84,7 @@ export default function AboutPage() {
           
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-[10px] font-bold text-accent-cyan uppercase tracking-widest block mb-2">Enterprise Ready</span>
-            <h2 className="font-display font-extrabold text-3xl text-primary dark:text-white">
+            <h2 className="font-display text-primary dark:text-white">
               Secure, Scalable & Compliant Infrastructure
             </h2>
           </div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
               <div className="p-3 bg-accent-purple/15 text-accent-purple rounded-2xl w-max">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-display font-extrabold text-lg text-primary dark:text-white">SOC2 & GDPR Compliance</h3>
+              <h3 className="font-display text-xl text-primary dark:text-white">SOC2 & GDPR Compliance</h3>
               <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-450 font-light leading-relaxed">
                 We prioritize user privacy and system security. Isolated database schemas, regional EU/US hosting preferences, automated cookie checks, and SAML/SSO directory syncing options.
               </p>
@@ -105,7 +105,7 @@ export default function AboutPage() {
               <div className="p-3 bg-accent-cyan/15 text-accent-cyan rounded-2xl w-max">
                 <Laptop className="w-6 h-6" />
               </div>
-              <h3 className="font-display font-extrabold text-lg text-primary dark:text-white">API Integrations</h3>
+              <h3 className="font-display text-xl text-primary dark:text-white">API Integrations</h3>
               <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-450 font-light leading-relaxed">
                 Connect your event registration streams directly to corporate CRM systems like Salesforce, HubSpot, or internal university membership rosters via REST webhooks.
               </p>
@@ -115,7 +115,7 @@ export default function AboutPage() {
               <div className="p-3 bg-accent-blue/15 text-accent-blue rounded-2xl w-max">
                 <HeartHandshake className="w-6 h-6" />
               </div>
-              <h3 className="font-display font-extrabold text-lg text-primary dark:text-white">99.9% Uptime SLA</h3>
+              <h3 className="font-display text-xl text-primary dark:text-white">99.9% Uptime SLA</h3>
               <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-450 font-light leading-relaxed">
                 Built on high-availability server clusters to guarantee stable page load speeds and offline-first check-in capabilities even under heavy attendee traffic.
               </p>
@@ -132,7 +132,7 @@ export default function AboutPage() {
           
           <div className="lg:col-span-6 text-left space-y-6">
             <span className="text-[10px] font-bold text-accent-purple uppercase tracking-widest block">Implementation SLA</span>
-            <h2 className="font-display font-extrabold text-3xl text-primary dark:text-white">
+            <h2 className="font-display text-primary dark:text-white">
               Hands-On Support & Guided Onboarding
             </h2>
             <p className="text-xs sm:text-sm text-slate-550 dark:text-slate-400 leading-relaxed font-light">
@@ -156,7 +156,7 @@ export default function AboutPage() {
 
           <div className="lg:col-span-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#070a1e]/40 p-8 rounded-3xl text-center space-y-6">
             <Rocket className="w-8 h-8 text-accent-cyan mx-auto" />
-            <h3 className="font-display font-extrabold text-xl text-primary dark:text-white">Ready to run smarter events?</h3>
+            <h3 className="font-display text-xl text-primary dark:text-white">Ready to run smarter events?</h3>
             <p className="text-xs text-slate-550 dark:text-slate-400 font-light max-w-sm mx-auto">
               Our implementation timelines average 2-4 weeks from contract to portal deployment. Let us run a audit on your event needs.
             </p>
