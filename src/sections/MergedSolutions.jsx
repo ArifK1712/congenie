@@ -288,7 +288,7 @@ export default function MergedSolutions() {
               {/* View all modules link */}
               <div className="text-right mt-6">
                 <a
-                  href="/features"
+                  href="/platform"
                   className="inline-flex items-center space-x-1 font-semibold text-accent-purple hover:text-[#6c28e2] transition-colors"
                 >
                   <span>View All Modules</span>

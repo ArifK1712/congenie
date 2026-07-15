@@ -29,7 +29,7 @@ useEffect(() => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Features', href: '/features' },
+    { name: 'Platform', href: '/platform' },
     { name: 'AI Capabilities', href: '/ai-capabilities' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Modules', href: '/modules' },
