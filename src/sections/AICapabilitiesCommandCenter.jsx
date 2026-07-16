@@ -556,18 +556,6 @@ export default function AICapabilitiesCommandCenter() {
             TABLET LAYOUT  (sm … lg)
         ══════════════════════════════════════════════════════════════ */}
         <div className="mt-14 w-full max-w-3xl hidden sm:flex lg:hidden flex-col items-center gap-10">
-          {/* Compact core */}
-          <div className="w-[210px] h-[210px] rounded-full bg-gradient-to-br from-[#0c122e] to-[#040615] border-2 border-blue-500/40 shadow-[0_0_40px_rgba(37,99,235,0.18)] flex flex-col justify-center items-center p-5 relative">
-            <div className="absolute inset-0 rounded-full border border-dashed border-cyan-400/20 aicmd-orbit-cw scale-105 pointer-events-none" />
-            <Activity className="w-6 h-6 text-cyan-400 mb-1.5 animate-pulse" />
-            <span className="text-[9px] font-mono text-slate-400 tracking-widest uppercase">ConGenie Engine</span>
-            <span className="text-xs font-extrabold text-white mt-0.5">Core Running</span>
-            <div className="w-full bg-[#050816] border border-slate-700/60 rounded-lg p-1.5 mt-2 min-h-[36px] flex flex-col justify-center items-center">
-              <span className="text-[8px] text-slate-300 font-light text-center leading-snug">
-                {modules[activeIdx].pipeline.join(' ➔ ')}
-              </span>
-            </div>
-          </div>
 
           {/* 2-col grid — Copilot first, spanning full width */}
           <div className="grid grid-cols-2 gap-5 w-full text-left">
@@ -606,14 +594,14 @@ export default function AICapabilitiesCommandCenter() {
                         <Icon className="w-4 h-4" style={{ color: m.accentA }} />
                       </div>
                       <span
-                        className="text-[8px] font-mono font-bold tracking-wider px-2 py-0.5 rounded-full uppercase border"
+                        className="text-xs font-mono font-bold tracking-wider px-2.5 py-0.5 rounded-full uppercase border transition-all duration-300"
                         style={{ color: m.badgeColor, borderColor: m.badgeBorder, background: m.badgeBg }}
                       >
                         {m.status}
                       </span>
                     </div>
-                    <h3 className="text-sm text-white">{m.title}</h3>
-                    <p className="text-[11px] text-slate-400 leading-relaxed">{m.desc}</p>
+                    <h3 className="font-semibold text-xl text-white leading-snug">{m.title}</h3>
+                    <p className="text-slate-400 leading-relaxed">{m.desc}</p>
                   </div>
                 </div>
               );
@@ -625,17 +613,7 @@ export default function AICapabilitiesCommandCenter() {
             MOBILE LAYOUT  (< sm)
         ══════════════════════════════════════════════════════════════ */}
         <div className="mt-12 w-full sm:hidden flex flex-col items-center gap-8">
-          {/* Mini core */}
-          <div className="w-[160px] h-[160px] rounded-full bg-gradient-to-br from-[#0c122e] to-[#040615] border border-blue-500/40 shadow-lg flex flex-col justify-center items-center p-4 relative">
-            <Activity className="w-5 h-5 text-cyan-400 mb-1 animate-pulse" />
-            <span className="text-[8px] font-mono text-slate-400 tracking-widest uppercase">ConGenie</span>
-            <span className="text-[10px] font-extrabold text-white">Active</span>
-            <div className="w-full bg-[#050816] border border-slate-700/60 rounded-md p-1.5 mt-2 min-h-[28px] flex flex-col justify-center items-center">
-              <span className="text-[7px] text-slate-300 text-center font-light leading-tight">
-                {modules[activeIdx].pipeline.slice(0, 2).join(' ➔ ')}…
-              </span>
-            </div>
-          </div>
+         
 
           {/* Vertical timeline */}
           <div className="relative border-l-2 border-cyan-400/20 pl-6 text-left space-y-5 w-full max-w-xs mx-auto">
@@ -666,11 +644,11 @@ export default function AICapabilitiesCommandCenter() {
                   >
                     <div className="bg-[#0c1630] p-4 rounded-[11px] space-y-2">
                       <div className="flex items-center justify-between">
-                        <span className="text-[8px] font-mono font-bold uppercase" style={{ color: m.badgeColor }}>{m.status}</span>
+                        <span className="text-xs font-mono font-bold tracking-wider px-2.5 py-0.5 rounded-full uppercase border transition-all duration-300" style={{ color: m.badgeColor }}>{m.status}</span>
                         <Icon className="w-4 h-4" style={{ color: m.accentA }} />
                       </div>
-                      <h4 className="text-xs text-white">{m.title}</h4>
-                      <p className="text-[10px] text-slate-400 leading-relaxed">{m.desc}</p>
+                      <h3 className="font-semibold text-xl text-white leading-snug">{m.title}</h3>
+                      <p className="text-slate-400 leading-relaxed">{m.desc}</p>
                     </div>
                   </div>
                 </div>

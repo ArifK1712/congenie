@@ -340,7 +340,7 @@ export default function Lifecycle() {
       </div>
 
       {/* MOBILE / TABLET LAYOUT (< 1024px) */}
-      <div className="flex lg:hidden flex-col gap-6 w-full max-w-5xl mx-auto px-4 sm:px-6 mt-2 mb-12">
+      <div className="grid md:grid-cols-2 lg:hidden gap-6 w-full max-w-5xl mx-auto px-4 sm:px-6 mt-2 mb-12">
         {phases.map((phase, idx) => {
           return (
             <div
