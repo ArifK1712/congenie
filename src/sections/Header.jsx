@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Sun, Moon, Menu, X, Sparkles } from 'lucide-react';
+import { Sun, Moon, Menu, X, Sparkles, ChevronDown, Ticket, Smartphone, MapPin, Users, BarChart3 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header({ darkMode, toggleDarkMode }) {
@@ -11,67 +11,101 @@ export default function Header({ darkMode, toggleDarkMode }) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-useEffect(() => {
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 40);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
 
-  handleScroll();
+    handleScroll();
 
-  window.addEventListener('scroll', handleScroll, {
-    passive: true,
-  });
+    window.addEventListener('scroll', handleScroll, {
+      passive: true,
+    });
 
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, []);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-  const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Platform', href: '/platform' },
-    { name: 'AI Capabilities', href: '/ai-capabilities' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Modules', href: '/modules' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+  const navigationItems = [
+    {
+      name: 'Platform',
+      href: '#',
+      dropdown: [
+        { name: 'Registration & Ticketing', href: '/platform/registration-ticketing', icon: Ticket },
+        { name: 'Event App', href: '/platform/event-app', icon: Smartphone },
+        { name: 'On-Site Check-in', href: '/platform/onsite-checkin', icon: MapPin },
+        { name: 'Speaker & Sponsor', href: '/platform/speaker-sponsor', icon: Users },
+        { name: 'Analytics & Reporting', href: '/platform/analytics-reporting', icon: BarChart3 }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '#',
+      dropdown: [
+        { name: 'By Event Type', href: '/solutions/event-type' },
+        { name: 'By Industry', href: '/solutions/industry' }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '#',
+      dropdown: [
+        { name: 'Case Studies', href: '/resources/case-studies' },
+        { name: 'Blog', href: '/resources/blog' },
+        { name: 'Help Center', href: '/resources/help-center' },
+        { name: 'Webinars', href: '/resources/webinars' }
+      ]
+    },
+    {
+      name: 'Pricing',
+      href: '/pricing'
+    },
+    {
+      name: 'Company',
+      href: '#',
+      dropdown: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Contact Us', href: '/contact' }
+      ]
+    }
   ];
 
   return (
     <header
-  className={`fixed left-0 right-0 z-50 mx-auto origin-top transform-gpu transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-    scrolled
-      ? `
-        top-0
-        max-w-full
-        rounded-none
-        border-b border-slate-200/50
-        bg-white/95
-        py-2
-        shadow-[0_10px_30px_rgba(15,23,42,0.08)]
-        backdrop-blur-xl
-        dark:border-slate-800/50
-        dark:bg-[#020314]/90
-        translate-y-0
-        scale-100
-      `
-      : `
-        top-4
-        max-w-[1400px]
-        rounded-full
-        border border-slate-200/60
-        bg-white/90
-        py-2
-        shadow-sm
-        backdrop-blur-xl
-        dark:border-slate-800/60
-        dark:bg-[#020314]/90
-        translate-y-0
-        scale-[0.985]
-      `
-  }`}
->
+      className={`fixed left-0 right-0 z-50 mx-auto origin-top transform-gpu transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        scrolled
+          ? `
+            top-0
+            max-w-full
+            rounded-none
+            border-b border-slate-200/50
+            bg-white/95
+            py-2
+            shadow-[0_10px_30px_rgba(15,23,42,0.08)]
+            backdrop-blur-xl
+            dark:border-slate-800/50
+            dark:bg-[#020314]/90
+            translate-y-0
+            scale-100
+          `
+          : `
+            top-4
+            max-w-[1400px]
+            rounded-3xl
+            border border-slate-200/60
+            bg-white/90
+            py-2
+            shadow-sm
+            backdrop-blur-xl
+            dark:border-slate-800/60
+            dark:bg-[#020314]/90
+            translate-y-0
+            scale-[0.985]
+          `
+      }`}
+    >
       <div className="max-w-[1400px] mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -85,19 +119,48 @@ useEffect(() => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+            {navigationItems.map((item) => {
+              if (item.dropdown) {
+                return (
+                  <div key={item.name} className="relative group py-2">
+                    <button className="flex items-center space-x-1 text-slate-650 hover:text-accent-purple dark:text-slate-300 dark:hover:text-accent-purple font-medium transition-colors cursor-pointer">
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" />
+                    </button>
+                    {/* Dropdown Menu Panel */}
+                    <div className="absolute top-full left-0 mt-2 w-64 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/95 dark:bg-[#020314]/95 shadow-xl p-3 invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 ease-out backdrop-blur-xl z-50">
+                      <div className="space-y-1">
+                        {item.dropdown.map((subItem) => {
+                          const Icon = subItem.icon;
+                          return (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="flex items-center space-x-3 px-3 py-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900/60 hover:text-accent-purple dark:hover:text-accent-purple transition-all"
+                            >
+                              {Icon && <Icon className="w-4 h-4 text-accent-purple shrink-0" />}
+                              <span className="text-xs font-semibold">{subItem.name}</span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              const isActive = pathname === item.href;
               return (
                 <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`transition-colors ${
+                  key={item.name}
+                  href={item.href}
+                  className={`transition-colors py-2 font-medium ${
                     isActive 
-                      ? 'text-accent-purple dark:text-accent-purple font-medium' 
-                      : 'text-slate-600 hover:text-accent-purple dark:text-slate-300 dark:hover:text-accent-purple'
+                      ? 'text-accent-purple dark:text-accent-purple' 
+                      : 'text-slate-650 hover:text-accent-purple dark:text-slate-300 dark:hover:text-accent-purple'
                   }`}
                 >
-                  {link.name}
+                  {item.name}
                 </Link>
               );
             })}
@@ -115,10 +178,10 @@ useEffect(() => {
             </button>
 
             <Link
-              href="/modules"
+              href="/login"
               className="px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-350 hover:text-accent-blue dark:hover:text-accent-cyan transition-colors"
             >
-              Explore Platform
+              Log In
             </Link>
             
             <Link
@@ -160,40 +223,60 @@ useEffect(() => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className={`lg:hidden border-t border-slate-200/50 dark:border-slate-800/50 overflow-hidden ${
-              scrolled ? 'bg-white dark:bg-[#020314]' : 'glass-panel'
+            className={`lg:hidden overflow-hidden ${
+              scrolled ? 'bg-white dark:bg-[#020314]' : ''
             }`}
           >
-            <div className="px-4 pt-3 pb-6 space-y-3 flex flex-col">
-              {navLinks.map((link) => {
-                const isActive = pathname === link.href;
-                return (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`px-3 py-2 rounded-lg text-base font-semibold transition-colors ${
-                      isActive 
-                        ? 'bg-accent-purple/10 text-accent-purple dark:text-accent-cyan' 
-                        : 'text-slate-700 dark:text-slate-305 hover:bg-slate-100 dark:hover:bg-slate-900'
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                );
-              })}
+            <div className="px-4 pt-3 pb-6 space-y-4 flex flex-col max-h-[80vh] overflow-y-auto">
+              {navigationItems.map((item) => (
+                <div key={item.name} className="space-y-2">
+                  <div className="text-xs font-bold font-mono tracking-widest text-slate-400 dark:text-slate-500 uppercase px-3">
+                    {item.name}
+                  </div>
+                  {item.dropdown ? (
+                    <div className="pl-3 space-y-1">
+                      {item.dropdown.map((subItem) => {
+                        const Icon = subItem.icon;
+                        return (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            onClick={() => setIsOpen(false)}
+                            className="flex items-center space-x-3 px-3 py-2 rounded-lg text-base font-semibold text-slate-705 dark:text-slate-305 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors"
+                          >
+                            {Icon && <Icon className="w-4 h-4 text-accent-purple shrink-0" />}
+                            <span>{subItem.name}</span>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div className="pl-3">
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className="text-base font-semibold text-slate-707 dark:text-slate-305 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors block py-2"
+                      >
+                        {item.name}
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              ))}
+              
               <hr className="border-slate-200 dark:border-slate-800 my-2" />
+              
               <Link
-                href="/modules"
+                href="/login"
                 onClick={() => setIsOpen(false)}
-                className="px-3 py-2 text-base font-semibold text-slate-705 dark:text-slate-305 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors text-center"
+                className="px-3 py-2 text-base font-semibold text-slate-750 dark:text-slate-305 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors text-center block"
               >
-                Explore Platform
+                Log In
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="px-4 py-3 rounded-xl text-center text-white font-semibold text-base bg-accent-purple hover:bg-[#6c28e2] transition-all duration-300"
+                className="px-4 py-3 rounded-xl text-center text-white font-semibold text-base bg-accent-purple hover:bg-[#6c28e2] transition-all duration-300 block"
               >
                 Book a Demo
               </Link>
