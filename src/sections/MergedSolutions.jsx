@@ -274,9 +274,9 @@ export default function MergedSolutions() {
                       <div className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 w-max text-accent-purple group-hover:bg-accent-purple/10 transition-colors duration-300 mb-4">
                         <ModuleIcon className="w-5 h-5" />
                       </div>
-                      <h4 className="font-display text-sm sm:text-base text-primary dark:text-white mb-2">
+                      <h5 className="font-display text-primary dark:text-white mb-2">
                         {moduleName}
-                      </h4>
+                      </h5>
                       <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
                         {moduleDesc}
                       </p>

@@ -69,9 +69,9 @@ export default function Home() {
                       <span className="font-mono text-xs font-bold text-slate-400 dark:text-slate-500 tracking-wider">STAGE 01</span>
                     </div>
 
-                    <h3 className="font-display text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
+                    <h5 className="font-display text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Pre-Event Setup & Sales
-                    </h3>
+                    </h5>
                     <p className="text-slate-555 dark:text-slate-400 font-light leading-relaxed">
                       Design speaker slide portals, open conditional forms, and collect ticket revenues via Stripe. Manage your agendas, databases, and promo codes from one admin dashboard.
                     </p>
@@ -110,9 +110,9 @@ export default function Home() {
                       <span className="font-mono text-xs font-bold text-slate-400 dark:text-slate-500 tracking-wider">STAGE 02</span>
                     </div>
 
-                    <h3 className="font-display text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
+                    <h5 className="font-display text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Onsite Event Operations
-                    </h3>
+                    </h5>
                     <p className="text-slate-555 dark:text-slate-400 leading-relaxed">
                       Scan guest tickets using offline-capable check-in apps, trigger thermal badge printing, and monitor real-time attendance counts in the room portals.
                     </p>
@@ -153,9 +153,9 @@ export default function Home() {
                       <span className="font-mono text-xs font-bold text-slate-400 dark:text-slate-500 tracking-wider">STAGE 03</span>
                     </div>
 
-                    <h3 className="font-display text-xl text-primary dark:text-white group-hover:text-accent-purple transition-colors">
+                    <h5 className="font-display text-primary dark:text-white group-hover:text-accent-purple transition-colors">
                       Post-Event ROI Insights
-                    </h3>
+                    </h5>
                     <p className="text-slate-555 dark:text-slate-400 leading-relaxed">
                       Audit sponsor booth ROI, generate financial charts, and send CME completion certificates. Collect surveys and compile overall event performance summaries.
                     </p>

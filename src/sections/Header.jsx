@@ -178,10 +178,10 @@ export default function Header({ darkMode, toggleDarkMode }) {
             </button>
 
             <Link
-              href="/login"
+              href="javascript:void(0)"
               className="px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-350 hover:text-accent-blue dark:hover:text-accent-cyan transition-colors"
             >
-              Log In
+              Explore ConGenie
             </Link>
             
             <Link
