@@ -59,7 +59,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-white dark:bg-[#070b19] border-t border-slate-100 dark:border-slate-900 transition-colors duration-300">
+    <section id="pricing" className="py-24 bg-white border-t border-slate-100 transition-colors duration-300">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -67,10 +67,10 @@ export default function Pricing() {
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-accent-blue/30 bg-accent-blue/5 text-accent-blue text-xs font-semibold mb-4">
             <span>Enterprise Tiers</span>
           </div>
-          <h2 className="font-display text-primary dark:text-white">
+          <h2 className="font-display text-primary">
             Flexible Licensing Tiers for Every Scale
           </h2>
-          <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+          <p className="mt-4 text-lg text-slate-600">
             Choose a plan that fits your attendee volume and required modules. Select a preloaded template or request custom keys.
           </p>
         </div>
@@ -87,31 +87,31 @@ export default function Pricing() {
               className={`relative rounded-3xl p-[1px] ${
                 plan.recommended
                   ? 'bg-gradient-to-tr from-accent-cyan via-accent-blue to-accent-purple shadow-xl'
-                  : 'bg-slate-200/60 dark:bg-slate-800/40'
+                  : 'bg-slate-200/60'
               }`}
             >
-              <div className="glass-card h-full p-8 rounded-[23px] flex flex-col justify-between relative overflow-hidden bg-white dark:bg-[#090f25]/90">
+              <div className="glass-card h-full p-8 rounded-[23px] flex flex-col justify-between relative overflow-hidden bg-white">
                 {plan.recommended && (
                   <div className="absolute top-0 right-0 bg-gradient-to-l from-accent-purple to-accent-blue text-[8px] font-black uppercase text-white px-4 py-1.5 rounded-bl-xl tracking-wider flex items-center space-x-1">
-                    <Sparkles className="w-3 h-3 text-white" />
+                    <Sparkles className="w-3.5 h-3.5 text-white" />
                     <span>Recommended</span>
                   </div>
                 )}
 
                 <div>
-                  <h3 className="font-display text-xl text-primary dark:text-white mb-2">
+                  <h3 className="font-display text-xl text-primary mb-2">
                     {plan.name}
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 min-h-[50px] leading-relaxed mb-6">
+                  <p className="text-xs text-slate-500 min-h-[50px] leading-relaxed mb-6">
                     {plan.desc}
                   </p>
                   
-                  <hr className="border-slate-100 dark:border-slate-800/60 mb-6" />
+                  <hr className="border-slate-100 mb-6" />
 
                   {/* Feature lists */}
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feat, fIdx) => (
-                      <li key={fIdx} className="flex items-start space-x-2.5 text-xs text-slate-650 dark:text-slate-350">
+                      <li key={fIdx} className="flex items-start space-x-2.5 text-xs text-slate-655">
                         <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </li>
@@ -124,7 +124,7 @@ export default function Pricing() {
                   className={`block text-center py-3.5 rounded-xl text-xs font-bold transition-all duration-300 ${
                     plan.recommended
                       ? 'bg-accent-purple hover:bg-[#6c28e2] text-white'
-                      : 'bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-850'
+                      : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                   }`}
                 >
                   Request Pricing

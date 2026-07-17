@@ -6,7 +6,7 @@ import { Sparkles, ArrowRight } from 'lucide-react';
 
 export default function FinalCTA() {
   return (
-    <section id="contact" className="py-16 lg:py-20 dark:bg-[#030712] relative overflow-hidden transition-colors duration-300">
+    <section id="contact" className="py-16 lg:py-20 relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 relative z-10">
         
         {/* Main Banner Card */}

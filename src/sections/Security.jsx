@@ -26,19 +26,19 @@ export default function Security() {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-[#070b19] border-t border-slate-100 dark:border-slate-900 transition-colors duration-300 relative">
+    <section className="py-24 bg-white border-t border-slate-100 transition-colors duration-300 relative">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-green-500/30 bg-green-500/5 text-green-600 dark:text-green-400 text-xs font-semibold mb-4">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-green-500/30 bg-green-500/5 text-green-600 text-xs font-semibold mb-4">
             <ShieldCheck className="w-4 h-4" />
             <span>High Security Standards</span>
           </div>
-          <h2 className="font-display text-primary dark:text-white">
+          <h2 className="font-display text-primary">
             Enterprise-Grade Security &amp; Global Scalability
           </h2>
-          <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+          <p className="mt-4 text-lg text-slate-600">
             Trusted by governments and international congresses. We guarantee data privacy, compliance, and flawless platform reliability.
           </p>
         </div>
@@ -54,16 +54,16 @@ export default function Security() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/40 hover:border-accent-blue/30 dark:hover:border-accent-cyan/30 transition-all duration-300 hover:shadow-lg flex flex-col justify-between"
+                className="glass-card p-6 rounded-2xl border border-slate-200/50 hover:border-accent-blue/30 transition-all duration-300 hover:shadow-lg flex flex-col justify-between"
               >
                 <div>
-                  <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 w-fit mb-6">
+                  <div className="p-3 rounded-xl bg-slate-100 text-slate-700 w-fit mb-6">
                     <SecurityIcon className="w-5 h-5" />
                   </div>
-                  <h3 className="font-display font-bold text-base text-primary dark:text-white mb-3">
+                  <h3 className="font-display font-bold text-base text-primary mb-3">
                     {p.title}
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-light">
+                  <p className="text-xs text-slate-500 leading-relaxed font-light">
                     {p.desc}
                   </p>
                 </div>

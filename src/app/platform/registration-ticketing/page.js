@@ -86,7 +86,7 @@ const WebhooksLogo = () => (
 );
 
 const OktaLogo = () => (
-  <svg viewBox="0 0 24 24" className="w-5 h-5 fill-slate-800 dark:fill-white" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 24 24" className="w-5 h-5 fill-slate-800" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/>
   </svg>
 );
@@ -144,7 +144,7 @@ function FlowNode({ icon: Icon, label, sub, active = false, index }) {
         <Icon className="w-5 h-5" />
       </div>
       <div className="text-center">
-        <h5 className={`font-semibold ${active ? 'text-accent-purple' : 'text-slate-700 dark:text-slate-300'}`}>{label}</h5>
+        <h5 className={`font-semibold ${active ? 'text-accent-purple' : 'text-slate-700'}`}>{label}</h5>
         {sub && <p className="text-slate-400 mt-0.5 hidden sm:block">{sub}</p>}
       </div>
     </motion.div>
@@ -165,7 +165,7 @@ function CommStep({ icon: Icon, channel, title, timing, color = 'purple' }) {
         <Icon className="w-4 h-4" />
       </div>
       <div className="flex-1 min-w-0">
-        <div className="text-sm font-semibold text-slate-800 dark:text-white group-hover:text-accent-purple transition-colors">{title}</div>
+        <div className="text-sm font-semibold text-slate-800 group-hover:text-accent-purple transition-colors">{title}</div>
         <div className="text-xs text-slate-500 mt-0.5 flex items-center gap-1.5">
           <span className="capitalize font-medium">{channel}</span>
           <span className="text-slate-300">·</span>
@@ -182,7 +182,7 @@ function MetricCard({ label, value, sub, trend, icon: Icon }) {
   return (
     <motion.div
       variants={fadeUp}
-      className="bg-white/80 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 rounded-2xl p-4 backdrop-blur-sm hover:border-accent-purple/30 transition-all duration-300"
+      className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm hover:border-accent-purple/30 transition-all duration-300"
     >
       <div className="flex items-start justify-between mb-3">
         <div className="w-8 h-8 rounded-xl bg-accent-purple/10 border border-accent-purple/20 flex items-center justify-center">
@@ -194,8 +194,8 @@ function MetricCard({ label, value, sub, trend, icon: Icon }) {
           </span>
         )}
       </div>
-      <div className="text-2xl font-bold text-slate-900 dark:text-white font-sans tracking-tight">{value}</div>
-      <div className="font-medium text-slate-600 dark:text-slate-400 mt-0.5">{label}</div>
+      <div className="text-2xl font-bold text-slate-900 font-sans tracking-tight">{value}</div>
+      <div className="font-medium text-slate-600 mt-0.5">{label}</div>
       {sub && <p className="text-slate-400 mt-1">{sub}</p>}
     </motion.div>
   );
@@ -206,20 +206,20 @@ function OutcomePanel({ number, heading, body, proof }) {
   return (
     <motion.div
       variants={fadeUp}
-      className="relative bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 overflow-hidden hover:border-accent-purple/35 hover:shadow-lg transition-all duration-400 group"
+      className="relative bg-white border border-slate-200 rounded-3xl p-8 overflow-hidden hover:border-accent-purple/35 hover:shadow-lg transition-all duration-400 group"
     >
       {/* Subtle purple corner glow */}
       <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent-purple/6 rounded-full blur-2xl group-hover:bg-accent-purple/10 transition-colors duration-500" />
 
       <div className="relative z-10">
         <div className="text-[11px] font-bold text-accent-purple/60 tracking-[0.15em] uppercase font-mono mb-4">{number}</div>
-        <h5 className="font-display text-primary dark:text-white group-hover:text-accent-purple transition-colors mb-4">
+        <h5 className="font-display text-primary group-hover:text-accent-purple transition-colors mb-2">
           {heading}
         </h5>
-        <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-5">{body}</p>
-        <div className="flex items-center gap-2 pt-4 border-t border-slate-100 dark:border-slate-800">
-          <CheckCircle2 className="w-4 h-4 text-accent-purple shrink-0" />
-          <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{proof}</span>
+        <p className="text-slate-600 leading-relaxed mb-5">{body}</p>
+        <div className="flex items-center gap-2 pt-4 border-t border-slate-100">
+          <CheckCircle2 className="w-4.5 h-4.5 text-accent-purple shrink-0" />
+          <span className="text-sm font-semibold text-slate-700">{proof}</span>
         </div>
       </div>
     </motion.div>
@@ -236,10 +236,10 @@ function IntegSpoke({ label, category, delay = 0, angle }) {
       viewport={{ once: true }}
       className="flex flex-col items-center gap-1.5"
     >
-      <div className="w-12 h-12 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-center text-accent-purple hover:border-accent-purple/40 hover:shadow-md transition-all duration-300 text-xs font-bold">
+      <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-accent-purple hover:border-accent-purple/40 hover:shadow-md transition-all duration-300 text-xs font-bold">
         {label.slice(0, 2)}
       </div>
-      <div className="text-[10px] font-semibold text-slate-600 dark:text-slate-400 text-center leading-tight max-w-[60px]">
+      <div className="text-[10px] font-semibold text-slate-600 text-center leading-tight max-w-[60px]">
         {label}
       </div>
       <div className="text-[9px] text-slate-400 font-medium">{category}</div>
@@ -336,15 +336,15 @@ export default function RegistrationTicketingPage() {
   ];
 
   return (
-    <main className="min-h-screen pt-20 bg-white dark:bg-[#020314] overflow-x-hidden transition-colors duration-300">
+    <main className="min-h-screen pt-20 bg-white overflow-x-hidden transition-colors duration-300">
 
       {/* ══════════════════════════════════════════════════════════════════════
           1. HERO — Bright premium with 3D ecosystem visual
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative flex items-center dark:from-[#020314] dark:via-[#07091e] dark:to-[#0b0d28] overflow-hidden border-b border-slate-100 dark:border-slate-900">
+      <section className="relative flex items-center bg-white overflow-hidden border-b border-slate-200">
         {/* ambient glows */}
-        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-accent-purple/8 dark:bg-accent-purple/12 rounded-full blur-[160px] pointer-events-none" />
-        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-indigo-300/12 dark:bg-indigo-500/8 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-accent-purple/8 rounded-full blur-[160px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-indigo-300/12 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-[1400px] mx-auto px-4 relative z-10 py-16 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -357,7 +357,7 @@ export default function RegistrationTicketingPage() {
 
               <motion.h1
                 variants={fadeUp}
-                className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-slate-900 dark:text-white leading-[1.05] tracking-tight"
+                className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-slate-900 leading-[1.05] tracking-tight"
               >
                 Seamless Registration &{' '}
                 <span className="bg-gradient-to-r from-accent-purple via-violet-500 to-indigo-500 bg-clip-text text-transparent">
@@ -365,7 +365,7 @@ export default function RegistrationTicketingPage() {
                 </span>
               </motion.h1>
 
-              <motion.p variants={fadeUp} className="text-slate-600 dark:text-slate-300 text-lg font-light leading-relaxed">
+              <motion.p variants={fadeUp} className="text-slate-600 text-lg font-light leading-relaxed">
                 Build complete registration journeys, sell tickets, collect payments, automate approvals, and manage attendee access — all from one elegant platform.
               </motion.p>
 
@@ -381,7 +381,7 @@ export default function RegistrationTicketingPage() {
                 <a
                   href="#journey"
                   id="hero-cta-secondary"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-sm hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-slate-200 text-slate-700 font-semibold text-sm hover:bg-slate-50 transition-all duration-300"
                 >
                   Explore Features
                 </a>
@@ -394,7 +394,7 @@ export default function RegistrationTicketingPage() {
                   { icon: Globe, text: '40+ Currencies' },
                   { icon: Zap, text: 'Setup in minutes' },
                 ].map(({ icon: Icon, text }) => (
-                  <div key={text} className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
+                  <div key={text} className="flex items-center gap-1.5 text-slate-500">
                     <Icon className="w-3.5 h-3.5 text-accent-purple" />
                     {text}
                   </div>
@@ -414,7 +414,7 @@ export default function RegistrationTicketingPage() {
                 transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
                 className="relative"
               >
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-accent-purple/15 border border-white/60 dark:border-slate-800/60">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-accent-purple/15 border border-slate-200">
                   <Image
                     src="/reg-hero.png"
                     alt="Premium registration ecosystem showing digital tickets, attendee badges, QR codes, payment objects, and confirmation status"
@@ -434,14 +434,14 @@ export default function RegistrationTicketingPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           2. REGISTRATION JOURNEY — Connected flow storytelling
       ══════════════════════════════════════════════════════════════════════ */}
-      <section id="journey" className="py-16 lg:py-20 bg-gradient-to-b from-[#faf9ff] to-white dark:from-[#030519] dark:to-[#020314]">
+      <section id="journey" className="py-16 lg:py-20 bg-gradient-to-b from-[#faf9ff] to-white">
         <div className="max-w-[1400px] mx-auto px-4">
           <InView className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <Label icon={Layers}>Registration Journey</Label>
-            <h2 className="font-display font-bold text-slate-900 dark:text-white">
+            <h2 className="font-display font-bold text-slate-900">
               Build Registration Journeys That&nbsp;Adapt
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-lg font-light leading-relaxed">
+            <p className="text-slate-600 text-lg font-light leading-relaxed">
               Guide every attendee through a tailored path — from first form visit to confirmed entry badge.
             </p>
           </InView>
@@ -482,12 +482,12 @@ export default function RegistrationTicketingPage() {
                 <motion.div
                   key={text}
                   variants={fadeUp}
-                  className="flex items-center gap-3 bg-white dark:bg-slate-900/40 border border-slate-100 dark:border-slate-800 rounded-2xl px-4 py-3 shadow-sm hover:border-accent-purple/25 hover:shadow-md transition-all duration-300"
+                  className="flex items-center gap-3 bg-white rounded-2xl px-4 py-3 shadow-sm hover:border-accent-purple/25 hover:shadow-md transition-all duration-300"
                 >
                   <div className="w-8 h-8 rounded-xl bg-accent-purple/8 border border-accent-purple/15 flex items-center justify-center shrink-0">
                     <Icon className="w-4 h-4 text-accent-purple" />
                   </div>
-                  <p className="text-slate-700 dark:text-slate-300">{text}</p>
+                  <p className="text-slate-700">{text}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -498,7 +498,7 @@ export default function RegistrationTicketingPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           4. TICKET TIERS — Dark section with 3D ticket visual
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-[#070b19] dark:bg-[#040610] text-white relative overflow-hidden">
+      <section className="py-16 lg:py-20 bg-[#070b19] text-white relative overflow-hidden">
         {/* purple glow behind visual */}
         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-accent-purple/10 rounded-full blur-[130px] pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-indigo-500/8 rounded-full blur-[100px] pointer-events-none" />
@@ -578,7 +578,7 @@ export default function RegistrationTicketingPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           5. PAYMENTS & INVOICING — Light, asymmetric
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20  bg-gradient-to-br from-[#faf9ff] to-white dark:from-[#030519] dark:to-[#020314] relative overflow-hidden">
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-[#faf9ff] to-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-accent-purple/5 rounded-full blur-[130px] pointer-events-none" />
 
         <div className="max-w-[1400px] mx-auto px-4 relative z-10">
@@ -587,15 +587,15 @@ export default function RegistrationTicketingPage() {
             {/* Left: text (narrower) */}
             <InView className="lg:col-span-5 space-y-6">
               <Label icon={Lock}>Enterprise Security</Label>
-              <h2 className="font-display font-bold text-slate-900 dark:text-white leading-tight">
+              <h2 className="font-display font-bold text-slate-900 leading-tight">
                 Global Payments &amp; Automated Invoicing
               </h2>
-              <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+              <p className="text-slate-600 font-light leading-relaxed">
                 Support global events with multi-currency payouts and automatic VAT/GST calculation. Deliver PDF invoices, handle refunds, and recover failed payments — all without manual intervention.
               </p>
               <ul className="space-y-3">
                 {paymentCapabilities.map((c) => (
-                  <li key={c} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                  <li key={c} className="flex items-start gap-3 text-sm text-slate-700">
                     <CheckCircle2 className="w-4.5 h-4.5 text-accent-purple shrink-0 mt-0.5" />
                     {c}
                   </li>
@@ -616,7 +616,7 @@ export default function RegistrationTicketingPage() {
                 transition={{ duration: 6.5, repeat: Infinity, ease: 'easeInOut', delay: 0.7 }}
                 className="relative"
               >
-                <div className="rounded-3xl overflow-hidden shadow-2xl shadow-slate-200 dark:shadow-accent-purple/10 border border-slate-200/70 dark:border-slate-800/60">
+                <div className="rounded-3xl overflow-hidden shadow-2xl shadow-slate-200 border border-slate-200/70">
                   <Image
                     src="/payment-ecosystem.png"
                     alt="Premium 3D payment ecosystem showing payment cards, invoice documents, digital receipts, and currency indicators"
@@ -635,14 +635,14 @@ export default function RegistrationTicketingPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           6. APPROVAL, WAITLIST & QUEUE — Light lavender, timeline flow
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-gradient-to-b from-[#f3efff] to-[#faf9ff] dark:from-[#08051f] dark:to-[#030519] border-y border-slate-100 dark:border-slate-900">
+      <section className="py-16 lg:py-20 bg-gradient-to-b from-[#f3efff] to-[#faf9ff] border-y border-slate-300">
         <div className="max-w-[1400px] mx-auto px-4">
           <InView className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <Label icon={UserCheck}>Access Management</Label>
-            <h2 className="font-display font-bold text-slate-900 dark:text-white">
+            <h2 className="font-display font-bold text-slate-900">
               Control Access Without Losing Demand
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+            <p className="text-slate-600 font-light leading-relaxed">
               Keep registration demand high while enforcing capacity, approval rules, and waitlist priority — all without manual back-and-forth.
             </p>
           </InView>
@@ -661,11 +661,11 @@ export default function RegistrationTicketingPage() {
                 <React.Fragment key={stage}>
                   <motion.div
                     variants={fadeUp}
-                    className={`flex-1 text-center px-4 py-3 rounded-2xl border font-semibold transition-all ${i === 3 ? 'bg-accent-purple/10 border-accent-purple/40 text-accent-purple dark:text-accent-purple' : 'bg-white dark:bg-slate-900/40 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300'}`}
+                    className={`flex-1 text-center px-4 py-3 rounded-2xl border font-semibold transition-all ${i === 3 ? 'bg-accent-purple/10 border-accent-purple/40 text-accent-purple' : 'bg-white/70 border-slate-300 text-slate-700'}`}
                   >
                     {stage}
                   </motion.div>
-                  {i < 3 && <ChevronRight className="w-4 h-4 text-slate-300 dark:text-slate-600 shrink-0 hidden sm:block" />}
+                  {i < 3 && <ChevronRight className="w-4 h-4 text-slate-300 shrink-0 hidden sm:block" />}
                 </React.Fragment>
               ))}
             </motion.div>
@@ -684,11 +684,11 @@ export default function RegistrationTicketingPage() {
                   <React.Fragment key={stage}>
                     <motion.div
                       variants={fadeUp}
-                      className={`flex-1 text-center px-4 py-3 rounded-2xl border font-semibold ${i === 3 ? 'bg-emerald-50 border-emerald-300/60 text-emerald-700 dark:bg-emerald-900/15 dark:border-emerald-800/40 dark:text-emerald-400' : 'bg-white/70 dark:bg-slate-900/30 border-dashed border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400'}`}
+                      className={`flex-1 text-center px-4 py-3 rounded-2xl border font-semibold ${i === 3 ? 'bg-emerald-50 border-emerald-300/60 text-emerald-700' : 'bg-white/70 border-dashed border-slate-300 text-slate-500'}`}
                     >
                       {stage}
                     </motion.div>
-                    {i < 3 && <ChevronRight className="w-4 h-4 text-slate-300 dark:text-slate-600 shrink-0 hidden sm:block" />}
+                    {i < 3 && <ChevronRight className="w-4 h-4 text-slate-300 shrink-0 hidden sm:block" />}
                   </React.Fragment>
                 ))}
               </motion.div>
@@ -712,13 +712,13 @@ export default function RegistrationTicketingPage() {
               <motion.div
                 key={title}
                 variants={fadeUp}
-                className="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 hover:border-accent-purple/30 hover:shadow-md transition-all duration-300 space-y-3"
+                className="bg-white/70 border border-slate-300 rounded-2xl p-5 hover:border-accent-purple/30 hover:shadow-md transition-all duration-300 space-y-3"
               >
                 <div className="w-9 h-9 rounded-xl bg-accent-purple/8 border border-accent-purple/15 flex items-center justify-center">
                   <Icon className="w-4.5 h-4.5 text-accent-purple" />
                 </div>
-                <h5 className="font-display text-slate-800 dark:text-white">{title}</h5>
-                <p className="text-slate-500 dark:text-slate-400 leading-relaxed">{desc}</p>
+                <h5 className="font-display text-slate-800">{title}</h5>
+                <p className="text-slate-500 leading-relaxed">{desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -728,7 +728,7 @@ export default function RegistrationTicketingPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           7. QR TICKETS & SECURE ACCESS — Dark cinematic section
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-[#070b19] dark:bg-[#040610] text-white relative overflow-hidden">
+      <section className="py-16 lg:py-20 bg-[#070b19] text-white relative overflow-hidden">
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-accent-purple/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-[1400px] mx-auto px-4 relative z-10">
@@ -802,7 +802,7 @@ export default function RegistrationTicketingPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           8. AUTOMATED COMMUNICATION — Light, connected timeline
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-[#faf9ff] dark:bg-[#030519] border-y border-slate-100 dark:border-slate-900 relative overflow-hidden transition-colors duration-300">
+      <section className="py-24 bg-[#faf9ff] border-y border-slate-200 relative overflow-hidden transition-colors duration-300">
         {/* Decorative background glow */}
         <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-accent-purple/5 rounded-full blur-[120px] pointer-events-none" />
         
@@ -812,36 +812,36 @@ export default function RegistrationTicketingPage() {
             {/* Left Column - Intro & Channel States */}
             <InView className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
               <Label icon={Bell}>Smart Communications</Label>
-              <h2 className="font-display font-bold text-slate-900 dark:text-white text-3xl sm:text-4xl leading-tight">
+              <h2 className="font-display font-bold text-slate-900 text-3xl sm:text-4xl leading-tight">
                 Keep Every Attendee Informed Automatically
               </h2>
-              <p className="text-slate-605 dark:text-slate-355 font-light leading-relaxed">
+              <p className="text-slate-600 font-light leading-relaxed">
                 Trigger the right message at the right moment — across email, SMS, and mobile push notifications — without any manual effort from your team.
               </p>
               
               {/* Channel Stats / Pills */}
               <div className="space-y-3 pt-2">
-                <div className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Active Delivery Channels</div>
+                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Active Delivery Channels</div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-2.5">
                   {[
                     { icon: Mail, label: 'Email Broadcasts', status: 'Active', desc: 'SLA-backed mail delivery', color: 'text-accent-purple bg-accent-purple/8 border-accent-purple/15' },
-                    { icon: MessageSquare, label: 'SMS Notifications', status: 'Active', desc: 'Global carrier routing', color: 'text-cyan-600 bg-cyan-50 dark:bg-cyan-950/15 border-cyan-200/50 dark:border-cyan-800/30' },
-                    { icon: Smartphone, label: 'Push Notifications', status: 'Active', desc: 'Direct attendee app push', color: 'text-emerald-600 bg-emerald-50 dark:bg-emerald-950/15 border-emerald-200/50 dark:border-emerald-800/30' }
+                    { icon: MessageSquare, label: 'SMS Notifications', status: 'Active', desc: 'Global carrier routing', color: 'text-cyan-600 bg-cyan-50 border-cyan-200/50' },
+                    { icon: Smartphone, label: 'Push Notifications', status: 'Active', desc: 'Direct attendee app push', color: 'text-emerald-600 bg-emerald-50 border-emerald-200/50' }
                   ].map((chan) => {
                     const Icon = chan.icon;
                     return (
-                      <div key={chan.label} className="flex items-center gap-3 p-3 bg-white dark:bg-slate-900/60 border border-slate-200/70 dark:border-slate-800/80 rounded-xl shadow-sm hover:border-accent-purple/30 transition-all duration-300">
+                      <div key={chan.label} className="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-accent-purple/30 transition-all duration-300">
                         <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 border ${chan.color}`}>
                           <Icon className="w-4.5 h-4.5" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between">
-                            <span className="font-semibold text-slate-800 dark:text-slate-200">{chan.label}</span>
+                            <span className="font-semibold text-slate-800">{chan.label}</span>
                             <span className="text-xs text-emerald-500 flex items-center gap-1">
                               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> {chan.status}
                             </span>
                           </div>
-                          <p className="text-slate-500 dark:text-slate-400 truncate">{chan.desc}</p>
+                          <p className="text-slate-500 truncate">{chan.desc}</p>
                         </div>
                       </div>
                     );
@@ -858,7 +858,7 @@ export default function RegistrationTicketingPage() {
                   </div>
                   <span className="text-xs bg-accent-purple/15 text-accent-purple px-2 py-0.5 rounded-full">Active</span>
                 </div>
-                <div className="text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+                <div className="text-slate-500 font-light leading-relaxed">
                   Triggers are verified and executed automatically at millisecond precision based on real-time event milestones.
                 </div>
               </div>
@@ -874,17 +874,17 @@ export default function RegistrationTicketingPage() {
             >
               <div className="relative">
                 {/* Connecting timeline line */}
-                <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gradient-to-b from-accent-purple via-slate-200 dark:via-slate-850 to-transparent" />
+                <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gradient-to-b from-accent-purple via-slate-200 to-transparent" />
 
                 <div className="space-y-6 pl-14">
                   {[
                     { icon: Mail, channel: 'Email', title: 'Registration Confirmation', timing: 'Immediately', trigger: 'Triggered upon successful checkout completion.', badgeColor: 'bg-accent-purple/10 text-accent-purple' },
-                    { icon: Bell, channel: 'Email + SMS', title: 'Approval or Rejection', timing: 'Within minutes', trigger: 'Executed after manual reviewer approval or automation rules pass.', badgeColor: 'bg-blue-50 text-blue-600 dark:bg-blue-955/20 dark:text-blue-400' },
-                    { icon: CreditCard, channel: 'Email', title: 'Payment Confirmation', timing: 'On payment', trigger: 'Fires instantly when payment gateway returns a successful webhook.', badgeColor: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-955/20 dark:text-emerald-400' },
-                    { icon: Ticket, channel: 'Email + App Push', title: 'Ticket & QR Delivery', timing: 'Post-payment', trigger: 'Generates secure printable ticket PDF & attendee wallet pass.', badgeColor: 'bg-violet-50 text-violet-600 dark:bg-violet-955/20 dark:text-violet-400' },
-                    { icon: Clock, channel: 'Email + SMS', title: 'Event Reminder', timing: '48h & 1h before', trigger: 'Scheduled job delivering quick-access check-in codes.', badgeColor: 'bg-amber-50 text-amber-600 dark:bg-amber-955/20 dark:text-amber-400' },
-                    { icon: Users, channel: 'Email', title: 'Waitlist Update', timing: 'On seat release', trigger: 'Notifies next attendee when a reserved seat slot is freed.', badgeColor: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-955/20 dark:text-indigo-400' },
-                    { icon: AlertCircle, channel: 'Email + SMS', title: 'Cancellation & Refund', timing: 'On request', trigger: 'Sent following registration cancellation or refund request.', badgeColor: 'bg-rose-50 text-rose-600 dark:bg-rose-955/20 dark:text-rose-400' }
+                    { icon: Bell, channel: 'Email + SMS', title: 'Approval or Rejection', timing: 'Within minutes', trigger: 'Executed after manual reviewer approval or automation rules pass.', badgeColor: 'bg-blue-50 text-blue-600' },
+                    { icon: CreditCard, channel: 'Email', title: 'Payment Confirmation', timing: 'On payment', trigger: 'Fires instantly when payment gateway returns a successful webhook.', badgeColor: 'bg-emerald-50 text-emerald-600' },
+                    { icon: Ticket, channel: 'Email + App Push', title: 'Ticket & QR Delivery', timing: 'Post-payment', trigger: 'Generates secure printable ticket PDF & attendee wallet pass.', badgeColor: 'bg-violet-50 text-violet-600' },
+                    { icon: Clock, channel: 'Email + SMS', title: 'Event Reminder', timing: '48h & 1h before', trigger: 'Scheduled job delivering quick-access check-in codes.', badgeColor: 'bg-amber-50 text-amber-600' },
+                    { icon: Users, channel: 'Email', title: 'Waitlist Update', timing: 'On seat release', trigger: 'Notifies next attendee when a reserved seat slot is freed.', badgeColor: 'bg-indigo-50 text-indigo-600' },
+                    { icon: AlertCircle, channel: 'Email + SMS', title: 'Cancellation & Refund', timing: 'On request', trigger: 'Sent following registration cancellation or refund request.', badgeColor: 'bg-rose-50 text-rose-600' }
                   ].map((step, i) => {
                     const Icon = step.icon;
                     return (
@@ -894,12 +894,12 @@ export default function RegistrationTicketingPage() {
                         className="relative group transition-all duration-300"
                       >
                         {/* Timeline node marker */}
-                        <div className="absolute -left-[45px] top-3.5 w-6 h-6 rounded-full bg-white dark:bg-slate-950 border-2 border-accent-purple flex items-center justify-center z-15 shadow-sm group-hover:scale-110 transition-transform duration-200">
+                        <div className="absolute -left-[45px] top-3.5 w-6 h-6 rounded-full bg-white border-2 border-accent-purple flex items-center justify-center z-15 shadow-sm group-hover:scale-110 transition-transform duration-200">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent-purple" />
                         </div>
 
                         {/* Card container */}
-                        <div className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-accent-purple/35 transition-all duration-300 relative overflow-hidden">
+                        <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-accent-purple/35 transition-all duration-300 relative overflow-hidden">
                           {/* Accent left line */}
                           <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent-purple/30 group-hover:bg-accent-purple transition-colors duration-300" />
                           
@@ -909,21 +909,21 @@ export default function RegistrationTicketingPage() {
                                 <Icon className="w-5 h-5" />
                               </div>
                               <div className="space-y-1">
-                                <h5 className="font-display text-slate-900 dark:text-white group-hover:text-accent-purple transition-colors duration-300">
+                                <h5 className="font-display text-slate-900 group-hover:text-accent-purple transition-colors duration-300">
                                   {step.title}
                                 </h5>
-                                <p className=" text-slate-500 dark:text-slate-400 font-light leading-relaxed max-w-lg">
+                                <p className=" text-slate-500 font-light leading-relaxed max-w-lg">
                                   {step.trigger}
                                 </p>
                               </div>
                             </div>
                             
                             {/* Metadata Badges */}
-                            <div className="flex sm:flex-col items-start sm:items-end gap-2 shrink-0 pt-2 sm:pt-0 border-t border-slate-100 dark:border-slate-850 sm:border-none">
+                            <div className="flex sm:flex-col items-start sm:items-end gap-2 shrink-0 pt-2 sm:pt-0 border-t border-slate-100 sm:border-none">
                               <span className={`text-xs px-2 py-0.5 rounded-full ${step.badgeColor}`}>
                                 {step.channel}
                               </span>
-                              <p className="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+                              <p className="flex items-center gap-1 text-slate-500">
                                 <Clock className="w-3 h-3 text-slate-400" />
                                 <span>{step.timing}</span>
                               </p>
@@ -944,15 +944,15 @@ export default function RegistrationTicketingPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           9. REGISTRATION PERFORMANCE INSIGHTS — Bright floating data
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-gradient-to-b from-[#faf9ff] to-[#f3efff] dark:from-[#030519] dark:to-[#08051f] relative overflow-hidden">
+      <section className="py-16 lg:py-20 bg-gradient-to-b from-[#faf9ff] to-[#f3efff] relative overflow-hidden">
         <div className="absolute top-0 right-1/4 w-[500px] h-[300px] bg-accent-purple/8 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-[1400px] mx-auto px-4 relative z-10">
           <InView className="text-center max-w-2xl mx-auto mb-14 space-y-4">
             <Label icon={BarChart3}>Live Intelligence</Label>
-            <h2 className="font-display font-bold text-slate-900 dark:text-white">
+            <h2 className="font-display font-bold text-slate-900">
               Understand Registration Performance in Real Time
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+            <p className="text-slate-600 font-light leading-relaxed">
               Dimensional analytics that surface registration funnels, ticket distribution, conversion rates, and revenue trends — all without leaving the platform.
             </p>
           </InView>
@@ -978,19 +978,19 @@ export default function RegistrationTicketingPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <div className="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-3xl p-6">
+            <div className="bg-white border border-slate-200 rounded-3xl p-6">
               <div className="text-xs font-bold text-slate-400 tracking-widest uppercase text-center mb-6">Registration Funnel</div>
               <div className="space-y-2">
                 {[
-                  { label: 'Page Views', value: '18,400', pct: 100, color: 'bg-slate-200 dark:bg-slate-700' },
+                  { label: 'Page Views', value: '18,400', pct: 100, color: 'bg-slate-200' },
                   { label: 'Form Started', value: '9,200', pct: 50, color: 'bg-accent-purple/30' },
                   { label: 'Form Submitted', value: '6,100', pct: 33, color: 'bg-accent-purple/50' },
                   { label: 'Payment Completed', value: '4,460', pct: 24, color: 'bg-accent-purple/70' },
                   { label: 'Ticket Confirmed', value: '4,350', pct: 23.6, color: 'bg-accent-purple' },
                 ].map(({ label, value, pct, color }) => (
                   <div key={label} className="flex items-center gap-4">
-                    <div className="w-32 shrink-0 text-right text-xs text-slate-500 dark:text-slate-400 font-medium">{label}</div>
-                    <div className="flex-1 bg-slate-100 dark:bg-slate-800 h-7 rounded-lg overflow-hidden relative">
+                    <div className="w-32 shrink-0 text-right text-xs text-slate-500 font-medium">{label}</div>
+                    <div className="flex-1 bg-slate-100 h-7 rounded-lg overflow-hidden relative">
                       <motion.div
                         className={`absolute left-0 top-0 h-full ${color} rounded-lg flex items-center pl-2`}
                         initial={{ width: 0 }}
@@ -1001,7 +1001,7 @@ export default function RegistrationTicketingPage() {
                         <span className="text-[9px] font-bold text-white opacity-90 whitespace-nowrap">{value}</span>
                       </motion.div>
                     </div>
-                    <div className="w-10 shrink-0 text-xs font-bold text-slate-600 dark:text-slate-400">{pct}%</div>
+                    <div className="w-10 shrink-0 text-xs font-bold text-slate-600">{pct}%</div>
                   </div>
                 ))}
               </div>
@@ -1013,7 +1013,7 @@ export default function RegistrationTicketingPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           10. INTEGRATIONS — Hub-and-spoke layout
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-[#fbfbfe] dark:bg-[#030514] border-y border-slate-100 dark:border-slate-900 relative overflow-hidden transition-colors duration-300">
+      <section className="py-16 lg:py-20 bg-[#fbfbfe] border-y border-slate-200 relative overflow-hidden transition-colors duration-300">
         <style>{`
           @keyframes dash {
             to {
@@ -1032,15 +1032,15 @@ export default function RegistrationTicketingPage() {
         <div className="max-w-[1400px] mx-auto px-4 relative z-10">
           <InView className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <Label icon={Zap}>Integrations</Label>
-            <h2 className="font-display font-bold text-slate-900 dark:text-white">
+            <h2 className="font-display font-bold text-slate-900">
               Connect Registration with Your Existing Stack
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+            <p className="text-slate-600 font-light leading-relaxed">
               ConGenie sits at the centre of your event data ecosystem — syncing registrations, payments, and attendee records with the tools you already use.
             </p>
           </InView>
 
-          <div className="relative max-w-5xl mx-auto">
+          <div className="relative max-w-[1400px] mx-auto">
             {/* SVG connection lines for desktop */}
             <svg className="hidden lg:block absolute inset-0 w-full h-full pointer-events-none z-0" xmlns="http://www.w3.org/2000/svg">
               {/* Payments (Top Left) -> Center (50%, 50%) */}
@@ -1064,10 +1064,10 @@ export default function RegistrationTicketingPage() {
               {/* Left Column (Payments & CRM) */}
               <div className="lg:col-span-4 space-y-6 flex flex-col justify-center z-10">
                 {/* Payments Card */}
-                <div className="bg-white/95 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/70 dark:border-slate-800/80 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:border-accent-purple/45 hover:-translate-y-0.5 transition-all duration-300 group relative">
+                <div className="bg-white/95 backdrop-blur-md border border-slate-200/70 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:border-accent-purple/45 hover:-translate-y-0.5 transition-all duration-300 group relative">
                   <div className="space-y-1 mb-4">
-                    <h5 className="font-bold text-slate-950 dark:text-white group-hover:text-accent-purple transition-colors">Payments</h5>
-                    <p className=" text-slate-500 dark:text-slate-400 font-light">Process global ticketing payments securely.</p>
+                    <h5 className="font-display text-primary group-hover:text-accent-purple transition-colors mb-2">Payments</h5>
+                    <p className=" text-slate-500 font-light">Process global ticketing payments securely.</p>
                   </div>
                   <div className="space-y-2">
                     {[
@@ -1076,13 +1076,13 @@ export default function RegistrationTicketingPage() {
                     ].map((integ) => {
                       const Logo = integ.logo;
                       return (
-                        <div key={integ.name} className="flex items-center gap-3 p-2 bg-slate-50/50 dark:bg-slate-950/40 border border-slate-150/80 dark:border-slate-800/50 rounded-xl hover:border-accent-purple/30 transition-colors">
-                          <div className="w-8 h-8 rounded-lg bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center justify-center shrink-0 shadow-sm">
+                        <div key={integ.name} className="flex items-center gap-3 p-2 bg-slate-50/50 border border-slate-150/80 rounded-xl hover:border-accent-purple/30 transition-colors">
+                          <div className="w-8 h-8 rounded-lg bg-white border border-slate-100 flex items-center justify-center shrink-0 shadow-sm">
                             <Logo />
                           </div>
                           <div className="min-w-0">
-                            <div className="text-[11px] font-bold text-slate-800 dark:text-slate-200">{integ.name}</div>
-                            <div className="text-[9px] text-slate-500 dark:text-slate-400 truncate">{integ.desc}</div>
+                            <p className="font-semibold text-slate-800">{integ.name}</p>
+                            <p className="text-sm text-slate-500 truncate">{integ.desc}</p>
                           </div>
                         </div>
                       );
@@ -1091,10 +1091,10 @@ export default function RegistrationTicketingPage() {
                 </div>
 
                 {/* CRM Card */}
-                <div className="bg-white/95 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/70 dark:border-slate-800/80 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:border-accent-purple/45 hover:-translate-y-0.5 transition-all duration-300 group relative">
+                <div className="bg-white/95 backdrop-blur-md border border-slate-200/70 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:border-accent-purple/45 hover:-translate-y-0.5 transition-all duration-300 group relative">
                   <div className="space-y-1 mb-4">
-                    <h5 className="font-bold text-slate-950 dark:text-white group-hover:text-accent-purple transition-colors">CRM & Marketing</h5>
-                    <p className="text-slate-500 dark:text-slate-400 font-light">Sync attendee profiles and track lead pipelines.</p>
+                    <h5 className="font-display text-primary group-hover:text-accent-purple transition-colors mb-2">CRM & Marketing</h5>
+                    <p className="text-slate-500 font-light">Sync attendee profiles and track lead pipelines.</p>
                   </div>
                   <div className="space-y-2">
                     {[
@@ -1103,13 +1103,13 @@ export default function RegistrationTicketingPage() {
                     ].map((integ) => {
                       const Logo = integ.logo;
                       return (
-                        <div key={integ.name} className="flex items-center gap-3 p-2 bg-slate-50/50 dark:bg-slate-950/40 border border-slate-150/80 dark:border-slate-800/50 rounded-xl hover:border-accent-purple/30 transition-colors">
-                          <div className="w-8 h-8 rounded-lg bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center justify-center shrink-0 shadow-sm">
+                        <div key={integ.name} className="flex items-center gap-3 p-2 bg-slate-50/50 border border-slate-150/80 rounded-xl hover:border-accent-purple/30 transition-colors">
+                          <div className="w-8 h-8 rounded-lg bg-white border border-slate-100 flex items-center justify-center shrink-0 shadow-sm">
                             <Logo />
                           </div>
                           <div className="min-w-0">
-                            <div className="text-[11px] font-bold text-slate-800 dark:text-slate-200">{integ.name}</div>
-                            <div className="text-[9px] text-slate-500 dark:text-slate-400 truncate">{integ.desc}</div>
+                            <p className="font-semibold text-slate-800">{integ.name}</p>
+                            <p className="text-sm text-slate-500 truncate">{integ.desc}</p>
                           </div>
                         </div>
                       );
@@ -1120,19 +1120,19 @@ export default function RegistrationTicketingPage() {
               
               {/* Center Column (ConGenie Hub) */}
               <div className="lg:col-span-4 flex flex-col items-center justify-center relative py-10 lg:py-0 z-10">
-                <div className="relative w-48 h-48 flex items-center justify-center">
+                <div className="relative w-96 h-96 flex items-center justify-center">
                   {/* Outer pulsing ring */}
-                  <div className="absolute inset-0 bg-accent-purple/5 dark:bg-accent-purple/10 rounded-full blur-2xl animate-pulse-slow" />
+                  <div className="absolute inset-0 bg-accent-purple/5 rounded-full blur-2xl animate-pulse-slow" />
                   
                   {/* Spinning borders */}
                   <div className="absolute inset-4 rounded-full border border-dashed border-accent-purple/30 animate-[spin_40s_linear_infinite]" />
                   <div className="absolute inset-8 rounded-full border border-accent-purple/10" />
                   
                   {/* Central Hub Plate */}
-                  <div className="relative w-28 h-28 rounded-full bg-gradient-to-br from-white to-[#fbf9ff] dark:from-[#090d26] dark:to-[#040615] border-2 border-accent-purple/35 dark:border-accent-purple/25 flex flex-col items-center justify-center shadow-xl shadow-accent-purple/15 dark:shadow-accent-purple/5 hover:scale-105 transition-transform duration-300 z-10">
-                    <Sparkles className="w-7 h-7 text-accent-purple mb-1 animate-pulse" />
-                    <span className="text-[10px] font-extrabold text-slate-900 dark:text-white uppercase tracking-widest">ConGenie</span>
-                    <span className="text-[8px] text-accent-purple font-bold tracking-wide">CORE HUB</span>
+                  <div className="relative w-64 h-64 rounded-full bg-gradient-to-br from-white to-[#fbf9ff] border-2 border-accent-purple/35 flex flex-col items-center justify-center shadow-xl shadow-accent-purple/15 hover:scale-105 transition-transform duration-300 z-10">
+                    <Sparkles className="w-7 h-7 text-accent-purple mb-1 animate-pulse" strokeWidth='1.5' />
+                    <h4 className="font-extrabold text-slate-900 uppercase tracking-widest">ConGenie</h4>
+                    <p className="text-accent-purple font-bold tracking-wide">CORE HUB</p>
                   </div>
                 </div>
               </div>
@@ -1140,10 +1140,10 @@ export default function RegistrationTicketingPage() {
               {/* Right Column (Automation, Comms, Identity) */}
               <div className="lg:col-span-4 space-y-6 flex flex-col justify-center z-10">
                 {/* Automation */}
-                <div className="bg-white/95 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/70 dark:border-slate-800/80 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:border-accent-purple/45 hover:-translate-y-0.5 transition-all duration-300 group relative">
+                <div className="bg-white/95 backdrop-blur-md border border-slate-200/70 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:border-accent-purple/45 hover:-translate-y-0.5 transition-all duration-300 group relative">
                   <div className="space-y-1 mb-4">
-                    <h5 className="font-bold text-slate-950 dark:text-white group-hover:text-accent-purple transition-colors">Automation</h5>
-                    <p className=" text-slate-500 dark:text-slate-400 font-light">Trigger multi-app workflow automations.</p>
+                    <h5 className="font-display text-primary group-hover:text-accent-purple transition-colors mb-2">Automation</h5>
+                    <p className=" text-slate-500 font-light">Trigger multi-app workflow automations.</p>
                   </div>
                   <div className="space-y-2">
                     {[
@@ -1152,13 +1152,13 @@ export default function RegistrationTicketingPage() {
                     ].map((integ) => {
                       const Logo = integ.logo;
                       return (
-                        <div key={integ.name} className="flex items-center gap-3 p-2 bg-slate-50/50 dark:bg-slate-950/40 border border-slate-150/80 dark:border-slate-800/50 rounded-xl hover:border-accent-purple/30 transition-colors">
-                          <div className="w-8 h-8 rounded-lg bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center justify-center shrink-0 shadow-sm">
+                        <div key={integ.name} className="flex items-center gap-3 p-2 bg-slate-50/50 border border-slate-150/80 rounded-xl hover:border-accent-purple/30 transition-colors">
+                          <div className="w-8 h-8 rounded-lg bg-white border border-slate-100 flex items-center justify-center shrink-0 shadow-sm">
                             <Logo />
                           </div>
                           <div className="min-w-0">
-                            <div className="text-[11px] font-bold text-slate-800 dark:text-slate-200">{integ.name}</div>
-                            <div className="text-[9px] text-slate-550 dark:text-slate-400 truncate">{integ.desc}</div>
+                            <p className="font-semibold text-slate-800">{integ.name}</p>
+                            <p className="text-sm text-slate-550 truncate">{integ.desc}</p>
                           </div>
                         </div>
                       );
@@ -1167,10 +1167,10 @@ export default function RegistrationTicketingPage() {
                 </div>
 
                 {/* Communication */}
-                <div className="bg-white/95 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/70 dark:border-slate-800/80 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:border-accent-purple/45 hover:-translate-y-0.5 transition-all duration-300 group relative">
+                <div className="bg-white/95 backdrop-blur-md border border-slate-200/70 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:border-accent-purple/45 hover:-translate-y-0.5 transition-all duration-300 group relative">
                   <div className="space-y-1 mb-4">
-                    <h5 className="font-bold text-slate-950 dark:text-white group-hover:text-accent-purple transition-colors">Communication</h5>
-                    <p className="text-slate-500 dark:text-slate-400 font-light">Automate notification updates instantly.</p>
+                    <h5 className="font-display text-primary group-hover:text-accent-purple transition-colors mb-2">Communication</h5>
+                    <p className="text-slate-500 font-light">Automate notification updates instantly.</p>
                   </div>
                   <div className="space-y-2">
                     {[
@@ -1179,13 +1179,13 @@ export default function RegistrationTicketingPage() {
                     ].map((integ) => {
                       const Logo = integ.logo;
                       return (
-                        <div key={integ.name} className="flex items-center gap-3 p-2 bg-slate-50/50 dark:bg-slate-950/40 border border-slate-150/80 dark:border-slate-800/50 rounded-xl hover:border-accent-purple/30 transition-colors">
-                          <div className="w-8 h-8 rounded-lg bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center justify-center shrink-0 shadow-sm">
+                        <div key={integ.name} className="flex items-center gap-3 p-2 bg-slate-50/50 border border-slate-150/80 rounded-xl hover:border-accent-purple/30 transition-colors">
+                          <div className="w-8 h-8 rounded-lg bg-white border border-slate-100 flex items-center justify-center shrink-0 shadow-sm">
                             <Logo />
                           </div>
                           <div className="min-w-0">
-                            <div className="text-slate-800 dark:text-slate-200">{integ.name}</div>
-                            <div className="text-[9px] text-slate-550 dark:text-slate-400 truncate">{integ.desc}</div>
+                            <div className="font-semibold text-slate-800">{integ.name}</div>
+                            <p className="text-sm text-slate-555 truncate">{integ.desc}</p>
                           </div>
                         </div>
                       );
@@ -1203,11 +1203,11 @@ export default function RegistrationTicketingPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           11. BUSINESS OUTCOMES — Premium editorial panels
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="pt-16 lg:pt-20 bg-gradient-to-b from-[#faf9ff] to-white dark:from-[#030519] dark:to-[#020314]">
+      <section className="pt-16 lg:pt-20 bg-white">
         <div className="max-w-[1400px] mx-auto px-4">
           <InView className="text-center mb-14 space-y-4">
             <Label icon={Star}>Business Outcomes</Label>
-            <h2 className="font-display font-bold text-slate-900 dark:text-white">
+            <h2 className="font-display font-bold text-slate-900">
               Measurable Impact from Day One
             </h2>
           </InView>

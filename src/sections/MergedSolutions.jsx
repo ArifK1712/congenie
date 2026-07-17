@@ -156,7 +156,7 @@ export default function MergedSolutions() {
   return (
     <section 
       id="solutions"
-      className="py-20 lg:py-24 bg-white dark:bg-[#030712] transition-colors duration-300 relative overflow-hidden"
+      className="py-20 lg:py-24 bg-white transition-colors duration-300 relative overflow-hidden"
     >
       {/* Decorative glows */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent-purple/5 rounded-full blur-[140px] pointer-events-none" />
@@ -174,17 +174,17 @@ export default function MergedSolutions() {
             <span>Platform Solutions</span>
           </div>
 
-          <h2 className="font-display text-primary dark:text-white">
+          <h2 className="font-display text-primary">
             Everything You Need to Run Any Event
           </h2>
 
-          <p className="mt-4 text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-sm sm:text-base text-slate-500 leading-relaxed max-w-2xl mx-auto">
             From conferences and exhibitions to medical congresses, trade missions, and corporate events, ConGenie delivers purpose-built modules customized for your event environment.
           </p>
         </div>
 
         {/* Tab Selector Buttons (Horizontal Scroll on Mobile) */}
-        <div className="flex overflow-x-auto pb-4 mb-10 gap-2 dark:border-slate-900 scrollbar-thin">
+        <div className="flex overflow-x-auto pb-4 mb-10 gap-2 scrollbar-thin">
           <div className="flex mx-auto gap-2 px-4 md:px-0">
             {solutionsData.map((tab) => {
               const TabIcon = tab.icon;
@@ -196,7 +196,7 @@ export default function MergedSolutions() {
                   className={`flex items-center space-x-2 px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap cursor-pointer ${
                     isActive 
                       ? 'bg-accent-purple text-white shadow-lg shadow-accent-purple/20' 
-                      : 'border border-slate-200/60 dark:border-slate-800/40 bg-white/50 dark:bg-[#0c1228]/35 text-slate-500 hover:text-accent-purple hover:border-accent-purple/40 dark:text-slate-400 dark:hover:text-white'
+                      : 'border border-slate-200/60 bg-white/50 text-slate-500 hover:text-accent-purple hover:border-accent-purple/40'
                   }`}
                 >
                   <TabIcon className="w-4 h-4" />
@@ -218,13 +218,13 @@ export default function MergedSolutions() {
             className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch"
           >
             {/* Left Column: Solution Details */}
-            <div className="lg:col-span-5 flex flex-col justify-between p-8 rounded-3xl border border-slate-200/50 dark:border-slate-800/50 bg-white dark:bg-slate-950/40">
+            <div className="lg:col-span-5 flex flex-col justify-between p-8 rounded-3xl border border-slate-200/50 bg-white">
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-display text-primary dark:text-white">
+                  <h3 className="font-display text-primary">
                     {activeSolution.title}
                   </h3>
-                  <p className="mt-3 text-slate-500 dark:text-slate-400 leading-relaxed">
+                  <p className="mt-3 text-slate-550 leading-relaxed">
                     {activeSolution.longDescription}
                   </p>
                 </div>
@@ -232,7 +232,7 @@ export default function MergedSolutions() {
                 {/* Bullets List */}
                 <div className="space-y-3 pt-2">
                   {activeSolution.bullets.map((bullet, idx) => (
-                    <div key={idx} className="flex items-center space-x-3 text-slate-650 dark:text-slate-300">
+                    <div key={idx} className="flex items-center space-x-3 text-slate-650">
                       <div className="w-5 h-5 rounded-full bg-accent-purple/10 flex items-center justify-center flex-shrink-0">
                         <Check className="w-3.5 h-3.5 text-accent-purple" />
                       </div>
@@ -243,10 +243,10 @@ export default function MergedSolutions() {
               </div>
 
               {/* Bottom Insight Card */}
-              <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-900">
+              <div className="mt-8 pt-6 border-t border-slate-100">
                 <div className="bg-accent-purple/5 border border-accent-purple/10 p-4 rounded-2xl">
                   <span className="block font-mono font-bold uppercase text-accent-purple tracking-wider mb-1">Platform Insight</span>
-                  <p className=" text-slate-600 dark:text-slate-400 font-light">{activeSolution.insight}</p>
+                  <p className=" text-slate-600 font-light">{activeSolution.insight}</p>
                 </div>
               </div>
             </div>
@@ -257,7 +257,7 @@ export default function MergedSolutions() {
                 <span className="font-mono font-bold text-accent-purple uppercase tracking-wider block mb-1">
                   RELEVANT MODULES
                 </span>
-                <p className="text-slate-500 dark:text-slate-400">
+                <p className="text-slate-500">
                   These core modules support the specific needs of {activeSolution.title}.
                 </p>
               </div>
@@ -269,15 +269,15 @@ export default function MergedSolutions() {
                   return (
                     <div
                       key={idx}
-                      className="bg-white dark:bg-slate-900/30 border border-slate-200/80 dark:border-slate-800/80 p-5 rounded-2xl text-left hover:border-accent-purple/40 hover:shadow-lg transition-all duration-300 group"
+                      className="bg-white border border-slate-200/80 p-5 rounded-2xl text-left hover:border-accent-purple/40 hover:shadow-lg transition-all duration-300 group"
                     >
-                      <div className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 w-max text-accent-purple group-hover:bg-accent-purple/10 transition-colors duration-300 mb-4">
+                      <div className="p-2.5 rounded-xl border border-slate-200 bg-slate-50 w-max text-accent-purple group-hover:bg-accent-purple/10 transition-colors duration-300 mb-4">
                         <ModuleIcon className="w-5 h-5" />
                       </div>
-                      <h5 className="font-display text-primary dark:text-white mb-2">
+                      <h5 className="font-display text-primary mb-2">
                         {moduleName}
                       </h5>
-                      <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
+                      <p className="text-slate-500 leading-relaxed">
                         {moduleDesc}
                       </p>
                     </div>
@@ -298,7 +298,6 @@ export default function MergedSolutions() {
             </div>
           </motion.div>
         </AnimatePresence>
-
       </div>
     </section>
   );

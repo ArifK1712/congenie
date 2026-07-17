@@ -28,7 +28,7 @@ const eventTypes = [
   { title: 'Networking Events', description: 'Icebreakers, matchmaking speed-meetings, and gala dinners.', icon: Users },
 ];
 
-const iconStyle = 'text-accent-purple dark:text-purple-400 bg-purple-50 dark:bg-purple-950/20 border-purple-100/50 dark:border-purple-900/30';
+const iconStyle = 'text-accent-purple bg-purple-50 border-purple-100/50';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -49,15 +49,15 @@ const itemVariants = {
 
 export default function TrustedBy() {
   return (
-    <section id="event-types" className="py-24 bg-white dark:bg-[#070b19] dark:border-slate-900 transition-colors duration-300">
+    <section id="event-types" className="py-24 bg-white transition-colors duration-300">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-display text-primary dark:text-white">
+          <h2 className="font-display text-primary">
             Built for Large-Scale, Complex Events
           </h2>
-          <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+          <p className="mt-4 text-lg text-slate-600">
             From single-day workshops to massive global summits, our software scales to meet the unique needs of different industries and formats.
           </p>
         </div>
@@ -77,15 +77,15 @@ export default function TrustedBy() {
                 key={event.title}
                 variants={itemVariants}
                 whileHover={{ y: -6, scale: 1.02 }}
-                className="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col items-center text-center transition-all duration-300 hover:shadow-xl hover:border-accent-purple/30 group"
+                className="glass-card p-6 rounded-2xl border border-slate-200/50 flex flex-col items-center text-center transition-all duration-300 hover:shadow-xl hover:border-accent-purple/30 group"
               >
                 <div className={`w-12 h-12 rounded-full border flex items-center justify-center mb-4 transition-transform duration-300 group-hover:-translate-y-0.5 ${iconStyle}`}>
                   <IconComponent className="w-6 h-6 stroke-[1.5]" />
                 </div>
-                <h3 className="font-display font-bold text-base text-primary dark:text-white mb-2">
+                <h3 className="font-display font-bold text-base text-primary mb-2">
                   {event.title}
                 </h3>
-                <p className="text-slate-500 dark:text-slate-400 leading-relaxed font-light text-sm">
+                <p className="text-slate-505 leading-relaxed font-light text-sm">
                   {event.description}
                 </p>
               </motion.div>

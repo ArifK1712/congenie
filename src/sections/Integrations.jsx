@@ -30,23 +30,23 @@ export default function Integrations() {
   const marqueeItems = [...partners, ...partners];
 
   return (
-    <section className="py-20 bg-slate-50 dark:bg-[#030712] overflow-hidden transition-colors duration-300">
+    <section className="py-20 bg-slate-50 overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 mb-12">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="font-display text-primary dark:text-white">
+          <h2 className="font-display text-primary">
             Syncs Seamlessly with Your Tech Stack
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-500 dark:text-slate-400">
+          <p className="mt-3 text-sm sm:text-base text-slate-500">
             Connect EVNT.AI to your favorite CRM tools, payment gateways, video streams, and offline files databases.
           </p>
         </div>
       </div>
 
       {/* Marquee Wrapper */}
-      <div className="relative w-full flex overflow-x-hidden border-y border-slate-200/50 dark:border-slate-800/40 bg-white/40 dark:bg-[#090e24]/10 py-6 backdrop-blur-sm">
+      <div className="relative w-full flex overflow-x-hidden border-y border-slate-200/50 bg-white/40 py-6 backdrop-blur-sm">
         {/* Gradients to fade edges */}
-        <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-slate-50 to-transparent dark:from-[#030712] z-10 pointer-events-none" />
-        <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent dark:from-[#030712] z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
 
         {/* Marquee Content */}
         <div className="animate-marquee whitespace-nowrap gap-6">
@@ -55,15 +55,15 @@ export default function Integrations() {
             return (
               <div
                 key={idx}
-                className="inline-flex items-center space-x-3 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/60 rounded-xl px-5 py-3 shadow-sm hover:border-accent-cyan/40 dark:hover:border-accent-cyan/40 transition-colors"
+                className="inline-flex items-center space-x-3 bg-white border border-slate-200/60 rounded-xl px-5 py-3 shadow-sm hover:border-accent-cyan/40 transition-colors"
                 title={item.desc}
               >
-                <div className="p-2 rounded bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-300">
+                <div className="p-2 rounded bg-slate-100 text-slate-700">
                   <PartnerIcon className="w-4 h-4" />
                 </div>
                 <div className="text-left">
-                  <h4 className="text-xs font-bold text-slate-850 dark:text-slate-100">{item.name}</h4>
-                  <p className="text-[9px] text-slate-400 dark:text-slate-500 font-light mt-0.5">{item.desc}</p>
+                  <h4 className="text-xs font-bold text-slate-850">{item.name}</h4>
+                  <p className="text-[9px] text-slate-400 font-light mt-0.5">{item.desc}</p>
                 </div>
               </div>
             );

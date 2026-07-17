@@ -32,7 +32,7 @@ const rolesData = [
     accent: '#7C3AED',
     url: 'console://congenie.com/workspace/admin',
     colorClass: 'text-violet-500 border-violet-500/20 bg-violet-500/5 hover:border-violet-500/30',
-    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 dark:text-violet-400 shadow-violet-500/10',
+    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 shadow-violet-500/10',
     kpis: [
       { label: 'Total Registrations', value: '12,450', change: '94% of target', icon: Users },
       { label: 'Checked-in Attendees', value: '9,820', change: 'Live synced', icon: Activity },
@@ -57,7 +57,7 @@ const rolesData = [
     accent: '#7C3AED', // Violet
     url: 'console://congenie.com/workspace/organizer',
     colorClass: 'text-violet-500 border-violet-500/20 bg-violet-500/5 hover:border-violet-500/30',
-    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 dark:text-violet-400 shadow-violet-500/10',
+    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 shadow-violet-500/10',
     kpis: [
       { label: 'Total Registrations', value: '3,420', change: '85% of target', icon: Users },
       { label: 'Confirmed Speakers', value: '48 / 50', change: '2 pending verification', icon: Sparkles },
@@ -82,7 +82,7 @@ const rolesData = [
     accent: '#7C3AED', // Violet
     url: 'console://congenie.com/workspace/registration',
     colorClass: 'text-violet-500 border-violet-500/20 bg-violet-500/5 hover:border-violet-500/30',
-    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 dark:text-violet-400 shadow-violet-500/10',
+    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 shadow-violet-500/10',
     kpis: [
       { label: 'Total Attendees', value: '1,250', change: '+14% from last week', icon: Users },
       { label: 'Approved Tickets', value: '1,180', change: 'Instant sync', icon: CheckCircle2 },
@@ -107,7 +107,7 @@ const rolesData = [
     accent: '#7C3AED', // Violet
     url: 'console://congenie.com/workspace/finance',
     colorClass: 'text-violet-500 border-violet-500/20 bg-violet-500/5 hover:border-violet-500/30',
-    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 dark:text-violet-400 shadow-violet-500/10',
+    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 shadow-violet-500/10',
     kpis: [
       { label: 'Revenue Collected', value: '$342,500', change: '108% of target', icon: DollarSign },
       { label: 'Outstanding Payments', value: '$12,400', change: 'Invoice reminders sent', icon: Clock },
@@ -132,7 +132,7 @@ const rolesData = [
     accent: '#7C3AED', // Violet
     url: 'console://congenie.com/workspace/agenda',
     colorClass: 'text-violet-500 border-violet-500/20 bg-violet-500/5 hover:border-violet-500/30',
-    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 dark:text-violet-400 shadow-violet-500/10',
+    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 shadow-violet-500/10',
     kpis: [
       { label: 'Total Sessions', value: '72', change: 'Multi-track timeline', icon: Calendar },
       { label: 'Confirmed Slots', value: '68', change: '4 open slots left', icon: CheckCircle2 },
@@ -157,7 +157,7 @@ const rolesData = [
     accent: '#7C3AED', // Indigo
     url: 'console://congenie.com/workspace/analytics',
     colorClass: 'text-violet-500 border-violet-500/20 bg-violet-500/5 hover:border-violet-500/30',
-    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 dark:text-violet-400 shadow-violet-500/10',
+    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 shadow-violet-500/10',
     kpis: [
       { label: 'Engagement Rate', value: '78%', change: '+8% vs benchmark', icon: TrendingUp },
       { label: 'Session Attendance', value: '84%', change: 'Avg 340 attendees/session', icon: Users },
@@ -182,7 +182,7 @@ const rolesData = [
     accent: '#7C3AED', // Violet
     url: 'console://congenie.com/workspace/attendee',
     colorClass: 'text-violet-500 border-violet-500/20 bg-violet-500/5 hover:border-violet-500/30',
-    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 dark:text-violet-400 shadow-violet-500/10',
+    activeColorClass: 'border-violet-500 bg-violet-500/10 text-violet-600 shadow-violet-500/10',
     kpis: [
       { label: 'Personal Schedule', value: '6 sessions', change: 'Synchronized to calendar', icon: Calendar },
       { label: 'Confirmed Meetings', value: '4 active', change: 'Table assignments set', icon: Users },
@@ -206,27 +206,27 @@ export default function DashboardPreview() {
   const activeRole = rolesData.find(r => r.id === activeTab) || rolesData[0];
 
   return (
-    <section id="platform-explorer" className="py-20 lg:py-24 bg-gradient-to-b from-[#F7F9FD] via-[#F2F5FB] to-white dark:from-[#020314] dark:via-[#0c1228]/20 dark:to-[#020314] transition-colors duration-300 relative overflow-hidden">
+    <section id="platform-explorer" className="py-20 lg:py-24 bg-gradient-to-b from-[#F7F9FD] via-[#F2F5FB] to-white transition-colors duration-300 relative overflow-hidden">
       
       {/* Background Decorative Glow Elements */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-1/4 left-1/10 w-[500px] h-[500px] rounded-full bg-blue-400/5 dark:bg-blue-500/5 blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/10 w-[500px] h-[500px] rounded-full bg-purple-400/5 dark:bg-purple-500/5 blur-[120px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(rgba(148,163,184,0.03)_1px,transparent_1px)] [background-size:2rem_2rem] dark:bg-[radial-gradient(rgba(235,231,251,0.015)_1px,transparent_1px)]" />
+        <div className="absolute top-1/4 left-1/10 w-[500px] h-[500px] rounded-full bg-blue-400/5 blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/10 w-[500px] h-[500px] rounded-full bg-purple-400/5 blur-[120px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(rgba(148,163,184,0.03)_1px,transparent_1px)] [background-size:2rem_2rem]" />
       </div>
 
       <div className="max-w-[1400px] mx-auto px-4 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-accent-blue/30 bg-accent-blue/5 text-accent-blue dark:text-accent-cyan text-xs font-semibold mb-4 backdrop-blur-sm">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-accent-blue/30 bg-accent-blue/5 text-accent-blue text-xs font-semibold mb-4 backdrop-blur-sm">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Role-Based Experience</span>
           </div>
-          <h2 className="font-display text-primary dark:text-white">
+          <h2 className="font-display text-primary">
             Explore ConGenie Through Every User's Workspace
           </h2>
-          <p className="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-slate-500 leading-relaxed max-w-2xl mx-auto">
             Each role receives a tailored workspace based on their responsibilities — from registration management to financial reporting, agenda planning, and attendee engagement.
           </p>
 
@@ -234,7 +234,7 @@ export default function DashboardPreview() {
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#platform-explorer"
-              className="px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 text-sm font-medium hover:border-accent-purple/40 hover:text-accent-purple transition-all duration-300 shadow-sm"
+              className="px-6 py-3 rounded-xl border border-slate-200 bg-white text-slate-700 text-sm font-medium hover:border-accent-purple/40 hover:text-accent-purple transition-all duration-300 shadow-sm"
             >
               Explore Live Demo
             </a>
@@ -262,8 +262,8 @@ export default function DashboardPreview() {
                   onClick={() => setActiveTab(role.id)}
                   className={`flex items-center space-x-4 px-5 py-4 rounded-2xl border text-left transition-all duration-300 flex-shrink-0 lg:flex-shrink-1 group relative cursor-pointer ${
                     isActive
-                      ? role.activeColorClass + ' bg-white dark:bg-slate-900 border-l-4 shadow-xl translate-x-1 lg:translate-x-3'
-                      : 'border-slate-200/60 dark:border-slate-800/40 bg-white/50 dark:bg-[#0c1228]/35 text-slate-500 dark:text-slate-450 hover:bg-white dark:hover:bg-slate-900 hover:border-slate-350'
+                      ? role.activeColorClass + ' bg-white border-l-4 shadow-xl translate-x-1 lg:translate-x-3'
+                      : 'border-slate-200/60 bg-white/50 text-slate-500 hover:bg-white hover:border-slate-350'
                   }`}
                   style={{
                     borderColor: isActive ? role.accent : '',
@@ -294,16 +294,16 @@ export default function DashboardPreview() {
 
                   {/* Text Content */}
                   <div className="flex-1 min-w-[120px]">
-                    <h6 className="font-display text-slate-800 dark:text-white">
+                    <h6 className="font-display text-slate-800">
                       {role.label}
                     </h6>
-                    <p className="text-xs text-slate-400 dark:text-slate-450 mt-0.5 uppercase tracking-wider">
+                    <p className="text-xs text-slate-400 mt-0.5 uppercase tracking-wider">
                       {role.sublabel}
                     </p>
                   </div>
 
                   {/* Arrow Indicator */}
-                  <div className="hidden lg:flex items-center text-slate-400 dark:text-slate-500 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">
+                  <div className="hidden lg:flex items-center text-slate-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">
                     <ChevronRight className="w-4 h-4" style={{ color: isActive ? role.accent : '' }} />
                   </div>
                 </button>
@@ -316,27 +316,27 @@ export default function DashboardPreview() {
             
             {/* Dynamic Ambient Spotlight behind the workspace */}
             <div 
-              className="absolute -top-16 -left-16 w-80 h-80 rounded-full blur-[100px] pointer-events-none opacity-20 dark:opacity-20 transition-all duration-500"
+              className="absolute -top-16 -left-16 w-80 h-80 rounded-full blur-[100px] pointer-events-none opacity-20 transition-all duration-500"
               style={{ backgroundColor: activeRole.accent }}
             />
             
             {/* 1. Main Dashboard Window */}
-            <div className="bg-white/80 dark:bg-[#080d24]/90 border border-slate-200/60 dark:border-slate-850/80 rounded-3xl relative min-h-[580px] backdrop-blur-xl p-6 overflow-hidden">
+            <div className="bg-white/80 border border-slate-200/60 rounded-3xl relative min-h-[580px] backdrop-blur-xl p-6 overflow-hidden">
               
               {/* Browser control bar */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-slate-200/50 dark:border-slate-850/60 gap-3">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-slate-200/50 gap-3">
                 <div className="flex items-center space-x-2">
-                  <span className="w-3 h-3 rounded-full bg-red-400" />
+                  <span className="w-3 h-3 rounded-full bg-red-450" />
                   <span className="w-3 h-3 rounded-full bg-yellow-400" />
                   <span className="w-3 h-3 rounded-full bg-green-400" />
-                  <div className="h-4 w-px bg-slate-200 dark:bg-slate-800 mx-2" />
-                  <span className="text-[10px] sm:text-xs text-slate-400 dark:text-slate-500 font-mono tracking-wide select-all bg-slate-100 dark:bg-slate-900/60 px-3 py-1 rounded-md max-w-[280px] sm:max-w-none overflow-hidden text-ellipsis whitespace-nowrap">
+                  <div className="h-4 w-px bg-slate-200 mx-2" />
+                  <span className="text-[10px] sm:text-xs text-slate-400 font-mono tracking-wide select-all bg-slate-100 px-3 py-1 rounded-md max-w-[280px] sm:max-w-none overflow-hidden text-ellipsis whitespace-nowrap">
                     {activeRole.url}
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-[10px] text-slate-450 dark:text-slate-400 font-mono uppercase tracking-widest font-bold">LIVE CONSOLE</span>
+                  <span className="text-[10px] text-slate-455 font-mono uppercase tracking-widest font-bold">LIVE CONSOLE</span>
                 </div>
               </div>
 
@@ -357,14 +357,14 @@ export default function DashboardPreview() {
                       return (
                         <div 
                           key={idx} 
-                          className="bg-slate-100/60 dark:bg-[#0e1634]/55 border border-slate-200/40 dark:border-slate-800/40 p-4 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300"
+                          className="bg-slate-100/60 border border-slate-200/40 p-4 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300"
                         >
                           <div className="flex justify-between items-start">
-                            <span className="text-xs text-slate-500 dark:text-slate-400 leading-tight">
+                            <span className="text-xs text-slate-500 leading-tight">
                               {kpi.label}
                             </span>
                             <div 
-                              className="p-1.5 rounded-lg border text-slate-600 dark:text-slate-450"
+                              className="p-1.5 rounded-lg border text-slate-600"
                               style={{ 
                                 backgroundColor: `${activeRole.accent}12`,
                                 borderColor: `${activeRole.accent}25`
@@ -374,10 +374,10 @@ export default function DashboardPreview() {
                             </div>
                           </div>
                           <div className="mt-3">
-                            <h4 className="text-xl sm:text-2xl font-black text-slate-800 dark:text-white tracking-tight leading-none">
+                            <h4 className="text-xl sm:text-2xl font-black text-slate-800 tracking-tight leading-none">
                               {kpi.value}
                             </h4>
-                            <p className="text-[9px] text-slate-450 dark:text-slate-400 font-light mt-1 flex items-center gap-0.5">
+                            <p className="text-[9px] text-slate-450 font-light mt-1 flex items-center gap-0.5">
                               <span style={{ color: activeRole.accent }}>{kpi.change}</span>
                             </p>
                           </div>
@@ -390,9 +390,9 @@ export default function DashboardPreview() {
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch">
                     
                     {/* Main Chart Visualization */}
-                    <div className="md:col-span-8 bg-slate-100/40 dark:bg-[#0b1028]/40 p-5 rounded-2xl border border-slate-200/40 dark:border-slate-800/40 flex flex-col justify-between min-h-[320px]">
+                    <div className="md:col-span-8 bg-slate-100/40 p-5 rounded-2xl border border-slate-200/40 flex flex-col justify-between min-h-[320px]">
                       <div className="flex justify-between items-center mb-3">
-                        <h4 className="text-xs sm:text-sm text-slate-800 dark:text-white">
+                        <h4 className="text-xs sm:text-sm text-slate-800">
                           {activeRole.chartTitle}
                         </h4>
                         <span 
@@ -431,16 +431,16 @@ export default function DashboardPreview() {
 
                           {/* App Interactive Notifications List */}
                           <div className="flex-1 w-full space-y-3">
-                            <div className="bg-slate-100/80 dark:bg-[#0c122c] border border-slate-200/50 dark:border-slate-800/40 p-3 rounded-xl">
+                            <div className="bg-slate-100/80 border border-slate-200/50 p-3 rounded-xl">
                               <span className="text-[8px] text-pink-500 font-extrabold uppercase tracking-widest block mb-0.5">UPCOMING MEETING</span>
-                              <h6 className="text-xs font-bold text-slate-800 dark:text-white leading-snug">Meet Marcus Sterling (Apex)</h6>
+                              <h6 className="text-xs font-bold text-slate-800 leading-snug">Meet Marcus Sterling (Apex)</h6>
                               <p className="text-[9px] text-slate-400 mt-1 font-light flex items-center gap-1">
                                 <MapPin className="w-3 h-3 text-slate-400" /> Table B3 • 03:15 PM
                               </p>
                             </div>
-                            <div className="bg-slate-100/80 dark:bg-[#0c122c] border border-slate-200/50 dark:border-slate-800/40 p-3 rounded-xl">
-                              <span className="text-[8px] text-slate-450 dark:text-slate-400 font-semibold uppercase tracking-widest block mb-0.5">LIVE ANNOUNCEMENT</span>
-                              <h6 className="text-xs font-bold text-slate-800 dark:text-white leading-snug">Opening keynote starting in Plenary</h6>
+                            <div className="bg-slate-100/80 border border-slate-200/50 p-3 rounded-xl">
+                              <span className="text-[8px] text-slate-455 font-semibold uppercase tracking-widest block mb-0.5">LIVE ANNOUNCEMENT</span>
+                              <h6 className="text-xs font-bold text-slate-800 leading-snug">Opening keynote starting in Plenary</h6>
                               <p className="text-[9px] text-slate-400 mt-1 font-light">Seats allocation will close in 5 mins.</p>
                             </div>
                           </div>
@@ -461,7 +461,7 @@ export default function DashboardPreview() {
                             </defs>
                             
                             {/* Baseline — rendered first so bars always paint on top */}
-                            <line x1="0" y1="107" x2="400" y2="107" stroke="currentColor" className="text-slate-200 dark:text-slate-800" strokeWidth="1" />
+                            <line x1="0" y1="107" x2="400" y2="107" stroke="currentColor" className="text-slate-200" strokeWidth="1" />
 
                             {activeRole.chartType === 'lines' ? (() => {
                               const maxVal = Math.max(...activeRole.chartData, 1);
@@ -531,10 +531,10 @@ export default function DashboardPreview() {
                     </div>
 
                     {/* Secondary Insights & Activities List Panel */}
-                    <div className="md:col-span-4 bg-slate-100/40 dark:bg-[#0b1028]/40 p-5 rounded-2xl border border-slate-200/40 dark:border-slate-800/40 flex flex-col justify-between min-h-[220px]">
+                    <div className="md:col-span-4 bg-slate-100/40 p-5 rounded-2xl border border-slate-200/40 flex flex-col justify-between min-h-[220px]">
                       <div>
-                        <h5 className="text-xs font-bold text-slate-800 dark:text-white uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
-                          <Activity className="w-3.5 h-3.5 text-slate-450 dark:text-slate-400" />
+                        <h5 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
+                          <Activity className="w-3.5 h-3.5 text-slate-455" />
                           Recent Activities
                         </h5>
                         <div className="space-y-3.5">
@@ -547,10 +547,10 @@ export default function DashboardPreview() {
                                 }}
                               />
                               <div className="flex-1 min-w-0">
-                                <p className="text-[11px] text-slate-700 dark:text-slate-300 font-light leading-snug break-words">
+                                <p className="text-[11px] text-slate-700 font-light leading-snug break-words">
                                   {act.text}
                                 </p>
-                                <span className="text-[9px] text-slate-400 dark:text-slate-500 font-light mt-0.5 block">
+                                <span className="text-[9px] text-slate-400 font-light mt-0.5 block">
                                   {act.time}
                                 </span>
                               </div>
@@ -559,8 +559,8 @@ export default function DashboardPreview() {
                         </div>
                       </div>
                       
-                      <div className="mt-4 pt-3.5 border-t border-slate-200/50 dark:border-slate-800/40">
-                        <button className="text-[10px] font-bold text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-white flex items-center gap-1 group transition-colors">
+                      <div className="mt-4 pt-3.5 border-t border-slate-200/50">
+                        <button className="text-[10px] font-bold text-slate-500 hover:text-slate-800 flex items-center gap-1 group transition-colors">
                           View Activity Log
                           <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </button>
@@ -591,7 +591,7 @@ export default function DashboardPreview() {
                         <span className="font-mono font-bold tracking-widest uppercase block" style={{ color: activeRole.accent }}>
                           CONGENIE ENGINE • AUTOMATION METRICS
                         </span>
-                        <p className="text-sm text-slate-650 dark:text-slate-350 font-light mt-0.5 leading-snug">
+                        <p className="text-sm text-slate-650 font-light mt-0.5 leading-snug">
                           {activeRole.aiInsight}
                         </p>
                       </div>

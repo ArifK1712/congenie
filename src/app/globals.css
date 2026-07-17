@@ -26,11 +26,6 @@
     transition-duration: 300ms;
   }
 
-  .dark body {
-    background-color: #020314; /* very deep brand navy/black */
-    color: #ebe7fb; /* brand soft lavender for contrast */
-  }
-
   /* ── Heading hierarchy ───────────────────────────────────────────── */
   h1 {
     font-family: var(--font-display);
@@ -88,25 +83,11 @@
   border: 1px solid rgba(132, 61, 245, 0.15); /* #843DF5 with alpha */
 }
 
-.dark .glass-panel {
-  background-color: rgba(4, 7, 66, 0.5); /* #040742 with alpha */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(132, 61, 245, 0.1);
-}
-
 .glass-card {
   background-color: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(132, 61, 245, 0.12);
-}
-
-.dark .glass-card {
-  background-color: rgba(4, 7, 66, 0.3);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(132, 61, 245, 0.15);
 }
 
 /* Glowing text & borders */

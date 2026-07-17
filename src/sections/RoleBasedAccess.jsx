@@ -45,7 +45,7 @@ export default function RoleBasedAccess() {
   };
 
   return (
-    <section className="py-24 bg-white dark:bg-[#070b19] border-y border-slate-100 dark:border-slate-900 transition-colors duration-300">
+    <section className="py-24 bg-white border-y border-slate-100 transition-colors duration-300">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -53,10 +53,10 @@ export default function RoleBasedAccess() {
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-accent-purple/30 bg-accent-purple/5 text-accent-purple text-xs font-semibold mb-4">
             <span>Granular Permissions</span>
           </div>
-          <h2 className="font-display text-primary dark:text-white">
+          <h2 className="font-display text-primary">
             Role-Based Access for Safe Collaboration
           </h2>
-          <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+          <p className="mt-4 text-lg text-slate-600">
             Secure workspaces tailored for everyone. Keep system configurations locked while empowering participants to manage their assets.
           </p>
         </div>
@@ -76,16 +76,16 @@ export default function RoleBasedAccess() {
                 key={role.title}
                 variants={itemVariants}
                 whileHover={{ scale: 1.02, y: -4 }}
-                className="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/40 hover:shadow-lg transition-all duration-300 flex items-start space-x-4"
+                className="glass-card p-6 rounded-2xl border border-slate-200/50 hover:shadow-lg transition-all duration-300 flex items-start space-x-4"
               >
-                <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-350">
+                <div className="p-3 rounded-xl bg-slate-100 text-slate-700">
                   <IconComp className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-base text-primary dark:text-white mb-2">
+                  <h3 className="font-display font-bold text-base text-primary mb-2">
                     {role.title}
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-light">
+                  <p className="text-xs text-slate-500 leading-relaxed font-light">
                     {role.desc}
                   </p>
                 </div>

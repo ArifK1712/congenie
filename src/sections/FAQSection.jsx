@@ -56,7 +56,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="pt-16 bg-white dark:bg-[#030712] transition-colors duration-300">
+    <section id="faq" className="pt-16 bg-white transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* Section Header */}
@@ -65,10 +65,10 @@ export default function FAQSection() {
             <HelpCircle className="w-3.5 h-3.5" />
             <span>FAQs</span>
           </div>
-          <h2 className="font-display text-primary dark:text-white">
+          <h2 className="font-display text-primary">
             Frequently Asked Questions
           </h2>
-          <p className="mt-2 text-slate-500 dark:text-slate-400 leading-relaxed">
+          <p className="mt-2 text-slate-500 leading-relaxed">
             Everything you need to know about the ConGenie platform.
           </p>
         </div>
@@ -82,8 +82,8 @@ export default function FAQSection() {
                 key={faq.id}
                 className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                   isOpen
-                    ? 'border-accent-purple/40 shadow-lg shadow-accent-purple/5 bg-white dark:bg-slate-900/50'
-                    : 'border-slate-200/70 dark:border-slate-800/70 bg-white dark:bg-[#060b1e]/50 hover:border-accent-purple/25'
+                    ? 'border-accent-purple/40 shadow-lg shadow-accent-purple/5 bg-white'
+                    : 'border-slate-200/70 bg-white hover:border-accent-purple/25'
                 }`}
               >
                 {/* Question button */}
@@ -96,14 +96,14 @@ export default function FAQSection() {
                     className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-purple/50 focus-visible:ring-offset-2 rounded-2xl"
                   >
                     <span className={`font-display font-semibold text-sm sm:text-base leading-snug transition-colors duration-200 ${
-                      isOpen ? 'text-accent-purple' : 'text-primary dark:text-white group-hover:text-accent-purple'
+                      isOpen ? 'text-accent-purple' : 'text-primary group-hover:text-accent-purple'
                     }`}>
                       {faq.question}
                     </span>
                     <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
                       isOpen
                         ? 'bg-accent-purple/15 text-accent-purple rotate-180'
-                        : 'bg-slate-100 dark:bg-slate-800 text-slate-400 group-hover:bg-accent-purple/10 group-hover:text-accent-purple'
+                        : 'bg-slate-100 text-slate-400 group-hover:bg-accent-purple/10 group-hover:text-accent-purple'
                     }`}>
                       <ChevronDown className="w-4 h-4" />
                     </span>
@@ -124,7 +124,7 @@ export default function FAQSection() {
                       transition={{ duration: 0.25, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <p className="px-6 pb-5 text-slate-600 dark:text-slate-400">
+                      <p className="px-6 pb-5 text-slate-600">
                         {faq.answer}
                       </p>
                     </motion.dd>

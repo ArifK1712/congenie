@@ -50,21 +50,21 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-16 lg:py-20 bg-slate-50 dark:bg-[#030712] border-t border-slate-100 dark:border-slate-900 transition-colors duration-300 relative overflow-hidden">
+    <section id="testimonials" className="py-16 lg:py-20 bg-slate-50 border-t border-slate-100 transition-colors duration-300 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center">
         
         {/* Section Heading */}
         <div className="mb-8">
-          <h2 className="font-display text-primary dark:text-white">
+          <h2 className="font-display text-primary">
             What Our Clients Say
           </h2>
-          <p className="mt-3 text-slate-500 dark:text-slate-400">
+          <p className="mt-3 text-slate-500">
             Trusted by event professionals across industries worldwide.
           </p>
         </div>
 
         {/* Quote Icon decorative */}
-        <div className="flex justify-center mb-4 text-accent-blue/20 dark:text-accent-cyan/15">
+        <div className="flex justify-center mb-4 text-accent-blue/20">
           <Quote className="w-16 h-16 transform rotate-180" />
         </div>
 
@@ -87,7 +87,7 @@ export default function Testimonials() {
               </div>
 
               {/* Review Text */}
-              <p className="text-lg sm:text-xl text-slate-700 dark:text-slate-200 font-light italic leading-relaxed">
+              <p className="text-lg sm:text-xl text-slate-700 font-light italic leading-relaxed">
                 &quot;{reviews[currentIdx].text}&quot;
               </p>
 
@@ -99,10 +99,10 @@ export default function Testimonials() {
                   className="w-12 h-12 rounded-full object-cover border-2 border-accent-blue/30 shadow-md"
                 />
                 <div className="text-left">
-                  <h4 className="text-sm text-slate-850 dark:text-slate-100">
+                  <h4 className="text-sm text-slate-855">
                     {reviews[currentIdx].name}
                   </h4>
-                  <p className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">
+                  <p className="text-[10px] sm:text-xs text-slate-500">
                     {reviews[currentIdx].role} • {reviews[currentIdx].event}
                   </p>
                 </div>
@@ -115,7 +115,7 @@ export default function Testimonials() {
         <div className="flex items-center justify-center space-x-6 mt-10">
           <button
             onClick={handlePrev}
-            className="p-2.5 rounded-full border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-900 transition-colors"
+            className="p-2.5 rounded-full border border-slate-200 text-slate-660 hover:bg-white transition-colors"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -128,7 +128,7 @@ export default function Testimonials() {
                 key={idx}
                 onClick={() => setCurrentIdx(idx)}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
-                  currentIdx === idx ? 'w-6 bg-accent-blue dark:bg-accent-cyan' : 'w-2.5 bg-slate-300 dark:bg-slate-800'
+                  currentIdx === idx ? 'w-6 bg-accent-blue' : 'w-2.5 bg-slate-300'
                 }`}
                 aria-label={`Go to testimonial ${idx + 1}`}
               />
@@ -137,7 +137,7 @@ export default function Testimonials() {
 
           <button
             onClick={handleNext}
-            className="p-2.5 rounded-full border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-900 transition-colors"
+            className="p-2.5 rounded-full border border-slate-200 text-slate-660 hover:bg-white transition-colors"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-5 h-5" />
