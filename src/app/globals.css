@@ -55,7 +55,7 @@
 
   /* ── Body text ───────────────────────────────────────────────────── */
   p {
-    @apply text-base font-light leading-7;
+    @apply text-lg font-light leading-7;
   }
 
   small {

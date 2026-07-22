@@ -35,6 +35,10 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import FinalCTA from '../../../sections/FinalCTA';
+import registrationHero from '../../../assets/reg-hero.png';
+import paymentEcosystem from '../../../assets/payment-ecosystem.png';
+import qrTicketVisual from '../../../assets/qr-checkin.png';
+import ticketTiersVisual from '../../../assets/ticket-tiers.png';
 
 // ─── SVG Logos for Integrations ──────────────────────────────────────────────
 const StripeLogo = () => (
@@ -341,7 +345,7 @@ export default function RegistrationTicketingPage() {
       {/* ══════════════════════════════════════════════════════════════════════
           1. HERO — Bright premium with 3D ecosystem visual
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative flex items-center bg-white overflow-hidden border-b border-slate-200">
+      <section className="relative bg-white overflow-hidden border-b border-slate-200">
         {/* ambient glows */}
         <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-accent-purple/8 rounded-full blur-[160px] pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-indigo-300/12 rounded-full blur-[120px] pointer-events-none" />
@@ -404,7 +408,7 @@ export default function RegistrationTicketingPage() {
 
             {/* Right: 3D hero visual */}
             <motion.div
-              className="relative"
+              className="relative max-w-xl ms-auto"
               initial={{ opacity: 0, scale: 0.96, y: 16 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -416,10 +420,8 @@ export default function RegistrationTicketingPage() {
               >
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-accent-purple/15 border border-slate-200">
                   <Image
-                    src="/reg-hero.png"
+                    src={registrationHero}
                     alt="Premium registration ecosystem showing digital tickets, attendee badges, QR codes, payment objects, and confirmation status"
-                    width={760}
-                    height={480}
                     className="w-full h-auto object-cover"
                     priority
                   />
@@ -487,7 +489,7 @@ export default function RegistrationTicketingPage() {
                   <div className="w-8 h-8 rounded-xl bg-accent-purple/8 border border-accent-purple/15 flex items-center justify-center shrink-0">
                     <Icon className="w-4 h-4 text-accent-purple" />
                   </div>
-                  <p className="text-slate-700">{text}</p>
+                  <p className="text-slate-700 font-medium">{text}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -519,10 +521,8 @@ export default function RegistrationTicketingPage() {
               >
                 <div className="rounded-3xl overflow-hidden shadow-2xl shadow-accent-purple/20 border border-white/10">
                   <Image
-                    src="/ticket-tiers.png"
+                    src={ticketTiersVisual}
                     alt="Layered 3D event ticket objects showing VIP, Standard, Student and Early Bird passes with capacity indicators"
-                    width={700}
-                    height={440}
                     className="w-full h-auto object-cover"
                   />
                 </div>
@@ -595,7 +595,7 @@ export default function RegistrationTicketingPage() {
               </p>
               <ul className="space-y-3">
                 {paymentCapabilities.map((c) => (
-                  <li key={c} className="flex items-start gap-3 text-sm text-slate-700">
+                  <li key={c} className="flex items-start gap-3 text-slate-700">
                     <CheckCircle2 className="w-4.5 h-4.5 text-accent-purple shrink-0 mt-0.5" />
                     {c}
                   </li>
@@ -618,10 +618,8 @@ export default function RegistrationTicketingPage() {
               >
                 <div className="rounded-3xl overflow-hidden shadow-2xl shadow-slate-200 border border-slate-200/70">
                   <Image
-                    src="/payment-ecosystem.png"
+                    src={paymentEcosystem}
                     alt="Premium 3D payment ecosystem showing payment cards, invoice documents, digital receipts, and currency indicators"
-                    width={760}
-                    height={480}
                     className="w-full h-auto object-cover"
                   />
                 </div>
@@ -633,95 +631,256 @@ export default function RegistrationTicketingPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          6. APPROVAL, WAITLIST & QUEUE — Light lavender, timeline flow
+          6. APPROVAL, WAITLIST & QUEUE — Premium glassmorphism workflow panel
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-gradient-to-b from-[#f3efff] to-[#faf9ff] border-y border-slate-300">
-        <div className="max-w-[1400px] mx-auto px-4">
-          <InView className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <Label icon={UserCheck}>Access Management</Label>
+      <section className="py-16 lg:py-20 bg-gradient-to-b from-[#f0ebff] via-[#f7f4ff] to-[#faf9ff] border-y border-purple-100 relative overflow-hidden">
+        {/* Ambient glows */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[300px] bg-accent-purple/8 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[300px] bg-violet-300/10 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="max-w-[1400px] mx-auto px-4 relative z-10">
+
+          {/* Header */}
+          <InView className="text-center max-w-2xl mx-auto mb-14 space-y-4">
+            <Label icon={UserCheck}>Capacity & Waitlist Automation</Label>
             <h2 className="font-display font-bold text-slate-900">
-              Control Access Without Losing Demand
+              Manage Capacity Without Losing Demand
             </h2>
-            <p className="text-slate-600 font-light leading-relaxed">
-              Keep registration demand high while enforcing capacity, approval rules, and waitlist priority — all without manual back-and-forth.
+            <p className="text-slate-600 font-light leading-relaxed text-lg">
+              Automate approvals, waitlists, payment deadlines and seat releases to keep every available place filled.
             </p>
           </InView>
 
-          {/* Main approval flow */}
-          <div className="max-w-[1400px] mx-auto mb-16">
-            <div className="text-xs font-bold text-slate-400 tracking-widest uppercase text-center mb-6">Primary Registration Flow</div>
-            <motion.div
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-            >
-              {['Pending', 'Approved', 'Payment Pending', 'Confirmed'].map((stage, i) => (
-                <React.Fragment key={stage}>
-                  <motion.div
-                    variants={fadeUp}
-                    className={`flex-1 text-center px-4 py-3 rounded-2xl border font-semibold transition-all ${i === 3 ? 'bg-accent-purple/10 border-accent-purple/40 text-accent-purple' : 'bg-white/70 border-slate-300 text-slate-700'}`}
-                  >
-                    {stage}
-                  </motion.div>
-                  {i < 3 && <ChevronRight className="w-4 h-4 text-slate-300 shrink-0 hidden sm:block" />}
-                </React.Fragment>
-              ))}
-            </motion.div>
+          {/* ── Premium Workflow Panel ─────────────────────────────────────────── */}
+          <InView variants={{ hidden: { opacity: 0, y: 32 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22,1,0.36,1] } } }} className="mb-14">
+            <div className="relative rounded-[28px] border border-white/80 bg-white/60 backdrop-blur-xl shadow-2xl shadow-purple-200/40 p-6 sm:p-8 lg:p-10 overflow-hidden">
 
-            {/* Waitlist branch */}
-            <div className="mt-6">
-              <div className="text-xs font-bold text-slate-400 tracking-widest uppercase text-center mb-4">Waitlist Path</div>
-              <motion.div
-                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={stagger}
-              >
-                {['Waitlist', 'Seat Released', 'Payment Link Sent', 'Confirmed'].map((stage, i) => (
-                  <React.Fragment key={stage}>
-                    <motion.div
-                      variants={fadeUp}
-                      className={`flex-1 text-center px-4 py-3 rounded-2xl border font-semibold ${i === 3 ? 'bg-emerald-50 border-emerald-300/60 text-emerald-700' : 'bg-white/70 border-dashed border-slate-300 text-slate-500'}`}
-                    >
-                      {stage}
-                    </motion.div>
-                    {i < 3 && <ChevronRight className="w-4 h-4 text-slate-300 shrink-0 hidden sm:block" />}
-                  </React.Fragment>
+              {/* Inner glow overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/4 via-transparent to-violet-200/10 pointer-events-none rounded-[28px]" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-accent-purple/30 to-transparent" />
+
+              {/* ── Row 1: Primary Registration Flow ─── */}
+              <div className="relative z-10 mb-8">
+                {/* Row label */}
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-accent-purple shadow-[0_0_6px_rgba(132,61,245,0.7)] animate-pulse" />
+                    <span className="text-xs font-bold text-accent-purple tracking-widest uppercase">Primary Registration Flow</span>
+                  </div>
+                  <div className="flex-1 h-px bg-gradient-to-r from-accent-purple/20 to-transparent" />
+                </div>
+
+{/* Flow nodes — flex row with arrows as sibling elements */}
+                <div className="hidden lg:flex items-center gap-0">
+                  {[
+                    { label: 'Pending', icon: Clock, color: 'text-slate-500', bg: 'bg-slate-50', border: 'border-slate-200', dot: 'bg-slate-300' },
+                    { label: 'Approved', icon: BadgeCheck, color: 'text-indigo-600', bg: 'bg-indigo-50/80', border: 'border-indigo-200/70', dot: 'bg-indigo-400' },
+                    { label: 'Payment Pending', icon: CreditCard, color: 'text-amber-600', bg: 'bg-amber-50/80', border: 'border-amber-200/70', dot: 'bg-amber-400' },
+                    { label: 'Confirmed', icon: CheckCircle2, color: 'text-accent-purple', bg: 'bg-accent-purple/8', border: 'border-accent-purple/30', dot: 'bg-accent-purple' },
+                  ].map((node, i) => {
+                    const Icon = node.icon;
+                    return (
+                      <React.Fragment key={node.label}>
+                        {/* Card */}
+                        <div className={`flex-1 flex items-center gap-3 px-4 py-4 rounded-2xl border ${node.bg} ${node.border} transition-all duration-300 hover:scale-[1.02]`}>
+                          <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${node.bg} border ${node.border}`}>
+                            <Icon className={`w-4 h-4 ${node.color}`} />
+                          </div>
+                          <div>
+                            <div className={`font-semibold leading-tight ${node.color}`}>{node.label}</div>
+                            <div className="mt-0.5"><div className={`w-1.5 h-1.5 rounded-full ${node.dot}`} /></div>
+                          </div>
+                        </div>
+                        {/* Centred connector arrow — sits between cards, no overlap */}
+                        {i < 3 && (
+                          <div className="shrink-0 w-8 flex items-center justify-center">
+                            <div className="flex items-center gap-0">
+                              <div className="w-4 h-px bg-gradient-to-r from-accent-purple/30 to-accent-purple/50" />
+                              <div className="w-0 h-0 border-t-[3px] border-t-transparent border-l-[5px] border-l-accent-purple/50 border-b-[3px] border-b-transparent" />
+                            </div>
+                          </div>
+                        )}
+                      </React.Fragment>
+                    );
+                  })}
+                </div>
+                {/* Mobile fallback: simple 2-col grid without arrows */}
+                <div className="grid grid-cols-2 gap-3 lg:hidden">
+                  {[
+                    { label: 'Pending', icon: Clock, color: 'text-slate-500', bg: 'bg-slate-50', border: 'border-slate-200', dot: 'bg-slate-300' },
+                    { label: 'Approved', icon: BadgeCheck, color: 'text-indigo-600', bg: 'bg-indigo-50/80', border: 'border-indigo-200/70', dot: 'bg-indigo-400' },
+                    { label: 'Payment Pending', icon: CreditCard, color: 'text-amber-600', bg: 'bg-amber-50/80', border: 'border-amber-200/70', dot: 'bg-amber-400' },
+                    { label: 'Confirmed', icon: CheckCircle2, color: 'text-accent-purple', bg: 'bg-accent-purple/8', border: 'border-accent-purple/30', dot: 'bg-accent-purple' },
+                  ].map((node) => {
+                    const Icon = node.icon;
+                    return (
+                      <div key={node.label} className={`flex items-center gap-3 px-4 py-4 rounded-2xl border ${node.bg} ${node.border}`}>
+                        <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${node.bg} border ${node.border}`}>
+                          <Icon className={`w-4 h-4 ${node.color}`} />
+                        </div>
+                        <div>
+                          <div className={`font-semibold leading-tight ${node.color}`}>{node.label}</div>
+                          <div className="mt-0.5"><div className={`w-1.5 h-1.5 rounded-full ${node.dot}`} /></div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Divider with label */}
+              <div className="flex items-center gap-4 mb-8">
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+                <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100/80 border border-slate-200">
+                  <RefreshCw className="w-3 h-3 text-emerald-500" />
+                  <span className="text-xs font-semibold text-slate-500 tracking-wide">Waitlist Recovery Path</span>
+                </div>
+                <div className="flex-1 h-px bg-gradient-to-l from-transparent via-slate-200 to-transparent" />
+              </div>
+
+              {/* ── Row 2: Waitlist Recovery Flow ─── */}
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.6)] animate-pulse" />
+                    <span className="text-xs font-bold text-emerald-600 tracking-widest uppercase">Waitlist Recovery Flow</span>
+                  </div>
+                  <div className="flex-1 h-px bg-gradient-to-r from-emerald-300/30 to-transparent" />
+                </div>
+
+{/* Waitlist flow nodes — flex row with centred arrow siblings */}
+                <div className="hidden lg:flex items-center gap-0">
+                  {[
+                    { label: 'On Waitlist', icon: Users, color: 'text-slate-500', bg: 'bg-slate-50', border: 'border-dashed border-slate-200', dot: 'bg-slate-300' },
+                    { label: 'Seat Released', icon: Zap, color: 'text-violet-600', bg: 'bg-violet-50/80', border: 'border-dashed border-violet-200/70', dot: 'bg-violet-400' },
+                    { label: 'Payment Link Sent', icon: Mail, color: 'text-sky-600', bg: 'bg-sky-50/80', border: 'border-dashed border-sky-200/70', dot: 'bg-sky-400' },
+                    { label: 'Confirmed', icon: CheckCircle2, color: 'text-emerald-700', bg: 'bg-emerald-50/80', border: 'border-emerald-200/70', dot: 'bg-emerald-500' },
+                  ].map((node, i) => {
+                    const Icon = node.icon;
+                    return (
+                      <React.Fragment key={node.label}>
+                        {/* Card */}
+                        <div className={`flex-1 flex items-center gap-3 px-4 py-4 rounded-2xl border ${node.bg} ${node.border} transition-all duration-300 hover:scale-[1.02]`}>
+                          <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${node.bg} border ${node.border}`}>
+                            <Icon className={`w-4 h-4 ${node.color}`} />
+                          </div>
+                          <div>
+                            <div className={`font-semibold leading-tight ${node.color}`}>{node.label}</div>
+                            <div className="mt-0.5"><div className={`w-1.5 h-1.5 rounded-full ${node.dot}`} /></div>
+                          </div>
+                        </div>
+                        {/* Centred connector arrow */}
+                        {i < 3 && (
+                          <div className="shrink-0 w-8 flex items-center justify-center">
+                            <div className="flex items-center gap-0">
+                              <div className="w-4 h-px bg-gradient-to-r from-emerald-400/30 to-emerald-500/50" />
+                              <div className="w-0 h-0 border-t-[3px] border-t-transparent border-l-[5px] border-l-emerald-500/50 border-b-[3px] border-b-transparent" />
+                            </div>
+                          </div>
+                        )}
+                      </React.Fragment>
+                    );
+                  })}
+                </div>
+                {/* Mobile fallback */}
+                <div className="grid grid-cols-2 gap-3 lg:hidden">
+                  {[
+                    { label: 'On Waitlist', icon: Users, color: 'text-slate-500', bg: 'bg-slate-50', border: 'border-dashed border-slate-200', dot: 'bg-slate-300' },
+                    { label: 'Seat Released', icon: Zap, color: 'text-violet-600', bg: 'bg-violet-50/80', border: 'border-dashed border-violet-200/70', dot: 'bg-violet-400' },
+                    { label: 'Payment Link Sent', icon: Mail, color: 'text-sky-600', bg: 'bg-sky-50/80', border: 'border-dashed border-sky-200/70', dot: 'bg-sky-400' },
+                    { label: 'Confirmed', icon: CheckCircle2, color: 'text-emerald-700', bg: 'bg-emerald-50/80', border: 'border-emerald-200/70', dot: 'bg-emerald-500' },
+                  ].map((node) => {
+                    const Icon = node.icon;
+                    return (
+                      <div key={node.label} className={`flex items-center gap-3 px-4 py-4 rounded-2xl border ${node.bg} ${node.border}`}>
+                        <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${node.bg} border ${node.border}`}>
+                          <Icon className={`w-4 h-4 ${node.color}`} />
+                        </div>
+                        <div>
+                          <div className={`font-semibold leading-tight ${node.color}`}>{node.label}</div>
+                          <div className="mt-0.5"><div className={`w-1.5 h-1.5 rounded-full ${node.dot}`} /></div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Bottom stat bar */}
+              <div className="relative z-10 mt-8 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+                {[
+                  { value: '100%', label: 'Seats filled automatically' },
+                  { value: '< 60s', label: 'Seat release to next in queue' },
+                  { value: '0 manual', label: 'Steps in waitlist process' },
+                ].map((s) => (
+                  <div key={s.label} className="text-center">
+                    <div className="text-2xl font-bold text-accent-purple font-sans">{s.value}</div>
+                    <div className="text-slate-500 mt-0.5">{s.label}</div>
+                  </div>
                 ))}
-              </motion.div>
-            </div>
-          </div>
+              </div>
 
-          {/* Feature detail grid */}
+            </div>
+          </InView>
+
+          {/* ── Feature Cards ──────────────────────────────────────────────────── */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-[1400px] mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-40px' }}
             variants={stagger}
           >
             {[
-              { icon: UserCheck, title: 'Manual & Auto Approval', desc: 'Define approval rules per attendee type or registration form' },
-              { icon: AlertCircle, title: 'Capacity Alerts', desc: 'Automated alerts at 50%, 80%, 90% and 100% capacity filled' },
-              { icon: Clock, title: 'Time-Limited Payment Links', desc: 'Expire payment invitations automatically; release seat to waitlist' },
-              { icon: RefreshCw, title: 'Automatic Seat Release', desc: 'Release unpaid seats and notify next person in queue instantly' },
-            ].map(({ icon: Icon, title, desc }) => (
+              {
+                icon: UserCheck,
+                title: 'Manual & Auto Approval',
+                desc: 'Define approval rules per attendee type or registration form',
+                accent: 'from-accent-purple/8 to-accent-purple/3',
+                iconBg: 'bg-accent-purple/10 border-accent-purple/20',
+                iconColor: 'text-accent-purple',
+              },
+              {
+                icon: AlertCircle,
+                title: 'Capacity Alerts',
+                desc: 'Automated alerts at 50%, 80%, 90% and 100% capacity filled',
+                accent: 'from-amber-50/80 to-amber-50/20',
+                iconBg: 'bg-amber-100/60 border-amber-200/60',
+                iconColor: 'text-amber-600',
+              },
+              {
+                icon: Clock,
+                title: 'Time-Limited Payment Links',
+                desc: 'Expire payment invitations automatically; release seat to waitlist',
+                accent: 'from-sky-50/80 to-sky-50/20',
+                iconBg: 'bg-sky-100/60 border-sky-200/60',
+                iconColor: 'text-sky-600',
+              },
+              {
+                icon: RefreshCw,
+                title: 'Automatic Seat Release',
+                desc: 'Release unpaid seats and notify next person in queue instantly',
+                accent: 'from-emerald-50/80 to-emerald-50/20',
+                iconBg: 'bg-emerald-100/60 border-emerald-200/60',
+                iconColor: 'text-emerald-600',
+              },
+            ].map(({ icon: Icon, title, desc, accent, iconBg, iconColor }) => (
               <motion.div
                 key={title}
                 variants={fadeUp}
-                className="bg-white/70 border border-slate-300 rounded-2xl p-5 hover:border-accent-purple/30 hover:shadow-md transition-all duration-300 space-y-3"
+                className={`relative group rounded-2xl border border-white/90 bg-gradient-to-br ${accent} backdrop-blur-sm p-6 shadow-md shadow-slate-100/80 hover:shadow-lg hover:shadow-purple-100/60 hover:-translate-y-1 transition-all duration-300 overflow-hidden`}
               >
-                <div className="w-9 h-9 rounded-xl bg-accent-purple/8 border border-accent-purple/15 flex items-center justify-center">
-                  <Icon className="w-4.5 h-4.5 text-accent-purple" />
+                {/* Card inner top glow line */}
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+                <div className={`w-10 h-10 rounded-2xl border flex items-center justify-center mb-4 ${iconBg}`}>
+                  <Icon className={`w-5 h-5 ${iconColor}`} />
                 </div>
-                <h5 className="font-display text-slate-800">{title}</h5>
+                <h5 className="font-display font-bold text-slate-800 mb-2 leading-snug">{title}</h5>
                 <p className="text-slate-500 leading-relaxed">{desc}</p>
               </motion.div>
             ))}
           </motion.div>
+
         </div>
       </section>
 
@@ -756,17 +915,17 @@ export default function RegistrationTicketingPage() {
               <div className="flex items-center gap-6 pt-2">
                 <div>
                   <div className="text-3xl font-bold text-white font-sans">&lt; 0.5s</div>
-                  <div className=" text-slate-500 mt-0.5">Avg. scan time</div>
+                  <div className=" text-slate-200 mt-0.5">Avg. scan time</div>
                 </div>
                 <div className="w-px h-10 bg-slate-700" />
                 <div>
                   <div className="text-3xl font-bold text-white font-sans">99.9%</div>
-                  <div className=" text-slate-500 mt-0.5">Check-in accuracy</div>
+                  <div className=" text-slate-200 mt-0.5">Check-in accuracy</div>
                 </div>
                 <div className="w-px h-10 bg-slate-700" />
                 <div>
                   <div className="text-3xl font-bold text-white font-sans">0</div>
-                  <div className=" text-slate-500 mt-0.5">Duplicate entries</div>
+                  <div className=" text-slate-200 mt-0.5">Duplicate entries</div>
                 </div>
               </div>
             </InView>
@@ -785,7 +944,7 @@ export default function RegistrationTicketingPage() {
               >
                 <div className="rounded-3xl overflow-hidden shadow-2xl shadow-accent-purple/25 border border-white/10">
                   <Image
-                    src="/qr-checkin.png"
+                    src={qrTicketVisual}
                     alt="Cinematic 3D visual of mobile QR ticket, printed attendee badge, QR scanner with scanning beam, and check-in confirmation"
                     width={700}
                     height={440}

@@ -308,10 +308,10 @@ const integrations = [
                   { icon: Zap, text: 'Real-time updates' },
                   { icon: Globe, text: 'Every device' },
                 ].map(({ icon: Icon, text }) => (
-                  <div key={text} className="flex items-center gap-1.5 text-slate-500 text-sm">
+                  <p key={text} className="flex items-center gap-1.5 text-slate-500">
                     <Icon className="w-3.5 h-3.5 text-accent-purple" />
                     {text}
-                  </div>
+                  </p>
                 ))}
               </motion.div>
             </motion.div>
@@ -324,12 +324,10 @@ const integrations = [
               transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="absolute -inset-4 bg-accent-purple/5 rounded-3xl blur-3xl pointer-events-none" />
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-accent-purple/10 border border-slate-200">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-accent-purple/10 border border-slate-200 max-w-xl ms-auto">
                 <Image
                   src={eventAppVenueHuman}
                   alt="Professional event attendee using the ConGenie Event App to navigate a modern conference venue"
-                  width={620}
-                  height={500}
                   className="w-full h-auto object-cover"
                   priority
                 />
@@ -404,11 +402,11 @@ const integrations = [
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 bg-gradient-to-br from-[#faf9ff] to-white border border-slate-200 rounded-3xl p-8 lg:p-10"
+              className="mt-6 bg-linear-to-br from-[#faf9ff] to-white border border-slate-200 rounded-3xl p-8 lg:p-10"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 {/* Left: stage description */}
-                <div className="space-y-4">
+                <div className="space-y-4 ">
                   {(() => {
                     const stage = journeyStages[activeJourney];
                     const StageIcon = stage.icon;
@@ -443,7 +441,7 @@ const integrations = [
                         <div className="w-7 h-7 rounded-lg bg-accent-purple/10 flex items-center justify-center shrink-0">
                           <FIcon className="w-3.5 h-3.5 text-accent-purple" />
                         </div>
-                        <span className="text-sm font-medium text-slate-700">{f.title}</span>
+                        <p className="font-medium text-slate-700 leading-tight">{f.title}</p>
                       </motion.div>
                     );
                   })}
@@ -541,7 +539,7 @@ const integrations = [
                       <f.icon className="w-4 h-4 text-accent-purple" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="font-semibold text-slate-800 mb-0.5">{f.title}</div>
+                      <h5 className="font-display font-bold text-slate-800 mb-0.5">{f.title}</h5>
                       <p className="text-slate-500 leading-relaxed">{f.body}</p>
                     </div>
                   </motion.div>
@@ -551,14 +549,12 @@ const integrations = [
 
             {/* Right: notifications visual */}
             <InView className="flex justify-center lg:justify-end" delay={0.15} variants={scaleIn}>
-              <div className="relative w-full max-w-md">
+              <div className="relative w-full max-w-xl">
                 <div className="absolute -inset-4 bg-accent-purple/5 rounded-3xl blur-3xl pointer-events-none" />
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-200/80 border border-slate-200">
                   <Image
                     src={eventAppNotifications}
                     alt="ConGenie Event App showing push notifications, digital ticket and venue navigation"
-                    width={480}
-                    height={480}
                     className="w-full h-auto object-cover"
                   />
                 </div>
@@ -610,7 +606,7 @@ const integrations = [
                     <div className="w-7 h-7 rounded-lg bg-accent-purple/20 border border-accent-purple/30 flex items-center justify-center shrink-0">
                       <item.icon className="w-3.5 h-3.5 text-accent-purple" />
                     </div>
-                    <span className="font-semibold text-white text-sm">{item.title}</span>
+                    <h5 className="font-display font-bold text-white">{item.title}</h5>
                   </div>
                   <p className="text-slate-400 leading-relaxed">{item.body}</p>
                 </motion.div>
@@ -651,7 +647,7 @@ const integrations = [
                     <div className="w-7 h-7 rounded-lg bg-accent-purple/20 border border-accent-purple/30 flex items-center justify-center shrink-0">
                       <item.icon className="w-3.5 h-3.5 text-accent-purple" />
                     </div>
-                    <span className="font-semibold text-white text-sm">{item.title}</span>
+                    <h5 className="font-display font-bold text-white">{item.title}</h5>
                   </div>
                   <p className="text-slate-400 leading-relaxed">{item.body}</p>
                 </motion.div>
@@ -668,7 +664,7 @@ const integrations = [
       ══════════════════════════════════════════════════════════════════ */}
       <section className="pt-16 lg:pt-20 bg-white">
         <div className="max-w-[1400px] mx-auto px-4">
-          <InView className="text-center mb-12 space-y-3 max-w-3xl mx-auto">
+          <InView className="text-center mb-12 space-y-3 mx-auto">
             <Label icon={BarChart3}>Analytics &amp; Integrations</Label>
             <h2 className="font-display text-slate-900">
               Connected with Every Part of ConGenie
@@ -696,7 +692,7 @@ const integrations = [
                 height={100}
                 className="object-contain"
               />
-                  <p className="text-xl font-medium text-slate-600 text-center">{integ.label}</p>
+                  <h6 className="font-semibold text-slate-900 text-center">{integ.label}</h6>
                 </motion.div>
               ))}
             </div>
@@ -733,7 +729,7 @@ const integrations = [
                 height={100}
                 className="object-contain"
               />
-                  <p className="text-xl font-medium text-slate-600 text-center">{integ.label}</p>
+                  <h6 className="font-semibold text-slate-900 text-center">{integ.label}</h6>
                 </motion.div>
               ))}
             </div>
