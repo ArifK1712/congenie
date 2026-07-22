@@ -457,6 +457,8 @@ const integrations = [
           Merges: Personalisation, Agenda, Engagement, Networking
       ══════════════════════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-20 bg-[#070b19] relative overflow-hidden">
+        <div className="absolute top-0 right-80 w-120 h-120 bg-accent-purple opacity-40 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-accent-purple opacity-30 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-purple/8 rounded-full blur-[160px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -569,6 +571,8 @@ const integrations = [
       ══════════════════════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-20 bg-gradient-to-br from-[#0c0826] via-[#130d35] to-[#070b19] relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-accent-purple/10 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-[15%] -translate-y-1/2 w-[400px] h-[400px] bg-accent-purple opacity-35 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 right-[15%] -translate-y-1/2 w-[400px] h-[400px] bg-accent-purple opacity-35 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-[1400px] mx-auto px-4 relative z-10">
           <InView className="text-center mb-12 space-y-3 max-w-3xl mx-auto">

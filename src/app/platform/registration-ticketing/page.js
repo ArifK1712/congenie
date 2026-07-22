@@ -502,6 +502,7 @@ export default function RegistrationTicketingPage() {
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-20 bg-[#070b19] text-white relative overflow-hidden">
         {/* purple glow behind visual */}
+        <div className="absolute top-0 right-80 w-120 h-120 bg-accent-purple opacity-40 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-accent-purple/10 rounded-full blur-[130px] pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-indigo-500/8 rounded-full blur-[100px] pointer-events-none" />
 
@@ -888,6 +889,7 @@ export default function RegistrationTicketingPage() {
           7. QR TICKETS & SECURE ACCESS — Dark cinematic section
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-20 bg-[#070b19] text-white relative overflow-hidden">
+        <div className="absolute top-0 left-80 w-120 h-120 bg-accent-purple opacity-40 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-accent-purple/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-[1400px] mx-auto px-4 relative z-10">
